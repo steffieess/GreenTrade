@@ -28,7 +28,7 @@
    }
 
    :root {
-      --main-color: #4c7031;
+      --main-color: #7DBC66;
       --black: #222;
       --white: #fff;
       --light-black: #777;

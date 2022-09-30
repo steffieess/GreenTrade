@@ -10,7 +10,7 @@ body {
  }
 
  :root {
-    --main-color: #4c7031;
+    --main-color: #7DBC66;
     --black: #222;
     --white: #fff;
     --light-black: #777;
@@ -98,7 +98,7 @@ body {
  }
 
  .btn:hover {
-    background-color: #668C4A !important;
+    background-color: #75AF61 !important;
     color: white;
     border: #222;
  }
@@ -711,7 +711,7 @@ section {
 	height:480px;
 	position:relative;
 	margin:2% auto;
-	background:rgba(0,0,0,0.3);
+	background:var(--light-white);
 	padding:10px;
     overflow: hidden;
 }
@@ -720,7 +720,7 @@ section {
 	width:220px;
 	margin:35px auto;
 	position:relative;
-	box-shadow: 0 0 20px 9px #ff61241f;
+	box-shadow: var(--main-color);
 	border-radius: 30px;
 }
 .toggle-btn
@@ -739,7 +739,7 @@ section {
 	position: absolute;
 	width: 110px;
 	height: 100%;
-	background: #F3C693;
+	background: var(--main-color);
 	border-radius: 30px;
 	transition: .5s;
 }
@@ -776,7 +776,7 @@ section {
 	cursor: pointer;
 	display: block;
 	margin: auto;
-	background: #F3C693;
+	background: var(--main-color);
 	border: 0;
 	outline: none;
 	border-radius: 30px;
@@ -813,7 +813,7 @@ section {
 	height:480px;
 	position:relative;
 	margin:2% auto;
-	background:rgba(0,0,0,0.3);
+	background:rgba(0, 0, 0, .1);
 	padding:10px;
     overflow: hidden;
 }
@@ -822,7 +822,7 @@ section {
 	width:220px;
 	margin:35px auto;
 	position:relative;
-	box-shadow: 0 0 20px 9px #ff61241f;
+	box-shadow: 0 0 5px 3px #7DBC66;
 	border-radius: 30px;
 }
 .toggle-btn
@@ -841,7 +841,7 @@ section {
 	position: absolute;
 	width: 110px;
 	height: 100%;
-	background: #F3C693;
+	background: var(--main-color);
 	border-radius: 30px;
 	transition: .5s;
 }
@@ -878,7 +878,7 @@ section {
 	cursor: pointer;
 	display: block;
 	margin: auto;
-	background: #F3C693;
+	background: var(--main-color);
 	border: 0;
 	outline: none;
 	border-radius: 30px;
@@ -905,3 +905,25 @@ section {
 	color:white;
 	font-size: 15;
 }
+/*FIN REGISTRO E INICIAR SESIÓN*/
+
+/*INICIO STYLES SCROLLBAR DE REGISTRAR*/
+#global {
+    width: 300px;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+#global::-webkit-scrollbar {
+    width: 1rem;
+}
+
+#global::-webkit-scrollbar-track {
+    background-color: white;
+    box-shadow: var(--box-shadow);
+}
+
+#global::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+/*FIN STYLES SCROLLBAR DE REGISTRAR*/
