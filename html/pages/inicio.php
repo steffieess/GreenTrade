@@ -4,10 +4,6 @@
 
 <!-- home section starts -->
 
-
-
-
-
 <section class="home">
 
    <div id="menu-btn"></div>
@@ -16,13 +12,13 @@
 
       <div class="swiper-wrapper">
 
-         <div class="swiper-slide slide" style="background:url(../img/Diapositiva1.jpg) no-repeat"></div>
+         <div class="swiper-slide slide" style="background:url(../img/Diapositiva4.jpg) no-repeat"></div>
 
          <div class="swiper-slide slide" style="background:url(../img/Diapositiva2.jpg) no-repeat"> </div>
          
          <div class="swiper-slide slide" style="background:url(../img/Diapositiva3.jpg) no-repeat"> </div>
 
-         <div class="swiper-slide slide" style="background:url(../img/Diapositiva4.jpg) no-repeat"> </div>
+         <div class="swiper-slide slide" style="background:url(../img/Diapositiva1.jpg) no-repeat"> </div>
 
          <div class="swiper-slide slide" style="background:url(../img/Diapositiva5.jpg) no-repeat"> </div>
 

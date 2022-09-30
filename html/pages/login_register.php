@@ -25,7 +25,7 @@
                     <input name="clave" type="text" class='input-field' placeholder="••••••••••••" required>
                 </div>
                 <div>
-                    <input class="submit-btn" type="submit" value="Ingresar">
+                    <input class="submit-btn" type="submit" value="Ingresar" name="Ingresar">
                 </div>
             </form>
             <!--Cierre Formulario LOGIN-->
@@ -83,7 +83,7 @@
                             <input name="clave_user_valid" type="text" class='input-field' placeholder="••••••••••••" required>
                         </div>
                     <div>
-                        <input class="submit-btn" type="submit" value="Registrar">
+                        <input class="submit-btn" type="submit" value="Registrar" name="Registrar">
                     </div>
                 </div>
             </action=>
