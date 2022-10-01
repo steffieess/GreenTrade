@@ -135,10 +135,12 @@
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                <li><a href="inicio.php"><img src="../img/logo.png.png" alt=""></a></li>
                <li><a href="inicio.php" class="nav-link px-2 text-white" style="font-size: 15px;">GreenTrade</a></li>
+               <li><a href="homepage.php" class="nav-link px-2 text-white" style="font-size: 15px;">Inicio</a></li>
                <li><a href="" class="nav-link px-2 text-white" style="font-size: 15px;">Premium</a></li>
                <li><a href="" class="nav-link px-2 text-white" style="font-size: 15px;">Visión</a></li>
-            </ul>
+               <li><a href="registroUsuario.php" class="nav-link px-2 text-white" style="font-size: 15px;">Usuarios</a></li>
 
+            </ul>
             <div class="text-end">
                <a href="login_register.php" class="btn">Ingresar</a>
             </div>

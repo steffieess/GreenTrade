@@ -14,22 +14,11 @@
 
          <div class="swiper-slide slide" style="background:url(../img/Diapositiva4.jpg) no-repeat"></div>
 
-         <div class="swiper-slide slide" style="background:url(../img/Diapositiva2.jpg) no-repeat"> </div>
-         
-         <div class="swiper-slide slide" style="background:url(../img/Diapositiva3.jpg) no-repeat"> </div>
-
          <div class="swiper-slide slide" style="background:url(../img/Diapositiva1.jpg) no-repeat"> </div>
-
-         <div class="swiper-slide slide" style="background:url(../img/Diapositiva5.jpg) no-repeat"> </div>
 
          <div class="swiper-slide slide" style="background:url(../img/Diapositiva6.jpg) no-repeat"> </div>
 
-         <div class="swiper-slide slide" style="background:url(../img/Diapositiva7.jpg) no-repeat"> </div>
-
-         <div class="swiper-slide slide" style="background:url(../img/Diapositiva8.jpg) no-repeat"> </div>
-
          <div class="swiper-slide slide" style="background:url(../img/Diapositiva9.jpg) no-repeat"> </div>
-
 
       </div>
 
