@@ -17,12 +17,12 @@
             <form action="../func/ingresar.php" id='login' class='input-group-login' method="POST">
                 <h1>Iniciar Sesión</h1>
                 <div class="content">
-                    <label for="nombre"><b>Correo</b></label>
-                    <input name="nombre" type="text" class='input-field' placeholder="greentrade@greentrade.com" required>
+                    <label for="correo"><b>Correo</b></label>
+                    <input name="correo" type="text" class='input-field' placeholder="greentrade@greentrade.com" required>
                 </div>
                 <div class="content">
                     <label for="psw"><b>Contraseña</b></label>
-                    <input name="clave" type="text" class='input-field' placeholder="••••••••••••" required>
+                    <input name="clave" type="password" class='input-field' placeholder="••••••••••••" required>
                 </div>
                 <div>
                     <input class="submit-btn" type="submit" value="Ingresar" name="Ingresar">
@@ -76,11 +76,11 @@
                     </div>
                     <div class="content">
                             <label for="clave_user"><b>Crear contraseña representante</b></label>
-                            <input name="clave_user" type="text" class='input-field' placeholder="••••••••••••" required>
+                            <input name="clave_user" type="password" class='input-field' placeholder="••••••••••••" required>
                         </div>
                         <div class="content">
                             <label for="clave_user_valid"><b>Repita contraseña creada</b></label>
-                            <input name="clave_user_valid" type="text" class='input-field' placeholder="••••••••••••" required>
+                            <input name="clave_user_valid" type="password" class='input-field' placeholder="••••••••••••" required>
                         </div>
                     <div>
                         <input class="submit-btn" type="submit" value="Registrar" name="Registrar">
