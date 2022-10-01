@@ -1,3 +1,4 @@
+<?php include("../func/mantenedor.php"); ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,6 +10,7 @@
    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <script src="https://kit.fontawesome.com/edde590ebc.js" crossorigin="anonymous"></script>
    <!-- CSS only -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
    <!-- CSS -->
@@ -138,7 +140,7 @@
                <li><a href="homepage.php" class="nav-link px-2 text-white" style="font-size: 15px;">Inicio</a></li>
                <li><a href="" class="nav-link px-2 text-white" style="font-size: 15px;">Premium</a></li>
                <li><a href="" class="nav-link px-2 text-white" style="font-size: 15px;">Visión</a></li>
-               <li><a href="registroUsuario.php" class="nav-link px-2 text-white" style="font-size: 15px;">Usuarios</a></li>
+               <li><a href="usuario.php" class="nav-link px-2 text-white" style="font-size: 15px;">Usuarios</a></li>
 
             </ul>
             <div class="text-end">
