@@ -6,7 +6,8 @@
 <section>
     <h1 class="heading-title"> Usuarios </h1>
     <div class="text-end">
-        <a href="registroUsuario.php" class="btn">Nuevo Usuario</a>
+        <a href="registroUsuario.php" class="btn">Nuevo Usuario Colaborador</a>
+        <a href="registroEmpresa.php" class="btn">Nuevo Usuario Externo</a>
     </div>
     <div class="col-md-8 table-user">
         <table class="table">
