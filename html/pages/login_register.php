@@ -86,7 +86,7 @@
                         <input class="submit-btn" type="submit" value="Registrar" name="Registrar">
                     </div>
                 </div>
-            </action=>
+            </form>
             <!--Cierre Formulario REGISTER-->
         </div>
     </div>

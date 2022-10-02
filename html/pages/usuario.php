@@ -5,8 +5,8 @@
 <!--body section starts-->
 <section class="table-user">
     <h1 class="heading-title"> Usuarios </h1>
-    <div class="card card-body">
-        <input  class="btn btn-block" value="Nuevo Usuario">
+    <div class="text-end">
+        <a href="registroUsuario.php" class="btn">Nuevo Usuario</a>
     </div>
     <div class="col-md-8">
         <table class="table">
@@ -31,7 +31,7 @@
                     <td>vnavarro@greentrade.cl</td>
                     <td>+56911111111</td>
                     <td>Habilitado</td>
-                    <td><i class="fa-solid fa-user-pen"></i></td>
+                    <td><a href="editarUsuario.php"><i class="fa-solid fa-user-pen"></i></a></td>
                 </tr>
                 <tr>
                     <td>11.111.111-2</td>
@@ -41,7 +41,7 @@
                     <td>vnavarro@greentrade.cl</td>
                     <td>+56911111111</td>
                     <td>Habilitado</td>
-                    <td><i class="fa-solid fa-user-pen"></i></td>
+                    <td><a href="editarUsuario.php"><i class="fa-solid fa-user-pen"></i></a></td>
                 </tr>
                 <tr>
                     <td>11.111.111-2</td>
@@ -51,7 +51,7 @@
                     <td>vnavarro@greentrade.cl</td>
                     <td>+56911111111</td>
                     <td>Habilitado</td>
-                    <td><i class="fa-solid fa-user-pen"></i></td>
+                    <td><a href="editarUsuario.php"><i class="fa-solid fa-user-pen"></i></a></td>
                 </tr>
             </tbody>
         </table>

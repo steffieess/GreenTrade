@@ -705,6 +705,7 @@ img {
     border-bottom: 1px solid #999;
     outline: none;
     background: transparent;
+    color: #222 !important;
 }
 
 .submit-btn {
@@ -848,10 +849,16 @@ img {
     margin-bottom: 10px;
 }
 
+.table-user a{
+    color: #222;
+}
 
+.table-user a:hover{
+    color: var(--main-color);
+}
 
 .table {
-    width: 100%;
+    width: 1500px;
     text-align: left;
     border-collapse: collapse;
     align-content: center;
@@ -865,6 +872,12 @@ img {
 th,
 td {
     padding: 20px;
+    height: 40px;
+    font-size: 15px;
+    max-width: 90px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
 }
 
 thead {
@@ -878,7 +891,9 @@ tr:nth-child(even) {
 }
 
 tr:hover td {
-    background-color: #E5E7E9;
+    background-color: #eaecee;
+    color: tr;
+    color: #777;
     
 }
 .card .btn {
@@ -888,5 +903,9 @@ tr:hover td {
 .card .btn:hover {
     background-color: var(--black);
     color: #fff;
+}
+
+.table-user .btn:hover{
+    border-color: #fff;
 }
 /*users styles ends*/
