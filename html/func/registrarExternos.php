@@ -1,14 +1,14 @@
 <?php
 require 'mantenedor.php';
 
-if (isset($_POST['regUsuario'])) {
+if (isset($_POST['regUsuarioExt'])) {
 
-    $rut_user = $_POST['rutUsuario'];
-    $nom_user = $_POST['nomUsuario'];
-    $appat_user = $_POST['appUsuario'];
-    $apmat_user = $_POST['apmUsuario'];
-    $mail_user = $_POST['mailUsuario'];
-    $tel_user = $_POST['telUsuario'];
+    $rut_user = $_POST['rutUsuarioExt'];
+    $nom_user = $_POST['nomUsuarioExt'];
+    $appat_user = $_POST['appUsuarioExt'];
+    $apmat_user = $_POST['apmUsuarioExt'];
+    $mail_user = $_POST['mailUsuarioExt'];
+    $tel_user = $_POST['telUsuarioExt'];
     
 
     $queryUsuario = "SELECT * FROM usuario WHERE rut_usuario =  '$rut_user'";
@@ -17,7 +17,7 @@ if (isset($_POST['regUsuario'])) {
 
     if ($sqlcantidad <= 0) {
         $queryClave = substr($rut_user,0,8); 
-        $queryInsertUsuario = "INSERT INTO usuario(rut_usuario, nom_usuario, ap_paterno, ap_materno, password, mail_usuario, tel_usuario, tipo_usu_id_tipousu, empresa_id_empresa) VALUES  ('$rut_user','$nom_user', '$appat_user', '$apmat_user', '$queryClave', '$mail_user','$tel_user', 0, 2, '$idEmpresaM')";
+        $queryInsertUsuario = "INSERT INTO usuario(rut_usuario, nom_usuario, ap_paterno, ap_materno, password, mail_usuario, tel_usuario, status, tipo_usu_id_tipousu, empresa_id_empresa) VALUES  ('$rut_user','$nom_user', '$appat_user', '$apmat_user', '$queryClave', '$mail_user','$tel_user', 0, 2, '$idEmpresaM')";
         $resultUsuario = mysqli_query($connc, $queryInsertUsuario);
 
         if ($resultUsuario) {
@@ -27,15 +27,15 @@ if (isset($_POST['regUsuario'])) {
         } else {
             $_SESSION['message'] = 'Error al crear usuario';
             $_SESSION['message_type'] = 'Error';
-            echo "<script> window.location='../pages/registroUsuario.php'; </script>";
+            echo "<script> window.location='../pages/registroUsuarioExterno.php'; </script>";
         }
     } else {
         $_SESSION['message'] = 'Usuario ya registrado';
         $_SESSION['message_type'] = 'Error';
-        echo "<script> window.location='../pages/registroUsuario.php'; </script>";
+        echo "<script> window.location='../pages/registroUsuarioExterno.php'; </script>";
     }
 } else {
     $_SESSION['message'] = 'Error';
     $_SESSION['message_type'] = 'Error';
-    echo "<script> window.location='../pages/registroUsuario.php'; </script>";
+    echo "<script> window.location='../pages/registroUsuarioExterno.php'; </script>";
 }

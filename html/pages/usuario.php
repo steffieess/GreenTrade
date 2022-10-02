@@ -42,15 +42,25 @@
 <section>
     <h1 class="heading-title"> Usuarios </h1>
     <div class="text-end">
-        <a href="registroUsuario.php" class="btn">Nuevo Usuario Colaborador</a>
-        <a href="registroEmpresa.php" class="btn">Nuevo Usuario Externo</a>
+        <?php
+            if ($tipoUsu == 1) {
+
+        ?>
+            <a href="registroUsuario.php" class="btn">Nuevo Usuario Colaborador</a>
+        <?php } ?>
+        <?php
+            if ($tipoUsu == 2) {
+
+        ?>
+            <a href="registroEmpresa.php" class="btn">Nuevo Usuario Externo</a>
+        <?php } ?>
     </div>
-    
+
     <?php
-      $querySuppliers = "SELECT * FROM usuario INNER JOIN empresa ON usuario.empresa_id_empresa = empresa.id_empresa  WHERE tipo_usu_id_tipousu = 2 AND empresa_id_empresa = '$idEmpresaM'";
-      $queryUserSuppliers = mysqli_query($connc, $querySuppliers);
-      ?>
-      
+    $querySuppliers = "SELECT * FROM usuario INNER JOIN empresa ON usuario.empresa_id_empresa = empresa.id_empresa  WHERE tipo_usu_id_tipousu = 2 AND empresa_id_empresa = '$idEmpresaM'";
+    $queryUserSuppliers = mysqli_query($connc, $querySuppliers);
+    ?>
+
     <div class="table-responsive">
         <div class="col-md-8 table-user ">
             <table class="table">
@@ -68,20 +78,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                <?php if (mysqli_num_rows($queryUserSuppliers) != 0) { ?>
-                <?php while ($dataUserSuppliers = mysqli_fetch_array($queryUserSuppliers)) { ?>
-                    <tr>
-                        <td><?php echo $dataUserSuppliers['rut_usuario']; ?></td>
-                        <td><?php echo $dataUserSuppliers['nom_usuario']; ?></td>
-                        <td><?php echo $dataUserSuppliers['ap_paterno']; ?></td>
-                        <td><?php echo $dataUserSuppliers['ap_materno']; ?></td>
-                        <td><?php echo $dataUserSuppliers['mail_usuario']; ?></td>
-                        <td><?php echo $dataUserSuppliers['tel_usuario']; ?></td>
-                        <td><?php echo $dataUserSuppliers['razon_social']; ?></td>
-                        <td>Habilitado</td>
-                        <td><a href="editarUsuario.php"><i class="fa-solid fa-user-pen"></i></a></td>
-                    </tr>
-                    <?php } ?>
+                    <?php if (mysqli_num_rows($queryUserSuppliers) != 0) { ?>
+                        <?php while ($dataUserSuppliers = mysqli_fetch_array($queryUserSuppliers)) { ?>
+                            <tr>
+                                <td><?php echo $dataUserSuppliers['rut_usuario']; ?></td>
+                                <td><?php echo $dataUserSuppliers['nom_usuario']; ?></td>
+                                <td><?php echo $dataUserSuppliers['ap_paterno']; ?></td>
+                                <td><?php echo $dataUserSuppliers['ap_materno']; ?></td>
+                                <td><?php echo $dataUserSuppliers['mail_usuario']; ?></td>
+                                <td><?php echo $dataUserSuppliers['tel_usuario']; ?></td>
+                                <td><?php echo $dataUserSuppliers['razon_social']; ?></td>
+                                <td>Habilitado</td>
+                                <td><a href="editarUsuario.php"><i class="fa-solid fa-user-pen"></i></a></td>
+                            </tr>
+                        <?php } ?>
                     <?php } else { ?>
 
                     <?php } ?>

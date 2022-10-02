@@ -3,37 +3,73 @@
 <!-- header section ends -->
 
 <!--body section starts-->
+
+<script>
+    <?php if (isset($_SESSION['message'])) { ?>
+        $(document).ready(function() {
+            setTimeout(clickbutton, 0);
+
+            function clickbutton() {
+                $("#btn-modal").click();
+            }
+        });
+        $(document).on('click', '#btn-modal', function() {
+            $('#modal-ejemplo').modal('show')
+        });
+    <?php } ?>
+</script>
+
+<button id="btn-modal" class="btn btn-primary" hidden>ABRIR MODAL </button>
+<?php if (isset($_SESSION['message'])) { ?>
+    <div class="modal fade" id="modal-ejemplo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><?php echo $_SESSION['message_type'] ?></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <?php echo $_SESSION['message'] ?>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php unset($_SESSION['message']);
+} ?>
+
 <section class="reg-user">
-    <h1 class="heading-title"> Crear Usuario Externo </h1>
+    <h1 class="heading-title"> Crear Usuario Externo</h1>
     <div>
-    <form action="../func/registroUsuario.php" id='regUser' class='input-group-regUser' method="POST">
-                
+    <form action="../func/registrarExternos.php" id='regUser' class='input-group-regUser' method="POST">
                 <div class="content">
-                    <label for="rutUsuario"><b>Rut Usuario</b></label>
-                    <input name="rutUsuario" type="text" class='input-field' placeholder="11111111-1" required>
+                    <label for="rutUsuarioExt"><b>Rut Usuario</b></label>
+                    <input name="rutUsuarioExt" type="text" class='input-field' placeholder="11111111-1" required>
                 </div>
                 <div class="content">
-                    <label for="nomUsuario"><b>Nombre Usuario</b></label>
-                    <input name="nomUsuario" type="text" class='input-field' placeholder="Nombre Usuario" required>
+                    <label for="nomUsuarioExt"><b>Nombre Usuario</b></label>
+                    <input name="nomUsuarioExt" type="text" class='input-field' placeholder="Nombre Usuario" required>
                 </div>
                 <div class="content">
-                    <label for="appUsuario"><b>Apellido Paterno Usuario</b></label>
-                    <input name="appUsuario" type="text" class='input-field' placeholder="Apellido Paterno" required>
+                    <label for="appUsuarioExt"><b>Apellido Paterno Usuario</b></label>
+                    <input name="appUsuarioExt" type="text" class='input-field' placeholder="Apellido Paterno" required>
                 </div>
                 <div class="content">
-                    <label for="apmUsuario"><b>Apellido Materno Usuario</b></label>
-                    <input name="apmUsuario" type="text" class='input-field' placeholder="Apellido Materno" required>
+                    <label for="apmUsuarioExt"><b>Apellido Materno Usuario</b></label>
+                    <input name="apmUsuarioExt" type="text" class='input-field' placeholder="Apellido Materno" required>
                 </div>
                 <div class="content">
-                    <label for="mailUsuario"><b>Correo Usuario</b></label>
-                    <input name="mailUsuario" type="text" class='input-field' placeholder="greentrade@greentrade.com" required>
+                    <label for="mailUsuarioExt"><b>Correo Usuario</b></label>
+                    <input name="mailUsuarioExt" type="text" class='input-field' placeholder="greentrade@greentrade.com" required>
                 </div>
                 <div class="content">
-                    <label for="telUsuario"><b>Teléfono Usuario</b></label>
-                    <input name="telUsuari" type="password" class='input-field' placeholder="Teléfono Usuario" required>
+                    <label for="telUsuarioExt"><b>Teléfono Usuario</b></label>
+                    <input name="telUsuarioExt" type="text" class='input-field' placeholder="Teléfono Usuario" required>
                 </div>
                 <div>
-                    <input class="submit-btn" type="submit" value="Registrar Usuario" name="regUsuario">
+                    <input class="submit-btn" type="submit" value="Registrar Usuario Externo" name="regUsuarioExt">
                 </div>
             </form>
     </div>  
