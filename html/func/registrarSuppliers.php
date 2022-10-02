@@ -16,8 +16,9 @@ if (isset($_POST['regUsuario'])) {
     $sqlcantidad = mysqli_num_rows($queryRutUsuario);
 
     if ($sqlcantidad <= 0) {
-        $queryClave = substr($rut_user,0,8); 
-        $queryInsertUsuario = "INSERT INTO usuario(rut_usuario, nom_usuario, ap_paterno, ap_materno, password, mail_usuario, tel_usuario, tipo_usu_id_tipousu, empresa_id_empresa) VALUES  ('$rut_user','$nom_user', '$appat_user', '$apmat_user', '$queryClave', '$mail_user','$tel_user', 0, 2, '$idEmpresaM')";
+        $queryClave = substr($rut_user,0,8);
+        $password = password_hash($queryClave, PASSWORD_BCRYPT);
+        $queryInsertUsuario = "INSERT INTO usuario(rut_usuario, nom_usuario, ap_paterno, ap_materno, password, mail_usuario, tel_usuario, status, tipo_usu_id_tipousu, empresa_id_empresa) VALUES  ('$rut_user','$nom_user', '$appat_user', '$apmat_user', '$password', '$mail_user','$tel_user', 0, 2, '$idEmpresaM')";
         $resultUsuario = mysqli_query($connc, $queryInsertUsuario);
 
         if ($resultUsuario) {

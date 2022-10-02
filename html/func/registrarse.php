@@ -43,7 +43,7 @@ if (isset($_POST['Registrar'])) {
                 $sqlcantidad = mysqli_num_rows($queryRutUsuario);
 
                 if ($sqlcantidad <= 0) {
-                    $queryInsertUsuario = "INSERT INTO usuario(rut_usuario, nom_usuario, ap_paterno, ap_materno, password, mail_usuario, tel_usuario, tipo_usu_id_tipousu, empresa_id_empresa) VALUES  ('$rut_user','$nom_user', '$appat_user', '$apmat_user', '$password', '$mail_user','$tel_user', 1, '$id_empresa')";
+                    $queryInsertUsuario = "INSERT INTO usuario(rut_usuario, nom_usuario, ap_paterno, ap_materno, password, mail_usuario, tel_usuario, status, tipo_usu_id_tipousu, empresa_id_empresa) VALUES  ('$rut_user','$nom_user', '$appat_user', '$apmat_user', '$password', '$mail_user','$tel_user', 0, 1, '$id_empresa')";
                     $resultUsuario = mysqli_query($connc, $queryInsertUsuario);
 
                     if ($resultUsuario) {

@@ -3,7 +3,7 @@ require '../../database/database.php';
 
 if (isset($_SESSION['usuarios_rut'])) {
     $rutUserM = $_SESSION['usuarios_rut'];
-    $sqlUserM="SELECT u.rut_usuario, u.nom_usuario, e.mail_empresa, e.id_empresa, u.tipo_usu_id_tipousu, e.usuario_empresa FROM usuario u INNER JOIN empresa e on u.rut_usuario = e.usuario_empresa WHERE rut_usuario = '$rutUserM'";
+    $sqlUserM="SELECT u.rut_usuario, u.nom_usuario, e.mail_empresa, e.id_empresa, u.tipo_usu_id_tipousu, e.usuario_empresa FROM usuario u INNER JOIN empresa e on u.empresa_id_empresa  = e.id_empresa  WHERE u.rut_usuario = '$rutUserM'";
     $queryUserM = mysqli_query($connc, $sqlUserM);
 
     $sqlcantidadM = mysqli_num_rows($queryUserM);
