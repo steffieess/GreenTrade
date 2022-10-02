@@ -13,7 +13,7 @@ if (isset($_SESSION['usuarios_rut'])) {
       $idEmpresaM = $dataUserM['id_empresa'];
       $mailM = $dataUserM['mail_empresa'];
       $rutP = $dataUserM['rut_usuario'];
-      $nombreP = $dataUserM['rut_usuario'];
+      $nombreP = $dataUserM['nom_usuario'];
     }else{
     }
   }else {
