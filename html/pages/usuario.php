@@ -3,12 +3,12 @@
 <!-- header section ends -->
 
 <!--body section starts-->
-<section class="table-user">
+<section>
     <h1 class="heading-title"> Usuarios </h1>
     <div class="text-end">
         <a href="registroUsuario.php" class="btn">Nuevo Usuario</a>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-8 table-user">
         <table class="table">
             <thead>
                 <tr>

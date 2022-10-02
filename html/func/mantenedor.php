@@ -8,8 +8,9 @@ if (isset($_SESSION['usuarios_rut'])) {
 
     $dataUserM = mysqli_fetch_array($queryUserM);
 
-    $empresa= $dataUserM['mail_empresa'];
+    $mailM = $dataUserM['mail_empresa'];
     $rutP = $dataUserM['rut_usuario'];
+    $nombreP = $dataUserM['rut_usuario'];
 
   }else {
     

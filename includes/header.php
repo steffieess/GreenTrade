@@ -1,6 +1,7 @@
 <?php include("../func/mantenedor.php"); ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -143,10 +144,15 @@
                <li><a href="usuario.php" class="nav-link px-2 text-white" style="font-size: 15px;">Usuarios</a></li>
 
             </ul>
-            <div class="text-end">
-               <a href="login_register.php" class="btn">Ingresar</a>
-            </div>
+            <?php if (!empty($dataUserM)) : ?>
+               <div class="text-end">
+                  <a href="../func/salir.php" class="btn">Salir</a>
+               </div>
+            <?php else : ?>
+               <div class="text-end">
+                  <a href="login_register.php" class="btn">Ingresar</a>
+               </div>
+            <?php endif ?>
          </div>
       </div>
-
    </header>

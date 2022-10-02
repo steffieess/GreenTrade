@@ -7,7 +7,13 @@
     <div id='login-form' class='login-page'>
 
         <div class="form-box">
-
+            <?php if (isset($_SESSION['message'])) { ?>
+                <div class="alert alert-<?= $_SESSION['message_type']; ?> alert-dismissible show" role="alert">
+                    <?= $_SESSION['message'] ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php unset($_SESSION['message']);
+            } ?>
             <div class='button-box'>
                 <div id='btn'></div>
                 <button type='button' onclick='login()' class='toggle-btn'><b>Log In</b></button>
@@ -75,13 +81,13 @@
                         <input name="tel_user" type="text" class='input-field' placeholder="Teléfono" required>
                     </div>
                     <div class="content">
-                            <label for="clave_user"><b>Crear contraseña representante</b></label>
-                            <input name="clave_user" type="password" class='input-field' placeholder="••••••••••••" required>
-                        </div>
-                        <div class="content">
-                            <label for="clave_user_valid"><b>Repita contraseña creada</b></label>
-                            <input name="clave_user_valid" type="password" class='input-field' placeholder="••••••••••••" required>
-                        </div>
+                        <label for="clave_user"><b>Crear contraseña representante</b></label>
+                        <input name="clave_user" type="password" class='input-field' placeholder="••••••••••••" required>
+                    </div>
+                    <div class="content">
+                        <label for="clave_user_valid"><b>Repita contraseña creada</b></label>
+                        <input name="clave_user_valid" type="password" class='input-field' placeholder="••••••••••••" required>
+                    </div>
                     <div>
                         <input class="submit-btn" type="submit" value="Registrar" name="Registrar">
                     </div>

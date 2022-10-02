@@ -41,17 +41,27 @@ if (isset($_POST['Registrar'])) {
                 $resultUsuario = mysqli_query($connc, $queryInsertUsuario);
 
                 if ($resultUsuario) {
-                    echo "<script>alert('Usuario y empresa creado exitosamente');window.location= '../pages/login_register.php'</script>";
+                    $_SESSION['message'] = 'Usuario y empresa creado exitosamente';
+                    $_SESSION['message_type'] = 'danger';
+                    echo "<script> window.location='../pages/login_register.php'; </script>";
                 } else {
-                    echo "<script>alert('Error al crear usuario');window.location= '../pages/login_register.php'</script>";
+                    $_SESSION['message'] = 'Error al crear usuario';
+                    $_SESSION['message_type'] = 'danger';
+                    echo "<script> window.location='../pages/login_register.php'; </script>";
                 }
-            }else{
-                echo "<script>alert('Usuario ya existente');window.location= '../pages/login_register.php'</script>";
+            } else {
+                $_SESSION['message'] = 'Usuario ya registrado';
+                $_SESSION['message_type'] = 'danger';
+                echo "<script> window.location='../pages/login_register.php'; </script>";
             }
         } else {
-            echo "<script>alert('Error al crear empresa');window.location= '../pages/login_register.php'</script>";
+            $_SESSION['message'] = 'Error al crear empresa';
+            $_SESSION['message_type'] = 'danger';
+            echo "<script> window.location='../pages/login_register.php'; </script>";
         }
     } else {
-        echo "<script>alert('Contraseñas no coinciden');window.location= '../pages/login_register.php'</script>";
+        $_SESSION['message'] = 'Contraseñas no coinciden';
+        $_SESSION['message_type'] = 'danger';
+        echo "<script> window.location='../pages/login_register.php'; </script>";
     }
 }
