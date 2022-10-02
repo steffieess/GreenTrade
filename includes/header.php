@@ -143,6 +143,8 @@
                <li><a href="" class="nav-link px-2 text-white" style="font-size: 15px;">Premium</a></li>
                <li><a href="" class="nav-link px-2 text-white" style="font-size: 15px;">Visión</a></li>
                <li><a href="usuario.php" class="nav-link px-2 text-white" style="font-size: 15px;">Usuarios</a></li>
+               <li><a href="importaciones.php" class="nav-link px-2 text-white" style="font-size: 15px;">Importaciones</a></li>
+               <li><a href="exportaciones.php" class="nav-link px-2 text-white" style="font-size: 15px;">Exportaciones</a></li>
                <?php else : ?>
                <li><a href="inicio.php"><img src="../img/logo.png.png" alt=""></a></li>
                <li><a href="inicio.php" class="nav-link px-2 text-white" style="font-size: 15px;">GreenTrade</a></li>
