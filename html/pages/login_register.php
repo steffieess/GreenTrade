@@ -17,8 +17,6 @@
     <?php } ?>
 </script>
 
-
-
 <button id="btn-modal" class="btn btn-primary" hidden>ABRIR MODAL </button>
 <?php if (isset($_SESSION['message'])) { ?>
     <div class="modal fade" id="modal-ejemplo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">

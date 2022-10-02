@@ -20,21 +20,21 @@ if (isset($_POST['regUsuario'])) {
         $resultUsuario = mysqli_query($connc, $queryInsertUsuario);
 
         if ($resultUsuario) {
-            $_SESSION['message'] = 'Usuario y empresa creados exitosamente';
+            $_SESSION['message'] = 'Usuario creado exitosamente';
             $_SESSION['message_type'] = 'Exitoso';
-            echo "<script> window.location='../pages/login_register.php'; </script>";
+            echo "<script> window.location='../pages/usuario.php'; </script>";
         } else {
             $_SESSION['message'] = 'Error al crear usuario';
             $_SESSION['message_type'] = 'Error';
-            echo "<script> window.location='../pages/login_register.php'; </script>";
+            echo "<script> window.location='../pages/registroUsuario.php'; </script>";
         }
     } else {
         $_SESSION['message'] = 'Usuario ya registrado';
         $_SESSION['message_type'] = 'Error';
-        echo "<script> window.location='../pages/login_register.php'; </script>";
+        echo "<script> window.location='../pages/registroUsuario.php'; </script>";
     }
 } else {
-    $_SESSION['message'] = 'Error al crear empresa';
+    $_SESSION['message'] = 'Error';
     $_SESSION['message_type'] = 'Error';
-    echo "<script> window.location='../pages/login_register.php'; </script>";
+    echo "<script> window.location='../pages/registroUsuario.php'; </script>";
 }
