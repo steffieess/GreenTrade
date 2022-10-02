@@ -27,7 +27,7 @@ if ($sqlcantidad > 0) {
 
 if ($pasa == 1) {
     $_SESSION['usuarios_rut'] = $rut;
-    echo "<script>alert('Ingreso exitoso');window.location= '../pages/homepage.php'</script>";
+    echo "<script> window.location='../pages/homepage.php'; </script>";
 } else {
     echo "<script>alert('Error al ingresasr');window.location= '../pages/login_register.php'</script>";
 }
