@@ -6,7 +6,7 @@
 <section class="reg-user">
     <h1 class="heading-title"> Crear Usuario </h1>
     <div>
-    <form action="../func/registroUsuario.php" id='regUser' class='input-group-regUser' method="POST">
+    <form action="../func/registrarSuppliers.php" id='regUser' class='input-group-regUser' method="POST">
                 <div class="content">
                     <label for="rutUsuario"><b>Rut Usuario</b></label>
                     <input name="rutUsuario" type="text" class='input-field' placeholder="11111111-1" required>
@@ -29,7 +29,7 @@
                 </div>
                 <div class="content">
                     <label for="telUsuario"><b>Teléfono Usuario</b></label>
-                    <input name="telUsuari" type="password" class='input-field' placeholder="Teléfono Usuario" required>
+                    <input name="telUsuario" type="text" class='input-field' placeholder="Teléfono Usuario" required>
                 </div>
                 <div>
                     <input class="submit-btn" type="submit" value="Registrar Usuario" name="regUsuario">

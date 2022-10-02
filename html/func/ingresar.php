@@ -16,20 +16,19 @@ if ($sqlcantidad > 0) {
         $rut = $dataDE['rut_usuario'];
         if (password_verify($clave, $dataDE['password'])) {
             $pasa = 1;
-        }else{
-            echo "<script>alert('Contraseña incorrecta');window.location= '../pages/login_register.php'</script>";
+        } else {
+            $_SESSION['message'] = 'Contraseña incorrecta';
+            $_SESSION['message_type'] = 'Error';
+            echo "<script> window.location='../pages/login_register.php'; </script>";
         }
     }
-    
-}else{
-    echo "<script>alert('Correo inexistente');window.location= '../pages/login_register.php'</script>";
+} else {
+    $_SESSION['message'] = 'Correo inexistente';
+    $_SESSION['message_type'] = 'Error';
+    echo "<script> window.location='../pages/login_register.php'; </script>";
 }
 
 if ($pasa == 1) {
     $_SESSION['usuarios_rut'] = $rut;
     echo "<script> window.location='../pages/homepage.php'; </script>";
-} else {
-    echo "<script>alert('Error al ingresasr');window.location= '../pages/login_register.php'</script>";
-}
-
-?>
+} 
