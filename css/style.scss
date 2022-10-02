@@ -909,5 +909,11 @@ tr:hover td {
 .table-user .btn:hover{
     border-color: #fff;
 }
+.table-user i:hover{
+    color: var(--main-color);
+}
+.table-user i{
+    margin-left: 30px;
+}
 /*users styles ends*/
 
