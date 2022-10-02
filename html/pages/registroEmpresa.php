@@ -12,7 +12,7 @@
                     <input name="rutUsuario" type="text" class='input-field' placeholder="11111111-1" required>
                 </div>
                 <div class="content">
-                    <label for="nomUsuario"><b>Nombre Dirección Empresa</b></label>
+                    <label for="nomUsuario"><b>Dirección Empresa</b></label>
                     <input name="nomUsuario" type="text" class='input-field' placeholder="Nombre Usuario" required>
                 </div>
                 <div class="content">
