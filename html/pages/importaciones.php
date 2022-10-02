@@ -6,52 +6,68 @@
 <section>
     <h1 class="heading-title"> Importaciones </h1>
     <div class="text-end">
-        <a href="registroUsuario.php" class="btn">Nueva Importación</a>
+        <a href="nuevaImportacion.php" class="btn">Nueva Importación</a>
     </div>
     <div class="col-md-8 table-user">
         <table class="table">
             <thead>
                 <tr>
-                    <th>Rut</th>
-                    <th>Nombre</th>
-                    <th>Apellido Paterno</th>
-                    <th>Apellido Materno</th>
-                    <th>Correo</th>
-                    <th>Teléfono</th>
-                    <th>Estado</th>
-                    <th>Modificar</th>
+                    <th>N° de Orden</th>
+                    <th>País de Origen</th>
+                    <th>País de Destino</th>
+                    <th>Embarque</th>
+                    <th>Desembarque</th>
+                    <th>Peso Estimado</th>
+                    <th>Volumen Estimado</th>
+                    <th>Incotem</th>
+                    <th>Tipo de Contenedor</th>
+                    <th>Cantidaad de Contenedores</th>
+                    <th>Documentación Asociada</th>
+                    <th>Observaciones</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>11.111.111-2</td>
-                    <td>Victor</td>
-                    <td>Navarro</td>
-                    <td>Ruíz</td>
-                    <td>vnavarro@greentrade.cl</td>
-                    <td>+56911111111</td>
-                    <td>Habilitado</td>
-                    <td><a href="editarUsuario.php"><i class="fa-solid fa-user-pen"></i></a></td>
+                    <td>7008960</td>
+                    <td>Panamá</td>
+                    <td>Chile</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>105 KG</td>
+                    <td>aaa</td>
+                    <td>aaa</td>
+                    <td>aaa</td>
+                    <td>1</td>
+                    <td><div class="doc"><a href="#"> <i class="fa-solid fa-file"></i><i class="fa-solid fa-eye"></i> </a></div></td>
+                    <td>La embarcación tiene retrasos debido a retención en custodia</td>
                 </tr>
                 <tr>
-                    <td>11.111.111-2</td>
-                    <td>Victor</td>
-                    <td>Navarro</td>
-                    <td>Ruíz</td>
-                    <td>vnavarro@greentrade.cl</td>
-                    <td>+56911111111</td>
-                    <td>Habilitado</td>
-                    <td><a href="editarUsuario.php"><i class="fa-solid fa-user-pen"></i></a></td>
+                <td>7008980</td>
+                    <td>Panamá</td>
+                    <td>Chile</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>105 KG</td>
+                    <td>aaa</td>
+                    <td>aaa</td>
+                    <td>aaa</td>
+                    <td>1</td>
+                    <td><div class="doc"><a href="#"> <i class="fa-solid fa-file"></i><i class="fa-solid fa-eye"></i> </a></div></td>
+                    <td>Ninguna</td>
                 </tr>
                 <tr>
-                    <td>11.111.111-2</td>
-                    <td>Victor</td>
-                    <td>Navarro</td>
-                    <td>Ruíz</td>
-                    <td>vnavarro@greentrade.cl</td>
-                    <td>+56911111111</td>
-                    <td>Habilitado</td>
-                    <td><a href="editarUsuario.php"><i class="fa-solid fa-user-pen"></i></a></td>
+                <td>7008401</td>
+                    <td>Panamá</td>
+                    <td>Chile</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>105 KG</td>
+                    <td>aaa</td>
+                    <td>aaa</td>
+                    <td>aaa</td>
+                    <td>1</td>
+                    <td><div class="doc"><a href="#"> <i class="fa-solid fa-file"></i><i class="fa-solid fa-eye"></i> </a></div></td>
+                    <td>Ninguna</td>
                 </tr>
             </tbody>
         </table>

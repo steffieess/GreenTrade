@@ -845,7 +845,7 @@ img {
 }
 /*navegacion de imagenes ends*/
 
-/*users styles starts*/
+/*tables styles starts*/
 .form-group input {
     margin-bottom: 10px;
 }
@@ -915,5 +915,24 @@ tr:hover td {
 .table-user i{
     margin-left: 30px;
 }
-/*users styles ends*/
+.table .doc:hover{
+    color: var(--main-color);
+}
+/*tables styles ends*/
+.reg-import label{
+    font-size: 15px;
+}
+.reg-user label{
+    font-size: 15px;
+}
+.submit-btn{
+    font-size: 15px;
+}
+.form-control{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
+.submit-btn{
+    font-weight: bold;
+}
