@@ -6,7 +6,12 @@
 <section>
     <h1 class="heading-title"> Reciclaje </h1>
     <div class="text-end">
-        <a href="crearSolicitud.php" class="btn">Crear solicitud de Reciclaje</a>
+        <?php
+        if ($tipoUsu == 2) {
+
+        ?>
+            <a href="crearSolicitud.php" class="btn">Crear solicitud de Reciclaje</a>
+        <?php } ?>
     </div>
     <div class="table-responsive">
         <div class="col-md-8 table-user">

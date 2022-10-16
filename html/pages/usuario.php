@@ -52,7 +52,7 @@
             if ($tipoUsu == 2) {
 
         ?>
-            <a href="registroEmpresa.php" class="btn">Nuevo Usuario Externo</a>
+            <a href="registroUsuarioExterno.php" class="btn">Nuevo Usuario Externo</a>
         <?php } ?>
     </div>
 

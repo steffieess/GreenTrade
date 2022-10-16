@@ -125,10 +125,10 @@
       border: #222;
    }
 
-   .modal-open{
-     overflow: hidden; 
-     padding-right: 0px !important;
-   } 
+   .modal-open {
+      overflow: hidden;
+      padding-right: 0px !important;
+   }
 </style>
 
 <body>
@@ -142,28 +142,33 @@
             </a>
 
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <?php if (!empty($dataUserM)) : ?>
-               <li><a href="inicio.php"><img src="../img/logo.png.png" alt=""></a></li>
-               <li><a href="inicio.php" class="nav-link px-2 text-white" style="font-size: 15px;">GreenTrade</a></li>
-               <li><a href="homepage.php" class="nav-link px-2 text-white" style="font-size: 15px;">Inicio</a></li>
-               <li><a href="importaciones.php" class="nav-link px-2 text-white" style="font-size: 15px;">Importaciones</a></li>
-               <li><a href="exportaciones.php" class="nav-link px-2 text-white" style="font-size: 15px;">Exportaciones</a></li>
-               <li><a href="usuario.php" class="nav-link px-2 text-white" style="font-size: 15px;">Usuarios</a></li>
-               <li><a href="empresa.php" class="nav-link px-2 text-white" style="font-size: 15px;">Empresas</a></li>
-               <li><a href="reciclaje.php" class="nav-link px-2 text-white" style="font-size: 15px;">Reciclaje</a></li>
-               <li><a href="solicitudes.php" class="nav-link px-2 text-white" style="font-size: 15px;">Solicitudes</a></li>
-               <li><a href="historial.php" class="nav-link px-2 text-white" style="font-size: 15px;">Historial</a></li>
-               
+               <?php if (!empty($dataUserM)) : ?>
+                  <?php if ($tipoUsu == 1 || $tipoUsu == 2) : ?>
+                     <li><a href="inicio.php"><img src="../img/logo.png.png" alt=""></a></li>
+                     <li><a href="inicio.php" class="nav-link px-2 text-white" style="font-size: 15px;">GreenTrade</a></li>
+                     <li><a href="homepage.php" class="nav-link px-2 text-white" style="font-size: 15px;">Inicio</a></li>
+                     <li><a href="importaciones.php" class="nav-link px-2 text-white" style="font-size: 15px;">Importaciones</a></li>
+                     <li><a href="exportaciones.php" class="nav-link px-2 text-white" style="font-size: 15px;">Exportaciones</a></li>
+                     <li><a href="usuario.php" class="nav-link px-2 text-white" style="font-size: 15px;">Usuarios</a></li>
+                     <li><a href="empresa.php" class="nav-link px-2 text-white" style="font-size: 15px;">Empresas</a></li>
+                     <li><a href="reciclaje.php" class="nav-link px-2 text-white" style="font-size: 15px;">Reciclaje</a></li>
+                  <?php endif ?>
+
+                  <?php if ($tipoUsu == 8) : ?>
+                  <li><a href="solicitudes.php" class="nav-link px-2 text-white" style="font-size: 15px;">Solicitudes</a></li>
+                  <li><a href="historial.php" class="nav-link px-2 text-white" style="font-size: 15px;">Historial</a></li>
+                  <?php endif ?>
+
                <?php else : ?>
-               <li><a href="inicio.php"><img src="../img/logo.png.png" alt=""></a></li>
-               <li><a href="inicio.php" class="nav-link px-2 text-white" style="font-size: 15px;">GreenTrade</a></li>
-               <li><a href="" class="nav-link px-2 text-white" style="font-size: 15px;">Premium</a></li>
-               <li><a href="" class="nav-link px-2 text-white" style="font-size: 15px;">Visión</a></li>
+                  <li><a href="inicio.php"><img src="../img/logo.png.png" alt=""></a></li>
+                  <li><a href="inicio.php" class="nav-link px-2 text-white" style="font-size: 15px;">GreenTrade</a></li>
+                  <li><a href="" class="nav-link px-2 text-white" style="font-size: 15px;">Premium</a></li>
+                  <li><a href="" class="nav-link px-2 text-white" style="font-size: 15px;">Visión</a></li>
                <?php endif ?>
             </ul>
             <?php if (!empty($dataUserM)) : ?>
                <div class="text-end">
-                  <a href="../func/salir.php" class="btn"><i class="fa-solid fa-right-from-bracket"></i>    Salir</a>
+                  <a href="../func/salir.php" class="btn"><i class="fa-solid fa-right-from-bracket"></i> Salir</a>
                </div>
             <?php else : ?>
                <div class="text-end">

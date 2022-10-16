@@ -43,36 +43,50 @@
 <section class="reg-user">
     <h1 class="heading-title"> Crear Usuario Externo</h1>
     <div>
-    <form action="../func/registrarExternos.php" id='regUser' class='input-group-regUser' method="POST">
-                <div class="content">
-                    <label for="rutUsuarioExt"><b>Rut Usuario</b></label>
-                    <input name="rutUsuarioExt" type="text" class='input-field' placeholder="11111111-1" required>
-                </div>
-                <div class="content">
-                    <label for="nomUsuarioExt"><b>Nombre Usuario</b></label>
-                    <input name="nomUsuarioExt" type="text" class='input-field' placeholder="Nombre Usuario" required>
-                </div>
-                <div class="content">
-                    <label for="appUsuarioExt"><b>Apellido Paterno Usuario</b></label>
-                    <input name="appUsuarioExt" type="text" class='input-field' placeholder="Apellido Paterno" required>
-                </div>
-                <div class="content">
-                    <label for="apmUsuarioExt"><b>Apellido Materno Usuario</b></label>
-                    <input name="apmUsuarioExt" type="text" class='input-field' placeholder="Apellido Materno" required>
-                </div>
-                <div class="content">
-                    <label for="mailUsuarioExt"><b>Correo Usuario</b></label>
-                    <input name="mailUsuarioExt" type="text" class='input-field' placeholder="greentrade@greentrade.com" required>
-                </div>
-                <div class="content">
-                    <label for="telUsuarioExt"><b>Teléfono Usuario</b></label>
-                    <input name="telUsuarioExt" type="text" class='input-field' placeholder="Teléfono Usuario" required>
-                </div>
-                <div>
-                    <input class="submit-btn" type="submit" value="Registrar Usuario Externo" name="regUsuarioExt">
-                </div>
-            </form>
-    </div>  
+        <form action="../func/registrarExternos.php" id='regUser' class='input-group-regUser' method="POST">
+            <?php
+            $sqlEmpresa = ("SELECT * FROM empresa");
+            $dataEmpresa = mysqli_query($connc, $sqlEmpresa);
+            ?>
+            <div class="form-group">
+                <label for="id_empExt"><b>Empresa Perteneciente</b></label>
+                <select class="form-control" name="id_empExt" id="id_empExt">
+                    <?php while ($rowEmpresa = mysqli_fetch_array($dataEmpresa)) { ?>
+                        <option class="form-control" value="<?php echo $rowEmpresa['id_empresa']; ?>">
+                            <?php echo $rowEmpresa['razon_social']; ?>
+                        </option>
+                    <?php } ?>
+                </select>
+            </div>
+            <div class="content">
+                <label for="rutUsuarioExt"><b>Rut Usuario</b></label>
+                <input name="rutUsuarioExt" type="text" class='input-field' placeholder="11111111-1" required>
+            </div>
+            <div class="content">
+                <label for="nomUsuarioExt"><b>Nombre Usuario</b></label>
+                <input name="nomUsuarioExt" type="text" class='input-field' placeholder="Nombre Usuario" required>
+            </div>
+            <div class="content">
+                <label for="appUsuarioExt"><b>Apellido Paterno Usuario</b></label>
+                <input name="appUsuarioExt" type="text" class='input-field' placeholder="Apellido Paterno" required>
+            </div>
+            <div class="content">
+                <label for="apmUsuarioExt"><b>Apellido Materno Usuario</b></label>
+                <input name="apmUsuarioExt" type="text" class='input-field' placeholder="Apellido Materno" required>
+            </div>
+            <div class="content">
+                <label for="mailUsuarioExt"><b>Correo Usuario</b></label>
+                <input name="mailUsuarioExt" type="text" class='input-field' placeholder="greentrade@greentrade.com" required>
+            </div>
+            <div class="content">
+                <label for="telUsuarioExt"><b>Teléfono Usuario</b></label>
+                <input name="telUsuarioExt" type="text" class='input-field' placeholder="Teléfono Usuario" required>
+            </div>
+            <div>
+                <input class="submit-btn" type="submit" value="Registrar Usuario Externo" name="regUsuarioExt">
+            </div>
+        </form>
+    </div>
     </div>
 </section>
 <!--body section ends-->
