@@ -40,45 +40,48 @@
 <section>
     <h1 class="heading-title"> Empresas </h1>
     <div class="text-end">
-        <a href="registroEmpresa.php" class="btn">Crear nueva Empresa</a>
+        <?php
+        if ($tipoUsu == 2) {
+
+        ?>
+            <a href="registroEmpresa.php" class="btn">Crear nueva Empresa</a>
+        <?php } ?>
     </div>
+
+    <?php
+    $queryEmpresa = "SELECT * FROM empresa INNER JOIN tipo_empresa ON empresa.tipo_empresa_id_tipoempresa = tipo_empresa.id_tipoempresa WHERE usuario_empresa = '$usuEmpresaM' AND tipo_empresa_id_tipoempresa > 1 ";
+    $queryEmpresaList = mysqli_query($connc, $queryEmpresa);
+    ?>
+
     <div class="table-responsive">
-    <div class="col-md-8 table-user">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Tipo Empresa</th>
-                    <th>Razón Social</th>
-                    <th>Dirección Empresa</th>
-                    <th>Teléfono Empresa</th>
-                    <th>Correo Empresa</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>aa</td>
-                    <td>Deportes</td>
-                    <td>Calle Nueva 0610<i class="fa-solid fa-pen-to-square"></i></td>
-                    <td>+56976809134<i class="fa-solid fa-pen-to-square"></i></td>
-                    <td>empresa@empresa.cl<i class="fa-solid fa-pen-to-square"></i></td>
-                </tr>
-                <tr>
-                    <td>aa</td>
-                    <td>Deportes</td>
-                    <td>Calle Nueva 0610<i class="fa-solid fa-pen-to-square"></i></td>
-                    <td>+56976809134<i class="fa-solid fa-pen-to-square"></i></td>
-                    <td>empresa@empresa.cl<i class="fa-solid fa-pen-to-square"></i></td>
-                </tr>
-                <tr>
-                    <td>aa</td>
-                    <td>Deportes</td>
-                    <td>Calle Nueva 0610<i class="fa-solid fa-pen-to-square"></i></td>
-                    <td>+56976809134<i class="fa-solid fa-pen-to-square"></i></td>
-                    <td>empresa@empresa.cl<i class="fa-solid fa-pen-to-square"></i></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+        <div class="col-md-8 table-user">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Tipo Empresa</th>
+                        <th>Razón Social</th>
+                        <th>Dirección Empresa</th>
+                        <th>Teléfono Empresa</th>
+                        <th>Correo Empresa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php if (mysqli_num_rows($queryEmpresaList) != 0) { ?>
+                        <?php while ($dataEmpresa = mysqli_fetch_array($queryEmpresaList)) { ?>
+                            <tr>
+                                <td><?php echo $dataEmpresa['nom_tipoempresa']; ?></td>
+                                <td><?php echo $dataEmpresa['razon_social']; ?></td>
+                                <td><?php echo $dataEmpresa['direccion_empresa']; ?><i class="fa-solid fa-pen-to-square"></i></td>
+                                <td><?php echo $dataEmpresa['tel_empresa']; ?><i class="fa-solid fa-pen-to-square"></i></td>
+                                <td><?php echo $dataEmpresa['mail_empresa']; ?><i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                        <?php } ?>
+                    <?php } else { ?>
+
+                    <?php } ?>
+                </tbody>
+            </table>
+        </div>
     </div>
 </section>
 
