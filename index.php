@@ -4,5 +4,5 @@
   session_unset();
 
   session_destroy();
- echo "<script> window.location='html/pages/inicio.php'; </script>";
+ echo "<script> window.location='html/pages/general/inicio.php'; </script>";
  ?> 

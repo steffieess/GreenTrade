@@ -1,5 +1,5 @@
 <?php
-require '../../database/database.php';
+require '../../../database/database.php';
 
 if (isset($_POST['Registrar'])) {
 
@@ -49,30 +49,30 @@ if (isset($_POST['Registrar'])) {
                     if ($resultUsuario) {
                         $_SESSION['message'] = 'Usuario y empresa creados exitosamente';
                         $_SESSION['message_type'] = 'Exitoso';
-                        echo "<script> window.location='../pages/login_register.php'; </script>";
+                        echo "<script> window.location='../pages/general/login_register.php'; </script>";
                     } else {
                         $_SESSION['message'] = 'Error al crear usuario';
                         $_SESSION['message_type'] = 'Error';
-                        echo "<script> window.location='../pages/login_register.php'; </script>";
+                        echo "<script> window.location='../pages/general/login_register.php'; </script>";
                     }
                 } else {
                     $_SESSION['message'] = 'Usuario ya registrado';
                     $_SESSION['message_type'] = 'Error';
-                    echo "<script> window.location='../pages/login_register.php'; </script>";
+                    echo "<script> window.location='../pages/general/login_register.php'; </script>";
                 }
             } else {
                 $_SESSION['message'] = 'Error al crear empresa';
                 $_SESSION['message_type'] = 'Error';
-                echo "<script> window.location='../pages/login_register.php'; </script>";
+                echo "<script> window.location='../pages/general/login_register.php'; </script>";
             }
         } else {
             $_SESSION['message'] = 'Empresa ya existente';
             $_SESSION['message_type'] = 'Error';
-            echo "<script> window.location='../pages/login_register.php'; </script>";
+            echo "<script> window.location='../pages/general/login_register.php'; </script>";
         }
     } else {
         $_SESSION['message'] = 'Contraseñas no coinciden';
         $_SESSION['message_type'] = 'Error';
-        echo "<script> window.location='../pages/login_register.php'; </script>";
+        echo "<script> window.location='../pages/general/login_register.php'; </script>";
     }
 }

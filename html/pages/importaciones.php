@@ -1,5 +1,5 @@
 <!-- header section starts  -->
-<?php include("../../includes/header.php"); ?>
+<?php include("../../../includes/header.php"); ?>
 <!-- header section ends -->
 
 <!--body section starts-->
@@ -10,7 +10,7 @@
         if ($tipoUsu == 2) {
 
         ?>
-            <a href="nuevaImportacion.php" class="btn">Nueva Importación</a>
+            <a href="IE/nuevaImportacion.php" class="btn">Nueva Importación</a>
         <?php } ?>
     </div>
     <?php
@@ -66,5 +66,5 @@
 <!--body section ends-->
 
 <!-- footer section starts  -->
-<?php include("../../includes/footer.php"); ?>
+<?php include("../../../includes/footer.php"); ?>
 <!-- footer section ends -->

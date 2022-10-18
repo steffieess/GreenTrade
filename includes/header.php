@@ -1,4 +1,4 @@
-<?php include("../func/mantenedor.php"); ?>
+<?php include("../../func/mantenedor.php"); ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -16,7 +16,7 @@
    <!-- CSS only -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
    <!-- CSS -->
-   <link rel="stylesheet" href="../../css/style.scss">
+   <link rel="stylesheet" href="../../../css/style.scss">
 </head>
 
 <style>
@@ -144,7 +144,7 @@
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                <?php if (!empty($dataUserM)) : ?>
                   <?php if ($tipoUsu == 1 || $tipoUsu == 2) : ?>
-                     <li><a href="inicio.php"><img src="../img/logo.png.png" alt=""></a></li>
+                     <li><a href="inicio.php"><img src="../../img/logo.png.png" alt=""></a></li>
                      <li><a href="inicio.php" class="nav-link px-2 text-white" style="font-size: 15px;">GreenTrade</a></li>
                      <li><a href="homepage.php" class="nav-link px-2 text-white" style="font-size: 15px;">Inicio</a></li>
                      <li><a href="importaciones.php" class="nav-link px-2 text-white" style="font-size: 15px;">Importaciones</a></li>
@@ -160,15 +160,14 @@
                   <?php endif ?>
 
                <?php else : ?>
-                  <li><a href="inicio.php"><img src="../img/logo.png.png" alt=""></a></li>
+                  <li><a href="inicio.php"><img src="../../img/logo.png.png" alt=""></a></li>
                   <li><a href="inicio.php" class="nav-link px-2 text-white" style="font-size: 15px;">GreenTrade</a></li>
-                  <li><a href="" class="nav-link px-2 text-white" style="font-size: 15px;">Premium</a></li>
-                  <li><a href="" class="nav-link px-2 text-white" style="font-size: 15px;">Visión</a></li>
+                  <li><a href="vision.php" class="nav-link px-2 text-white" style="font-size: 15px;">Visión</a></li>
                <?php endif ?>
             </ul>
             <?php if (!empty($dataUserM)) : ?>
                <div class="text-end">
-                  <a href="../func/salir.php" class="btn"><i class="fa-solid fa-right-from-bracket"></i> Salir</a>
+                  <a href="../../func/salir.php" class="btn"><i class="fa-solid fa-right-from-bracket"></i> Salir</a>
                </div>
             <?php else : ?>
                <div class="text-end">

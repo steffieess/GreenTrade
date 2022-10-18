@@ -1,5 +1,5 @@
 <!-- header section starts -->
-<?php include("../../includes/header.php"); ?>
+<?php include("../../../includes/header.php"); ?>
 <!-- header section ends  -->
 
 <!-- home section starts -->
@@ -12,13 +12,13 @@
 
       <div class="swiper-wrapper">
 
-         <div class="swiper-slide slide" style="background:url(../img/Diapositiva4.jpg) no-repeat"></div>
+         <div class="swiper-slide slide" style="background:url(../../img/Diapositiva4.jpg) no-repeat"></div>
 
-         <div class="swiper-slide slide" style="background:url(../img/Diapositiva1.jpg) no-repeat"> </div>
+         <div class="swiper-slide slide" style="background:url(../../img/Diapositiva1.jpg) no-repeat"> </div>
 
-         <div class="swiper-slide slide" style="background:url(../img/Diapositiva6.jpg) no-repeat"> </div>
+         <div class="swiper-slide slide" style="background:url(../../img/Diapositiva6.jpg) no-repeat"> </div>
 
-         <div class="swiper-slide slide" style="background:url(../img/Diapositiva9.jpg) no-repeat"> </div>
+         <div class="swiper-slide slide" style="background:url(../../img/Diapositiva9.jpg) no-repeat"> </div>
 
       </div>
 
@@ -37,11 +37,11 @@
 
    <h1 class="heading-title"> Beneficios Greentrade</h1>
 
-   <div class="box-container" href="facturas.php">
+   <div class="box-container">
 
       <div class="box">
          <div class="image">
-            <img src="../img/documento.png" alt="">
+            <img src="../../img/documento.png" alt="">
          </div>
          <div class="info">
             <h4>Almacenamiento Digital</h4>
@@ -50,7 +50,7 @@
 
       <div class="box">
          <div class="image">
-            <img src="../img/reporte.png" alt="">
+            <img src="../../img/reporte.png" alt="">
             <div class="info">
                <h4>Reportería</h4>
             </div>
@@ -59,7 +59,7 @@
 
       <div class="box" href="reservas.php">
          <div class="image">
-            <img src="../img/reciclaje.png" alt="">
+            <img src="../../img/reciclaje.png" alt="">
             <div class="info">
                <h4>Reducción de Huella de Carbono</h4>
             </div>
@@ -131,8 +131,8 @@
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
 <!-- custom js file link  -->
- <script src="../../js/script.js"></script> 
+ <script src="../../../js/script.js"></script> 
 
 <!-- footer section starts  -->
-<?php include("../../includes/footer.php"); ?>
+<?php include("../../../includes/footer.php"); ?>
 <!-- footer section ends -->

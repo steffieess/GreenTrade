@@ -1,5 +1,5 @@
 <?php
-require '../../database/database.php';
+require '../../../database/database.php';
 
 
 $mail_usuario = $_POST['correo'];
@@ -19,16 +19,16 @@ if ($sqlcantidad > 0) {
         } else {
             $_SESSION['message'] = 'Contraseña incorrecta';
             $_SESSION['message_type'] = 'Error';
-            echo "<script> window.location='../pages/login_register.php'; </script>";
+            echo "<script> window.location='../pages/general/login_register.php'; </script>";
         }
     }
 } else {
     $_SESSION['message'] = 'Correo inexistente';
     $_SESSION['message_type'] = 'Error';
-    echo "<script> window.location='../pages/login_register.php'; </script>";
+    echo "<script> window.location='../pages/general/login_register.php'; </script>";
 }
 
 if ($pasa == 1) {
     $_SESSION['usuarios_rut'] = $rut;
-    echo "<script> window.location='../pages/homepage.php'; </script>";
+    echo "<script> window.location='../pages/general/homepage.php'; </script>";
 } 

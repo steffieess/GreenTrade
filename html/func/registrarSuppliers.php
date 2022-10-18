@@ -24,19 +24,19 @@ if (isset($_POST['regUsuario'])) {
         if ($resultUsuario) {
             $_SESSION['message'] = 'Usuario creado exitosamente';
             $_SESSION['message_type'] = 'Exitoso';
-            echo "<script> window.location='../pages/usuario.php'; </script>";
+            echo "<script> window.location='../pages/IE/usuario.php'; </script>";
         } else {
             $_SESSION['message'] = 'Error al crear usuario';
             $_SESSION['message_type'] = 'Error';
-            echo "<script> window.location='../pages/registroUsuario.php'; </script>";
+            echo "<script> window.location='../pages/IE/registroUsuario.php'; </script>";
         }
     } else {
         $_SESSION['message'] = 'Usuario ya registrado';
         $_SESSION['message_type'] = 'Error';
-        echo "<script> window.location='../pages/registroUsuario.php'; </script>";
+        echo "<script> window.location='../pages/IE/registroUsuario.php'; </script>";
     }
 } else {
     $_SESSION['message'] = 'Error';
     $_SESSION['message_type'] = 'Error';
-    echo "<script> window.location='../pages/registroUsuario.php'; </script>";
+    echo "<script> window.location='../pages/IE/registroUsuario.php'; </script>";
 }

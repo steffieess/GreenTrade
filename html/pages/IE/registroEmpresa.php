@@ -1,5 +1,5 @@
 <!-- header section starts  -->
-<?php include("../../includes/header.php"); ?>
+<?php include("../../../includes/header.php"); ?>
 <!-- header section ends -->
 
 <script>
@@ -42,7 +42,7 @@
 <section class="reg-user">
     <h1 class="heading-title"> Registrar Empresa </h1>
     <div>
-        <form action="../func/funcRegistrarEmpresa.php" id='regEmpresa' class='input-group-regEmpresa' method="POST">
+        <form action="../../func/funcRegistrarEmpresa.php" id='regEmpresa' class='input-group-regEmpresa' method="POST">
             <?php
             $sqlEmpresa = ("SELECT * FROM tipo_empresa");
             $dataEmpresa = mysqli_query($connc, $sqlEmpresa);
@@ -83,5 +83,5 @@
 <!--body section ends-->
 
 <!-- footer section starts  -->
-<?php include("../../includes/footer.php"); ?>
+<?php include("../../../includes/footer.php"); ?>
 <!-- footer section ends -->

@@ -1,5 +1,5 @@
 <!-- header section starts  -->
-<?php include("../../includes/header.php"); ?>
+<?php include("../../../includes/header.php"); ?>
 <!-- header section ends -->
 
 <script>
@@ -42,7 +42,7 @@
 
     <div class="form-box">
         <!--Inicio Formulario LOGIN-->
-        <form action="../func/clave.php" id='login' class='input-group-login' method="POST">
+        <form action="../../func/clave.php" id='login' class='input-group-login' method="POST">
             <h1>Cambiar Contraseña</h1>
             <div class="content">
                 <label for="correo"><b>Ingrese contraseña actual</b></label>
@@ -60,5 +60,5 @@
 
 
 <!-- footer section starts  -->
-<?php include("../../includes/footer.php"); ?>
+<?php include("../../../includes/footer.php"); ?>
 <!-- footer section ends -->

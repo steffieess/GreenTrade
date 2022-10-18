@@ -1,5 +1,5 @@
 <!-- header section starts  -->
-<?php include("../../includes/header.php"); ?>
+<?php include("../../../includes/header.php"); ?>
 <!-- header section ends -->
 
 <!--body section starts-->
@@ -15,7 +15,7 @@
                         <th>Gramaje Total</th>
                         <th>Fecha Requerida</th>
                         <th>Empresa Solicitante</th>
-                        <th>Estado</th>
+                        <th>Aprobar / Rechazar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -25,7 +25,7 @@
                         <td>80 (g)</td>
                         <td>06/05/2023</td>
                         <td>Sparta</td>
-                        <td>Solicitado</td>
+                        <td><i class="fa-regular fa-circle-check"></i>  <i class="fa-solid fa-trash-can"></i></td>
                     </tr>
                     <tr>
                         <td>7008980</td>
@@ -33,7 +33,7 @@
                         <td>110 (g)</td>
                         <td>06/05/2023</td>
                         <td>Sparta</td>
-                        <td>Completo</td>
+                        <td><i class="fa-regular fa-circle-check"></i>  <i class="fa-solid fa-trash-can"></i></td>
                     </tr>
                     <tr>
                         <td>7008401</td>
@@ -42,7 +42,7 @@
                         <td>220 (g)</td>
                         <td>06/05/2023</td>
                         <td>Sparta</td>
-                        <td>Retiro Pendiente</td>
+                        <td><i class="fa-regular fa-circle-check"></i>  <i class="fa-solid fa-trash-can"></i></td>
                     </tr>
                 </tbody>
             </table>
@@ -52,5 +52,5 @@
 <!--body section ends-->
 
 <!-- footer section starts  -->
-<?php include("../../includes/footer.php"); ?>
+<?php include("../../../includes/footer.php"); ?>
 <!-- footer section ends -->

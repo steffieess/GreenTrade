@@ -1,6 +1,7 @@
 <!-- header section starts  -->
-<?php include("../../includes/header.php"); ?>
+<?php include("../../../includes/header.php"); ?>
 <!-- header section ends -->
+
 <script>
     <?php if (isset($_SESSION['message'])) { ?>
         $(document).ready(function() {
@@ -36,44 +37,59 @@
     </div>
 <?php unset($_SESSION['message']);
 } ?>
+
 <!--body section starts-->
 <section>
-    <h1 class="heading-title"> Empresas </h1>
+    <h1 class="heading-title"> Usuarios </h1>
     <div class="text-end">
         <?php
-        if ($tipoUsu == 2) {
+            if ($tipoUsu == 1) {
 
         ?>
-            <a href="registroEmpresa.php" class="btn">Crear nueva Empresa</a>
+            <a href="IE/registroUsuario.php" class="btn">Nuevo Usuario Colaborador</a>
+        <?php } ?>
+        <?php
+            if ($tipoUsu == 2) {
+
+        ?>
+            <a href="IE/registroUsuarioExterno.php" class="btn">Nuevo Usuario Externo</a>
         <?php } ?>
     </div>
 
     <?php
-    $queryEmpresa = "SELECT * FROM empresa INNER JOIN tipo_empresa ON empresa.tipo_empresa_id_tipoempresa = tipo_empresa.id_tipoempresa WHERE usuario_empresa = '$usuEmpresaM' AND tipo_empresa_id_tipoempresa > 1 ";
-    $queryEmpresaList = mysqli_query($connc, $queryEmpresa);
+    $querySuppliers = "SELECT * FROM usuario INNER JOIN empresa ON usuario.empresa_id_empresa = empresa.id_empresa  WHERE tipo_usu_id_tipousu = 2 AND empresa_id_empresa = '$idEmpresaM'";
+    $queryUserSuppliers = mysqli_query($connc, $querySuppliers);
     ?>
 
     <div class="table-responsive">
-        <div class="col-md-8 table-user">
+        <div class="col-md-8 table-user ">
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Tipo Empresa</th>
-                        <th>Razón Social</th>
-                        <th>Dirección Empresa</th>
-                        <th>Teléfono Empresa</th>
-                        <th>Correo Empresa</th>
+                        <th>Rut</th>
+                        <th>Nombre</th>
+                        <th>Apellido Paterno</th>
+                        <th>Apellido Materno</th>
+                        <th>Correo</th>
+                        <th>Teléfono</th>
+                        <th>Razón social</th>
+                        <th>Estado</th>
+                        <th>Modificar</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php if (mysqli_num_rows($queryEmpresaList) != 0) { ?>
-                        <?php while ($dataEmpresa = mysqli_fetch_array($queryEmpresaList)) { ?>
+                    <?php if (mysqli_num_rows($queryUserSuppliers) != 0) { ?>
+                        <?php while ($dataUserSuppliers = mysqli_fetch_array($queryUserSuppliers)) { ?>
                             <tr>
-                                <td><?php echo $dataEmpresa['nom_tipoempresa']; ?></td>
-                                <td><?php echo $dataEmpresa['razon_social']; ?></td>
-                                <td><?php echo $dataEmpresa['direccion_empresa']; ?><i class="fa-solid fa-pen-to-square"></i></td>
-                                <td><?php echo $dataEmpresa['tel_empresa']; ?><i class="fa-solid fa-pen-to-square"></i></td>
-                                <td><?php echo $dataEmpresa['mail_empresa']; ?><i class="fa-solid fa-pen-to-square"></i></td>
+                                <td><?php echo $dataUserSuppliers['rut_usuario']; ?></td>
+                                <td><?php echo $dataUserSuppliers['nom_usuario']; ?></td>
+                                <td><?php echo $dataUserSuppliers['ap_paterno']; ?></td>
+                                <td><?php echo $dataUserSuppliers['ap_materno']; ?></td>
+                                <td><?php echo $dataUserSuppliers['mail_usuario']; ?></td>
+                                <td><?php echo $dataUserSuppliers['tel_usuario']; ?></td>
+                                <td><?php echo $dataUserSuppliers['razon_social']; ?></td>
+                                <td>Habilitado</td>
+                                <td><a href="editarUsuario.php"><i class="fa-solid fa-user-pen"></i></a></td>
                             </tr>
                         <?php } ?>
                     <?php } else { ?>
@@ -88,5 +104,5 @@
 <!--body section ends-->
 
 <!-- footer section starts  -->
-<?php include("../../includes/footer.php"); ?>
+<?php include("../../../includes/footer.php"); ?>
 <!-- footer section ends -->

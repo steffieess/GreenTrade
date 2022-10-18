@@ -1,5 +1,5 @@
 <!-- header section starts  -->
-<?php include("../../includes/header.php"); ?>
+<?php include("../../../includes/header.php"); ?>
 <!-- header section ends -->
 
 <!--body section starts-->
@@ -43,7 +43,7 @@
 <section class="reg-user">
     <h1 class="heading-title"> Crear Usuario Externo</h1>
     <div>
-        <form action="../func/registrarExternos.php" id='regUser' class='input-group-regUser' method="POST">
+        <form action="../../func/registrarExternos.php" id='regUser' class='input-group-regUser' method="POST">
             <?php
             $sqlEmpresa = ("SELECT * FROM empresa");
             $dataEmpresa = mysqli_query($connc, $sqlEmpresa);
@@ -92,5 +92,5 @@
 <!--body section ends-->
 
 <!-- footer section starts  -->
-<?php include("../../includes/footer.php"); ?>
+<?php include("../../../includes/footer.php"); ?>
 <!-- footer section ends -->

@@ -1,5 +1,5 @@
 <!-- header section starts  -->
-<?php include("../../includes/header.php"); ?>
+<?php include("../../../includes/header.php"); ?>
 <!-- header section ends -->
 
 <!--body section starts-->
@@ -43,7 +43,7 @@
 <section class="reg-user">
     <h1 class="heading-title"> Crear Usuario </h1>
     <div>
-    <form action="../func/registrarSuppliers.php" id='regUser' class='input-group-regUser' method="POST">
+    <form action="../../func/registrarSuppliers.php" id='regUser' class='input-group-regUser' method="POST">
                 <div class="content">
                     <label for="rutUsuario"><b>Rut Usuario</b></label>
                     <input name="rutUsuario" type="text" class='input-field' placeholder="11111111-1" required>
@@ -78,5 +78,5 @@
 <!--body section ends-->
 
 <!-- footer section starts  -->
-<?php include("../../includes/footer.php"); ?>
+<?php include("../../../includes/footer.php"); ?>
 <!-- footer section ends -->

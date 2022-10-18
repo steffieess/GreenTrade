@@ -1,5 +1,5 @@
 <?php
-require '../../database/database.php';
+require '../../../database/database.php';
 
 if (isset($_SESSION['usuarios_rut'])) {
     $rutUserM = $_SESSION['usuarios_rut'];

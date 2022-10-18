@@ -1,12 +1,12 @@
 <!-- header section starts  -->
-<?php include("../../includes/header.php"); ?>
+<?php include("../../../includes/header.php"); ?>
 <!-- header section ends -->
 
 <!--body section starts-->
 <section class="reg-import">
     <h1 class="heading-title"> Nueva Emportación </h1>
     <div>
-        <form action="../func/registroImportacion.php" id='regImportacion' class='input-group-regExportacion' method="POST">
+        <form action="../../func/registroImportacion.php" id='regImportacion' class='input-group-regExportacion' method="POST">
             <div class="content">
                 <label for="nroOrdenExp"><b>N° de Orden</b></label>
                 <input name="nroOrdenExp" type="text" class='input-field' placeholder="N° de Orden" required>
@@ -84,5 +84,5 @@
 <!--body section ends-->
 
 <!-- footer section starts  -->
-<?php include("../../includes/footer.php"); ?>
+<?php include("../../../includes/footer.php"); ?>
 <!-- footer section ends -->

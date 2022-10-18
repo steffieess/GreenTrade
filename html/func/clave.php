@@ -18,13 +18,13 @@ if ($sqlcantidad > 0) {
         } else {
             $_SESSION['message'] = 'Contraseña actual incorrecta';
             $_SESSION['message_type'] = 'Error';
-            echo "<script> window.location='../pages/cambiarClave.php'; </script>";
+            echo "<script> window.location='../pages/general/cambiarClave.php'; </script>";
         }
     }
 } else {
     $_SESSION['message'] = 'Correo inexistente';
     $_SESSION['message_type'] = 'Error';
-    echo "<script> window.location='../pages/cambiarClave.php'; </script>";
+    echo "<script> window.location='../pages/general/cambiarClave.php'; </script>";
 }
 if ($pasa == 1) {
     $password = password_hash($_POST['clavenew'], PASSWORD_BCRYPT);
@@ -34,10 +34,10 @@ if ($pasa == 1) {
         $_SESSION['usuarios_rut'] = $rut;
         $_SESSION['message'] = 'Contraseña actualizada exitosamente';
         $_SESSION['message_type'] = 'Aviso';
-        echo "<script> window.location='../pages/cambiarClave.php'; </script>";
+        echo "<script> window.location='../pages/general/cambiarClave.php'; </script>";
     } else {
         $_SESSION['message'] = 'Error al guardar';
         $_SESSION['message_type'] = 'Error';
-        echo "<script> window.location='../pages/cambiarClave.php'; </script>";
+        echo "<script> window.location='../pages/general/cambiarClave.php'; </script>";
     }
 }
