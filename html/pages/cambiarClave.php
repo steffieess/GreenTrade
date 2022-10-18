@@ -42,7 +42,7 @@
 
     <div class="form-box">
         <!--Inicio Formulario LOGIN-->
-        <form action="../func/ingresar.php" id='login' class='input-group-login' method="POST">
+        <form action="../func/clave.php" id='login' class='input-group-login' method="POST">
             <h1>Cambiar Contraseña</h1>
             <div class="content">
                 <label for="correo"><b>Ingrese contraseña actual</b></label>
