@@ -43,7 +43,7 @@
 <section class="reg-user">
     <h1 class="heading-title"> Crear Usuario Externo</h1>
     <div>
-        <form action="../../func/registrarExternos.php" id='regUser' class='input-group-regUser' method="POST">
+        <form action="../../func/tools/registrarExternos.php" id='regUser' class='input-group-regUser' method="POST">
             <?php
             $sqlEmpresa = ("SELECT * FROM empresa");
             $dataEmpresa = mysqli_query($connc, $sqlEmpresa);

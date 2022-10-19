@@ -10,7 +10,7 @@
         if ($tipoUsu == 2) {
 
         ?>
-            <a href="IE/nuevaImportacion.php" class="btn">Nueva Importación</a>
+            <a href="../IE/nuevaImportacion.php" class="btn">Nueva Importación</a>
         <?php } ?>
     </div>
     <?php

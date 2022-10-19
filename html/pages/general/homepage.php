@@ -2,7 +2,7 @@
 <?php include("../../../includes/header.php"); ?>
 <!-- header section ends -->
 <!-- restrccion section starts  -->
-<?php include("../../func/restriccion.php"); ?>
+<?php include("../../func/tools/restriccion.php"); ?>
 <!-- restrccion section ends -->
 
 <!--body section starts-->

@@ -44,7 +44,7 @@
         if ($tipoUsu == 2) {
 
         ?>
-            <a href="IE/registroEmpresa.php" class="btn">Crear nueva Empresa</a>
+            <a href="../IE/registroEmpresa.php" class="btn">Crear nueva Empresa</a>
         <?php } ?>
     </div>
 

@@ -1,4 +1,4 @@
-<?php include("../../func/mantenedor.php"); ?>
+<?php include("../../func/mantenedor/mantenedor.php"); ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -144,34 +144,34 @@
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                <?php if (!empty($dataUserM)) : ?>
                   <?php if ($tipoUsu == 1 || $tipoUsu == 2) : ?>
-                     <li><a href="inicio.php"><img src="../../img/logo.png.png" alt=""></a></li>
-                     <li><a href="inicio.php" class="nav-link px-2 text-white" style="font-size: 15px;">GreenTrade</a></li>
-                     <li><a href="homepage.php" class="nav-link px-2 text-white" style="font-size: 15px;">Inicio</a></li>
-                     <li><a href="importaciones.php" class="nav-link px-2 text-white" style="font-size: 15px;">Importaciones</a></li>
-                     <li><a href="exportaciones.php" class="nav-link px-2 text-white" style="font-size: 15px;">Exportaciones</a></li>
-                     <li><a href="usuario.php" class="nav-link px-2 text-white" style="font-size: 15px;">Usuarios</a></li>
-                     <li><a href="empresa.php" class="nav-link px-2 text-white" style="font-size: 15px;">Empresas</a></li>
-                     <li><a href="reciclaje.php" class="nav-link px-2 text-white" style="font-size: 15px;">Reciclaje</a></li>
+                     <li><a href="../general/inicio.php"><img src="../../img/logo.png.png" alt=""></a></li>
+                     <li><a href="../general/inicio.php" class="nav-link px-2 text-white" style="font-size: 15px;">GreenTrade</a></li>
+                     <li><a href="../general/homepage.php" class="nav-link px-2 text-white" style="font-size: 15px;">Inicio</a></li>
+                     <li><a href="../general/importaciones.php" class="nav-link px-2 text-white" style="font-size: 15px;">Importaciones</a></li>
+                     <li><a href="../general/exportaciones.php" class="nav-link px-2 text-white" style="font-size: 15px;">Exportaciones</a></li>
+                     <li><a href="../IE/usuario.php" class="nav-link px-2 text-white" style="font-size: 15px;">Usuarios</a></li>
+                     <li><a href="../IE/empresa.php" class="nav-link px-2 text-white" style="font-size: 15px;">Empresas</a></li>
+                     <li><a href="../IE/reciclaje.php" class="nav-link px-2 text-white" style="font-size: 15px;">Reciclaje</a></li>
                   <?php endif ?>
 
                   <?php if ($tipoUsu == 8) : ?>
-                  <li><a href="solicitudes.php" class="nav-link px-2 text-white" style="font-size: 15px;">Solicitudes</a></li>
-                  <li><a href="historial.php" class="nav-link px-2 text-white" style="font-size: 15px;">Historial</a></li>
+                  <li><a href="../Reciclador/solicitudes.php" class="nav-link px-2 text-white" style="font-size: 15px;">Solicitudes</a></li>
+                  <li><a href="../Reciclador/historial.php" class="nav-link px-2 text-white" style="font-size: 15px;">Historial</a></li>
                   <?php endif ?>
 
                <?php else : ?>
-                  <li><a href="inicio.php"><img src="../../img/logo.png.png" alt=""></a></li>
-                  <li><a href="inicio.php" class="nav-link px-2 text-white" style="font-size: 15px;">GreenTrade</a></li>
-                  <li><a href="vision.php" class="nav-link px-2 text-white" style="font-size: 15px;">Visión</a></li>
+                  <li><a href="../general/inicio.php"><img src="../../img/logo.png.png" alt=""></a></li>
+                  <li><a href="../general/inicio.php" class="nav-link px-2 text-white" style="font-size: 15px;">GreenTrade</a></li>
+                  <li><a href="../general/vision.php" class="nav-link px-2 text-white" style="font-size: 15px;">Visión</a></li>
                <?php endif ?>
             </ul>
             <?php if (!empty($dataUserM)) : ?>
                <div class="text-end">
-                  <a href="../../func/salir.php" class="btn"><i class="fa-solid fa-right-from-bracket"></i> Salir</a>
+                  <a href="../../func/tools/salir.php" class="btn"><i class="fa-solid fa-right-from-bracket"></i> Salir</a>
                </div>
             <?php else : ?>
                <div class="text-end">
-                  <a href="login_register.php" class="btn">Ingresar</a>
+                  <a href="../general/login_register.php" class="btn">Ingresar</a>
                </div>
             <?php endif ?>
          </div>

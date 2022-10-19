@@ -47,7 +47,7 @@
             <button type='button' onclick='register()' class='toggle-btn'><b>Registro</b></button>
         </div>
         <!--Inicio Formulario LOGIN-->
-        <form action="../../func/ingresar.php" id='login' class='input-group-login' method="POST">
+        <form action="../../func/tools/ingresar.php" id='login' class='input-group-login' method="POST">
             <h1>Iniciar Sesión</h1>
             <div class="content">
                 <label for="correo"><b>Correo</b></label>
@@ -63,7 +63,7 @@
         </form>
         <!--Cierre Formulario LOGIN-->
         <!--Inicio Formulario REGISTER-->
-        <form action="../../func/registrarse.php" id='register' class='input-group-register' method="POST">
+        <form action="../../func/tools/registrarse.php" id='register' class='input-group-register' method="POST">
             <div id="global">
                 <h1>Registrar Empresa</h1>
                 <div class="content">

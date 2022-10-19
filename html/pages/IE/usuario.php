@@ -46,13 +46,13 @@
             if ($tipoUsu == 1) {
 
         ?>
-            <a href="IE/registroUsuario.php" class="btn">Nuevo Usuario Colaborador</a>
+            <a href="../IE/registroUsuario.php" class="btn">Nuevo Usuario Colaborador</a>
         <?php } ?>
         <?php
             if ($tipoUsu == 2) {
 
         ?>
-            <a href="IE/registroUsuarioExterno.php" class="btn">Nuevo Usuario Externo</a>
+            <a href="../IE/registroUsuarioExterno.php" class="btn">Nuevo Usuario Externo</a>
         <?php } ?>
     </div>
 

@@ -42,7 +42,7 @@
 <section class="reg-user">
     <h1 class="heading-title"> Registrar Empresa </h1>
     <div>
-        <form action="../../func/funcRegistrarEmpresa.php" id='regEmpresa' class='input-group-regEmpresa' method="POST">
+        <form action="../../func/tools/funcRegistrarEmpresa.php" id='regEmpresa' class='input-group-regEmpresa' method="POST">
             <?php
             $sqlEmpresa = ("SELECT * FROM tipo_empresa");
             $dataEmpresa = mysqli_query($connc, $sqlEmpresa);

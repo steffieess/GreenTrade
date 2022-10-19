@@ -6,7 +6,7 @@
 <section class="reg-import">
     <h1 class="heading-title"> Nueva Importación </h1>
     <div>
-        <form action="../../func/registroImportacion.php" id='regImportacion' class='input-group-regImportacion' method="POST">
+        <form action="../../func/tools/registroImportacion.php" id='regImportacion' class='input-group-regImportacion' method="POST">
             <div class="content">
                 <label for="nroOrdenImp"><b>N° de Orden</b></label>
                 <input name="nroOrdenImp" type="text" class='input-field' placeholder="N° de Orden" required>

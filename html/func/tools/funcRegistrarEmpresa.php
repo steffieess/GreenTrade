@@ -1,5 +1,5 @@
 <?php
-require 'mantenedor.php';
+require '../mantenedor/mantenedor.php';
 
 if (isset($_POST['regEmpresa'])) {
 
@@ -21,19 +21,19 @@ if (isset($_POST['regEmpresa'])) {
         if ($resultEmpresa) {
             $_SESSION['message'] = 'Empresa creada exitosamente';
             $_SESSION['message_type'] = 'Exitoso';
-            echo "<script> window.location='../pages/IE/empresa.php'; </script>";
+            echo "<script> window.location='../../pages/IE/empresa.php'; </script>";
         } else {
             $_SESSION['message'] = 'Error al crear la empresa';
             $_SESSION['message_type'] = 'Error';
-            echo "<script> window.location='../pages/IE/registroEmpresa.php'; </script>";
+            echo "<script> window.location='../../pages/IE/registroEmpresa.php'; </script>";
         }
     } else {
         $_SESSION['message'] = 'Empresa ya registrada';
         $_SESSION['message_type'] = 'Error';
-        echo "<script> window.location='../pages/IE/registroEmpresa.php'; </script>";
+        echo "<script> window.location='../../pages/IE/registroEmpresa.php'; </script>";
     }
 } else {
     $_SESSION['message'] = 'Error';
     $_SESSION['message_type'] = 'Error';
-    echo "<script> window.location='../pages/IE/registroEmpresa.php'; </script>";
+    echo "<script> window.location='../../pages/IE/registroEmpresa.php'; </script>";
 }
