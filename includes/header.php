@@ -6,6 +6,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" type="image/png" href="../../img/logo.png">
    <title>GreenTrade</title>
    <!-- swiper css link  -->
    <script src="https://code.jquery.com/jquery-3.6.1.slim.js" integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
@@ -16,7 +17,7 @@
    <!-- CSS only -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
    <!-- CSS -->
-   <link rel="stylesheet" href="../../../css/style.scss">
+   <link rel="stylesheet" href="../../../css/style.css">
 </head>
 
 <style>
@@ -144,7 +145,7 @@
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                <?php if (!empty($dataUserM)) : ?>
                   <?php if ($tipoUsu == 1 || $tipoUsu == 2) : ?>
-                     <li><a href="../general/inicio.php"><img src="../../img/logo.png.png" alt=""></a></li>
+                     <li><a href="../general/inicio.php"><img src="../../img/logo.png" alt=""></a></li>
                      <li><a href="../general/inicio.php" class="nav-link px-2 text-white" style="font-size: 15px;">GreenTrade</a></li>
                      <li><a href="../general/homepage.php" class="nav-link px-2 text-white" style="font-size: 15px;">Inicio</a></li>
                      <li><a href="../general/importaciones.php" class="nav-link px-2 text-white" style="font-size: 15px;">Importaciones</a></li>
@@ -160,7 +161,7 @@
                   <?php endif ?>
 
                <?php else : ?>
-                  <li><a href="../general/inicio.php"><img src="../../img/logo.png.png" alt=""></a></li>
+                  <li><a href="../general/inicio.php"><img src="../../img/logo.png" alt=""></a></li>
                   <li><a href="../general/inicio.php" class="nav-link px-2 text-white" style="font-size: 15px;">GreenTrade</a></li>
                   <li><a href="../general/vision.php" class="nav-link px-2 text-white" style="font-size: 15px;">Visión</a></li>
                <?php endif ?>
