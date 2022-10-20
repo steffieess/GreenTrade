@@ -89,7 +89,7 @@
                                 <td><?php echo $dataUserSuppliers['tel_usuario']; ?></td>
                                 <td><?php echo $dataUserSuppliers['razon_social']; ?></td>
                                 <td>Habilitado</td>
-                                <td><a href="editarUsuario.php"><i class="fa-solid fa-user-pen"></i></a></td>
+                                <td><a href="../general/editarUsuario.php?rut_usuario=<?php echo $dataUserSuppliers['rut_usuario']?>"><i class="fa-solid fa-user-pen"></i></a></td>
                             </tr>
                         <?php } ?>
                     <?php } else { ?>
