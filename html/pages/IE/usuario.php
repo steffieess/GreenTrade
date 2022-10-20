@@ -88,7 +88,12 @@
                                 <td><?php echo $dataUserSuppliers['mail_usuario']; ?></td>
                                 <td><?php echo $dataUserSuppliers['tel_usuario']; ?></td>
                                 <td><?php echo $dataUserSuppliers['razon_social']; ?></td>
+                                <?php
+                                if ($dataUserSuppliers['status'] == 0) { ?>
                                 <td>Habilitado</td>
+                                <?php }else{?>
+                                <td>Deshabilitado</td>
+                                <?php }?>
                                 <td><a href="../general/editarUsuario.php?rut_usuario=<?php echo $dataUserSuppliers['rut_usuario']?>"><i class="fa-solid fa-user-pen"></i></a></td>
                             </tr>
                         <?php } ?>

@@ -18,12 +18,12 @@ if (isset($_GET['rut_usuario'])) {
 
 <!--body section starts-->
 <section class="reg-import">
-    <h1 class="heading-title"> Nueva Emportación </h1>
+    <h1 class="heading-title"> Editar usuario </h1>
     <div>
         <form action="../../func/tools/editarUsuario.php?rut_usuario=<?php echo $_GET['rut_usuario']?>" id='editUsuario' class='input-group-editUsuario' method="POST">
             <div class="content">
                 <label for="newTelUser"><b>Nuevo Telefóno</b></label>
-                <input name="newTelUser" type="text" class='input-field' placeholder="Ingrese nuevo teléfono" value="<?php echo $tel; ?>" required>
+                <input name="newTelUser" type="text" class='input-field' placeholder="Ingrese nuevo teléfono" value="<?php echo $tel; ?>" required autocomplete="off">
             </div>
 
             <div class="form-group">
