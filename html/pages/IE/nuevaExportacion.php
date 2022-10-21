@@ -41,34 +41,9 @@
                     <?php } ?>
                 </select>
             </div>
-
-            <div class="content">
-                <label for="embarqueExp"><b>Embarque</b></label>
-                <input name="embarqueExp" type="text" class='input-field' placeholder="Embarque" required>
-            </div>
-            <div class="content">
-                <label for="desembarqueExp"><b>Desembarque</b></label>
-                <input name="desembarqueExp" type="text" class='input-field' placeholder="Desembarque" required>
-            </div>
-            <div class="content">
-                <label for="pesoExp"><b>Peso Estimado</b></label>
-                <input name="pesoExp" type="text" class='input-field' placeholder="Peso (kg)" required>
-            </div>
-            <div class="content">
-                <label for="volExp"><b>Volumen Estimado</b></label>
-                <input name="volExp" type="text" class='input-field' placeholder="Volumen" required>
-            </div>
             <div class="content">
                 <label for="incotemExp"><b>Incotem</b></label>
                 <input name="incotemExp" type="text" class='input-field' placeholder="Incotem" required>
-            </div>
-            <div class="content">
-                <label for="tipContExp"><b>Tipo de Contenedor</b></label>
-                <input name="tipContExp" type="text" class='input-field' placeholder="Tipo de Contenedor" required>
-            </div>
-            <div class="content">
-                <label for="cantContExp"><b>Cantidad de Contenedor</b></label>
-                <input name="cantContExp" type="text" class='input-field' placeholder="Cantidad de Contenedor" required>
             </div>
             <div class="content">
                 <label for="obsExp"><b>Observaciones</b></label>

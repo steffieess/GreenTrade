@@ -41,34 +41,9 @@
                     <?php } ?>
                 </select>
             </div>
-
-            <div class="content">
-                <label for="embarqueImp"><b>Embarque</b></label>
-                <input name="embarqueIm" type="text" class='input-field' placeholder="Embarque" required>
-            </div>
-            <div class="content">
-                <label for="desembarqueImp"><b>Desembarque</b></label>
-                <input name="desembarqueImp" type="text" class='input-field' placeholder="Desembarque" required>
-            </div>
-            <div class="content">
-                <label for="pesoImp"><b>Peso Estimado</b></label>
-                <input name="pesoImp" type="text" class='input-field' placeholder="Peso (kg)" required>
-            </div>
-            <div class="content">
-                <label for="volImp"><b>Volumen Estimado</b></label>
-                <input name="volImp" type="text" class='input-field' placeholder="Volumen" required>
-            </div>
             <div class="content">
                 <label for="incotemImp"><b>Incotem</b></label>
                 <input name="incotemImp" type="text" class='input-field' placeholder="Incotem" required>
-            </div>
-            <div class="content">
-                <label for="tipContImp"><b>Tipo de Contenedor</b></label>
-                <input name="tipContImp" type="text" class='input-field' placeholder="Tipo de Contenedor" required>
-            </div>
-            <div class="content">
-                <label for="cantContImp"><b>Cantidad de Contenedor</b></label>
-                <input name="cantContImp" type="text" class='input-field' placeholder="Cantidad de Contenedor" required>
             </div>
             <div class="content">
                 <label for="obsImp"><b>Observaciones</b></label>

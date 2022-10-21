@@ -27,13 +27,9 @@
                         <th>País de Destino</th>
                         <th>Embarque</th>
                         <th>Desembarque</th>
-                        <th>Peso Estimado</th>
-                        <th>Volumen Estimado</th>
                         <th>Incotem</th>
-                        <th>Tipo de Contenedor</th>
-                        <th>Cantidad de Contenedores</th>
-                        <th>Documentación Asociada</th>
                         <th>Observaciones</th>
+                        <th>Ver más</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -45,15 +41,11 @@
                                 <td><?php echo $dataImpExp['pais_destino']; ?></td>
                                 <td><?php echo $dataImpExp['embarque']; ?></td>
                                 <td><?php echo $dataImpExp['desembarque']; ?></td>
-                                <td><?php echo $dataImpExp['peso_estimado']; ?></td>
-                                <td><?php echo $dataImpExp['vol_estimado']; ?></td>
                                 <td><?php echo $dataImpExp['incoterm']; ?></td>
-                                <td><?php echo $dataImpExp['tipocontenedor']; ?></td>
-                                <td><?php echo $dataImpExp['cantcontenedor']; ?></td>
-                                <td>
-                                    <div class="doc"><a href="#"> <i class="fa-solid fa-file"></i><i class="fa-solid fa-eye"></i> </a></div>
-                                </td>
                                 <td><?php echo $dataImpExp['observaciones']; ?></td>
+                                <td>
+                                    <div class="doc"><a href="#"> <i class="fa-solid fa-eye"></i> </a></div>
+                                </td>
                             </tr>
                         <?php } ?>
                     <?php } else { ?>

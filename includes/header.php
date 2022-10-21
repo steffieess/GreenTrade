@@ -155,6 +155,11 @@
                      <li><a href="../IE/reciclaje.php" class="nav-link px-2 text-white" style="font-size: 15px;">Reciclaje</a></li>
                   <?php endif ?>
 
+                  <?php if ($tipoUsu == 3 || $tipoUsu == 4 || $tipoUsu == 5 || $tipoUsu == 6 || $tipoUsu == 7) : ?>
+                     <li><a href="../general/importaciones.php" class="nav-link px-2 text-white" style="font-size: 15px;">Importaciones</a></li>
+                     <li><a href="../general/exportaciones.php" class="nav-link px-2 text-white" style="font-size: 15px;">Exportaciones</a></li>
+                  <?php endif ?>
+
                   <?php if ($tipoUsu == 8) : ?>
                   <li><a href="../Reciclador/solicitudes.php" class="nav-link px-2 text-white" style="font-size: 15px;">Solicitudes</a></li>
                   <li><a href="../Reciclador/historial.php" class="nav-link px-2 text-white" style="font-size: 15px;">Historial</a></li>
