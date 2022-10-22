@@ -81,9 +81,7 @@
                                 <td><?php echo $dataImpExp['desembarque']; ?></td>
                                 <td><?php echo $dataImpExp['incoterm']; ?></td>
                                 <td><?php echo $dataImpExp['observaciones']; ?></td>
-                                <td>
-                                    <div class="doc"><i class="fa-solid fa-eye"></i> </a></div>
-                                </td>
+                                <td><a href="../general/listaImp.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp']?>"><i class="fa-solid fa-eye"></i></a></td>
                             </tr>
                         <?php } ?>
                     <?php } else { ?>
