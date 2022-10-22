@@ -1,0 +1,48 @@
+.fancy-file{
+    display: none;
+}
+
+.fancy-file + label{
+    display: flex;
+    flex: 1;
+}
+
+.fancy-file__fancy-file-name,
+.fancy-file__fancy-file-button{
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
+.fancy-file__fancy-file-name{
+    background: #EEE;
+    border: 1px solid #CACACA;
+    flex: 1;
+    border-radius: 45px 0 0 45px;
+}
+
+.fancy-file__fancy-file-name span{
+    white-space: nowrap;
+    overflow: hidden;
+    /*text-overflow: ellipsis;
+    width: 200px;*/
+    display: block;
+}
+
+.fancy-file__fancy-file-button{
+    background: #7DBC66 url(./folder.png) 4px center/25px no-repeat;
+    border: 1px solid #7DBC66;
+    font-weight: bold;
+    white-space: nowrap;
+    border-radius: 0 45px 45px 0;
+    padding-left: 33px;
+    cursor: pointer;
+}
+
+.fancy-file.a + label > .fancy-file__fancy-file-button{
+    background-color: #7DBC66;
+    border-color: #7DBC66;
+}
+.fancy-file.b + label > .fancy-file__fancy-file-button{
+    background-color: #7DBC66;
+    border-color: #7DBC66;
+}

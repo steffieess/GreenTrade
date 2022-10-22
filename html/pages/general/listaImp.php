@@ -94,19 +94,42 @@ if (isset($_GET['nro_orden'])) {
                     <input name="newTipoContenedorImp" type="text" class='input-field' placeholder="" required>
                 </div>
                 <div class="content">
-                    <label for="newInvoiceImp"><b>Commercial Invoice</b></label>
+                    <span style="font-size: 15px;"><b>Commercial Invoice</b></span>
+                    <input type="file" name="comercialInvoice" id="newInvoiceImp" accept=".pdf" class='fancy-file'>
+                    <!--<label for="newInvoiceImp">
+                        <span class='fancy-file__fancy-file-name'>
+                            <span>Ningún Archivo Seleccionado</span>
+                        </span>
+                        <span class='fancy-file__fancy-file-button'>
+                            Buscar Archivo
+                        </span>
+                    </label> -->
                 </div>
                 <div class="content">
-                    <label for="newPackingImp"><b>Packing List</b></label>
+                    <span style="font-size: 15px;"><b>Packing List</b></span>
+                    <input type="file" name="packingList" id="newPackingImp" accept=".pdf" class='fancy-file'>
+                   <!-- <label for="newPackingImp">
+                        <span class='fancy-file__fancy-file-name'>
+                            <span>Ningún Archivo Seleccionado</span>
+                        </span>
+                        <span class='fancy-file__fancy-file-button'>
+                            Buscar Archivo
+                        </span>
+                    </label>
+
+            -->
                 </div>
                 <div class="content">
-                    <label for="newCertOrigenImp"><b>Certificado de Origen</b></label>
+                    <span style="font-size: 15px;"><b>Certificado de Origen</b></span>
+                    <input type="file" name="certificadoOrigen" id="newCertOrigenImp" accept=".pdf" class='fancy-file'>
                 </div>
                 <div class="content">
-                    <label for="newDocTransporteImp"><b>Documento de Transporte</b></label>
+                    <span style="font-size: 15px;"><b>Documento de Transporte</b></span>
+                    <input type="file" name="documentoTransporte" id="newDocTransporteImp" accept=".pdf" class='fancy-file'>
                 </div>
                 <div class="content">
-                    <label for="newOtroImp"><b>Otros</b></label>
+                    <span style="font-size: 15px;"><b>Otros</b></span>
+                    <input type="file" name="otros" id="newOtroImp" accept=".pdf" class='fancy-file'>
                 </div>
             <?php endif ?>
 
@@ -135,7 +158,8 @@ if (isset($_GET['nro_orden'])) {
                     <input name="newPrimaPolizaImp" type="text" class='input-field' placeholder="" required>
                 </div>
                 <div class="content">
-                    <label for="newPolizaImp"><b>Poliza de Seguro</b></label>
+                    <span style="font-size: 15px;"><b>Póliza de Seguro</b></span>
+                    <input type="file" name="polizaSeguro" id="newPolizaImp" accept=".pdf" class='fancy-file'>
                 </div>
             <?php endif ?>
 
@@ -144,6 +168,7 @@ if (isset($_GET['nro_orden'])) {
                 <input class="submit-btn" type="submit" value="Guardar" name="editImp">
             </div>
         </form>
+        <script src="../../../fancy-file/script.js">
     </div>
     </div>
 </section>
