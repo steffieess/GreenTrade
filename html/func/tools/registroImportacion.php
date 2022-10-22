@@ -14,33 +14,33 @@ if (isset($_POST['regImp'])) {
     $id_paisOrigenImp = $_POST['id_paisOrigenImp'];
     $id_paisDestinoImp = $_POST['id_paisDestinoImp'];
 
-    $queryInsertImpo = "INSERT INTO imp_exp(nro_orden, usuempresa, usuproveedor, usutrasportadora, incoterm, fecha_creacion, estado, observaciones, tipo_ie_id_tipoie, usuario_rut_usuario) VALUES  ('$nroOrdenImp', '$rutP', '$proveedor', '$ffww', '$incotemImp', '$Date', 'Vigente' , '$obsImp', 1, '$usuEmpresaM')";
-    $resultImpo = mysqli_query($connc, $queryInsertImpo);
+    $id_imp_exp = $nroOrdenImp . $usuEmpresaM;
 
-    if ($resultImpo) {
+    $queryImpo = "SELECT * FROM imp_exp WHERE id_imp_exp =  '$id_imp_exp' AND tipo_ie_id_tipoie = 1";
+    $queryIdImpo = mysqli_query($connc, $queryImpo);
+    $sqlcantidadImpo = mysqli_num_rows($queryIdImpo);
 
-        $queryInsertIePaisOrigen = "INSERT INTO ie_pais(descripcion, pais_id_pais, imp_exp_nro_orden) VALUES  ('Origen', '$id_paisOrigenImp', '$nroOrdenImp')";
-        $resultIePaisOrigen = mysqli_query($connc, $queryInsertIePaisOrigen);
 
-        $queryInsertIePaisDestino = "INSERT INTO ie_pais(descripcion, pais_id_pais, imp_exp_nro_orden) VALUES  ('Destino', '$id_paisOrigenImp', '$nroOrdenImp')";
-        $resultIePaisDestino = mysqli_query($connc, $queryInsertIePaisDestino);
-
-        if ($resultIePaisOrigen && $resultIePaisDestino) {
+    if ($sqlcantidadImpo <= 0) {
+        $queryInsertImpo = "INSERT INTO imp_exp(id_imp_exp, nro_orden, usuempresa, usuproveedor, usutrasportadora, incoterm, origen, destino, fecha_creacion, estado, observaciones, tipo_ie_id_tipoie, usuario_rut_usuario) VALUES  ('$id_imp_exp', '$nroOrdenImp', '$rutP', '$proveedor', '$ffww', '$incotemImp', '$id_paisOrigenImp', '$id_paisDestinoImp', '$Date', 'Vigente' , '$obsImp', 1, '$usuEmpresaM')";
+        $resultImpo = mysqli_query($connc, $queryInsertImpo);
+        
+        if ($resultImpo) {
             $_SESSION['message'] = 'Importación creada exitosamente';
             $_SESSION['message_type'] = 'Exitoso';
             echo "<script> window.location='../../pages/general/importaciones.php'; </script>";
-        }else{
+        } else {
             $_SESSION['message'] = 'Error al crear importación';
             $_SESSION['message_type'] = 'Error';
             echo "<script> window.location='../../pages/IE/nuevaImportacion.php'; </script>";
         }
     } else {
-        $_SESSION['message'] = 'Error al crear importación';
+        $_SESSION['message'] = 'Nro de orden de importación ya existe';
         $_SESSION['message_type'] = 'Error';
         echo "<script> window.location='../../pages/IE/nuevaImportacion.php'; </script>";
     }
 } else {
-    $_SESSION['message'] = 'Error';
+    $_SESSION['message'] = 'Error al crear importación';
     $_SESSION['message_type'] = 'Error';
     echo "<script> window.location='../../pages/IE/nuevaImportacion.php'; </script>";
 }

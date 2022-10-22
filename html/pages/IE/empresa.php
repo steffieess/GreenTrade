@@ -49,7 +49,7 @@
     </div>
 
     <?php
-    $queryEmpresa = "SELECT * FROM empresa INNER JOIN tipo_empresa ON empresa.tipo_empresa_id_tipoempresa = tipo_empresa.id_tipoempresa WHERE usuario_empresa = '$usuEmpresaM' AND tipo_empresa_id_tipoempresa > 1 ";
+    $queryEmpresa = "SELECT * FROM empresa INNER JOIN tipo_empresa ON empresa.tipo_empresa_id_tipoempresa = tipo_empresa.id_tipoempresa WHERE usuario_empresa = '$usuEmpresaM'";
     $queryEmpresaList = mysqli_query($connc, $queryEmpresa);
     ?>
 

@@ -9,6 +9,7 @@ if (isset($_POST['regUsuarioExt'])) {
     $apmat_user = $_POST['apmUsuarioExt'];
     $mail_user = $_POST['mailUsuarioExt'];
     $tel_user = $_POST['telUsuarioExt'];
+    $id_empExt = $_POST['id_empExt'];
     
 
     $queryUsuario = "SELECT * FROM usuario WHERE rut_usuario =  '$rut_user'";
@@ -16,8 +17,9 @@ if (isset($_POST['regUsuarioExt'])) {
     $sqlcantidad = mysqli_num_rows($queryRutUsuario);
 
     if ($sqlcantidad <= 0) {
-        $queryClave = substr($rut_user,0,8); 
-        $queryInsertUsuario = "INSERT INTO usuario(rut_usuario, nom_usuario, ap_paterno, ap_materno, password, mail_usuario, tel_usuario, status, tipo_usu_id_tipousu, empresa_id_empresa) VALUES  ('$rut_user','$nom_user', '$appat_user', '$apmat_user', '$queryClave', '$mail_user','$tel_user', 0, 2, '$idEmpresaM')";
+        $queryClave = substr($rut_user,0,8);
+        $password = password_hash($queryClave, PASSWORD_BCRYPT);
+        $queryInsertUsuario = "INSERT INTO usuario(rut_usuario, nom_usuario, ap_paterno, ap_materno, password, mail_usuario, tel_usuario, status, tipo_usu_id_tipousu, empresa_id_empresa) VALUES  ('$rut_user','$nom_user', '$appat_user', '$apmat_user', '$password', '$mail_user','$tel_user', 0, 2, '$id_empExt')";
         $resultUsuario = mysqli_query($connc, $queryInsertUsuario);
 
         if ($resultUsuario) {

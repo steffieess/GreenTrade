@@ -57,7 +57,7 @@
     </div>
 
     <?php
-    $querySuppliers = "SELECT * FROM usuario INNER JOIN empresa ON usuario.empresa_id_empresa = empresa.id_empresa  WHERE tipo_usu_id_tipousu = 2 AND empresa_id_empresa = '$idEmpresaM'";
+    $querySuppliers = "SELECT * FROM usuario INNER JOIN empresa ON usuario.empresa_id_empresa = empresa.id_empresa WHERE empresa.usuario_empresa = '$usuEmpresaM' ORDER BY empresa.id_empresa ASC";
     $queryUserSuppliers = mysqli_query($connc, $querySuppliers);
     ?>
 

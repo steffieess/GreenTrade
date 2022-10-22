@@ -45,7 +45,7 @@
     <div>
         <form action="../../func/tools/registrarExternos.php" id='regUser' class='input-group-regUser' method="POST">
             <?php
-            $sqlEmpresa = ("SELECT * FROM empresa");
+            $sqlEmpresa = ("SELECT * FROM empresa WHERE usuario_empresa = '$usuEmpresaM'");
             $dataEmpresa = mysqli_query($connc, $sqlEmpresa);
             ?>
             <div class="form-group">

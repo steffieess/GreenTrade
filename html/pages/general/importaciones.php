@@ -52,7 +52,7 @@
         
     </div>
     <?php
-    $queryImpExp = "SELECT * FROM imp_exp WHERE usuario_rut_usuario = '$usuEmpresaM' AND usuempresa = '$rutP'";
+    $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 1";
     $queryImpExpList = mysqli_query($connc, $queryImpExp);
     ?>
     <div class="table-responsive">
@@ -75,8 +75,8 @@
                         <?php while ($dataImpExp = mysqli_fetch_array($queryImpExpList)) { ?>
                             <tr>
                                 <td><?php echo $dataImpExp['nro_orden']; ?></td>
-                                <td><?php echo $dataImpExp['pais_origen']; ?></td>
-                                <td><?php echo $dataImpExp['pais_destino']; ?></td>
+                                <td><?php echo $dataImpExp['origen']; ?></td>
+                                <td><?php echo $dataImpExp['destino']; ?></td>
                                 <td><?php echo $dataImpExp['embarque']; ?></td>
                                 <td><?php echo $dataImpExp['desembarque']; ?></td>
                                 <td><?php echo $dataImpExp['incoterm']; ?></td>
