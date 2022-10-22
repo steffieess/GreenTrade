@@ -40,7 +40,7 @@ if (isset($_GET['nro_orden'])) {
                 <label for="newobsImp"><b>Observaciones</b></label>
                 <input name="newobsImp" type="text" class='input-field' placeholder="Obervaciones">
             </div>
-            <?php if ($tipoUsu == 3) : ?>
+            <?php if ($tipoUsu == 1 || $tipoUsu == 2 || $tipoUsu == 3) : ?>
                 <div class="content">
                     <label for="newReservaImp"><b>N° Reserva</b></label>
                     <input name="newReservaImp" type="text" class='input-field' placeholder="" required>
@@ -110,7 +110,7 @@ if (isset($_GET['nro_orden'])) {
                 </div>
             <?php endif ?>
 
-            <?php if ($tipoUsu == 5) : ?>
+            <?php if ($tipoUsu == 1 || $tipoUsu == 2 || $tipoUsu == 5) : ?>
                 <div class="content">
                     <label for="newLinkImp"><b>Link Seguimiento</b></label>
                     <input name="newLinkImp" type="text" class='input-field' placeholder="" required>
@@ -121,7 +121,7 @@ if (isset($_GET['nro_orden'])) {
                 </div>
             <?php endif ?>
 
-            <?php if ($tipoUsu == 7) : ?>
+            <?php if ($tipoUsu == 1 || $tipoUsu == 2 || $tipoUsu == 7) : ?>
                 <div class="content">
                     <label for="newNroPolizaImp"><b>N° Póliza de Seguro</b></label>
                     <input name="newNroPolizaImp" type="text" class='input-field' placeholder="" required>
