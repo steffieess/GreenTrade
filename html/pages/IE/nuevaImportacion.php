@@ -11,6 +11,36 @@
                 <label for="nroOrdenImp"><b>N° de Orden</b></label>
                 <input name="nroOrdenImp" type="text" class='input-field' placeholder="N° de Orden" required>
             </div>
+            
+            <?php
+                $sqlProveedor = ("SELECT * FROM empresa WHERE usuario_empresa = '$usuEmpresaM' AND tipo_empresa_id_tipoempresa = 2");
+                $dataProveedor = mysqli_query($connc, $sqlProveedor);
+            ?>
+            <div class="form-group">
+                <label for="proveedor"><b>Proveedor</b></label>
+                <select class="form-control" name="proveedor" id="proveedor">
+                    <?php while ($rowProveedor = mysqli_fetch_array($dataProveedor)){ ?>
+                        <option class="form-control" value="<?php echo $rowProveedor['id_empresa']; ?>">
+                        <?php echo $rowProveedor['razon_social'];?>
+                    </option>
+                    <?php } ?>
+                </select>
+            </div>
+
+            <?php
+                $sqlFFWW = ("SELECT * FROM empresa WHERE usuario_empresa = '$usuEmpresaM' AND tipo_empresa_id_tipoempresa = 4");
+                $dataFFWW = mysqli_query($connc, $sqlFFWW);
+            ?>
+            <div class="form-group">
+                <label for="ffww"><b>FFWW o Cía Transportadora</b></label>
+                <select class="form-control" name="ffww" id="ffww">
+                    <?php while ($rowFFWW = mysqli_fetch_array($dataFFWW)){ ?>
+                        <option class="form-control" value="<?php echo $rowFFWW['id_empresa']; ?>">
+                        <?php echo $rowFFWW['razon_social'];?>
+                    </option>
+                    <?php } ?>
+                </select>
+            </div>
 
             <?php
                 $sqlPais = ("SELECT * FROM pais");
@@ -43,11 +73,11 @@
             </div>
             <div class="content">
                 <label for="incotemImp"><b>Incotem</b></label>
-                <input name="incotemImp" type="text" class='input-field' placeholder="Incotem" required>
+                <input name="incotemImp" type="text" maxlength="50" class='input-field' placeholder="Incotem" required>
             </div>
             <div class="content">
                 <label for="obsImp"><b>Observaciones</b></label>
-                <input name="obsImp" type="text" class='input-field' placeholder="Obervaciones">
+                <input name="obsImp" type="text" class='input-field' placeholder="Obervaciones" required>
             </div>
             <div>
                     <input class="submit-btn" type="submit" value="Guardar" name="regImp">
