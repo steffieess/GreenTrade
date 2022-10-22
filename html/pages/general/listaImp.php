@@ -5,12 +5,12 @@
 <?php
 if (isset($_GET['nro_orden'])) {
     $nroOrden = $_GET['nro_orden'];
-    $queryeditImp = "SELECT * FROM imp_exp WHERE nro_orden = '$nroOrden'";
+    $queryeditImp = "SELECT * FROM imp_exp WHERE id_imp_exp = '$nroOrden'";
     $queryeditImpList = mysqli_query($connc, $queryeditImp);
 
     if (mysqli_num_rows($queryeditExpList) == 1) {
         $row = mysqli_fetch_array($queryeditImpList);
-        $nOrden = $row['nro_orden'];
+        $nOrden = $row['id_imp_exp'];
     }
 }
 ?>
@@ -20,7 +20,7 @@ if (isset($_GET['nro_orden'])) {
     <h1 class="heading-title"> Editar Importación </h1>
     <?php if ($tipoUsu == 1 || $tipoUsu == 2) : ?>
         <div>
-            <form action="../../func/tools/editarImportacion.php" id='editImp' class='input-group-editImp' method="POST">
+            <form action="../../func/tools/editarImportacion.php?nro_orden=<?php echo $_GET['nro_orden'] ?>" id='editImp' class='input-group-editImp' method="POST">
                 <div class="content">
                     <label for="newnroOrdenImp"><b>N° de Orden</b></label>
                     <input name="newnroOrdenImp" type="text" class='input-field' placeholder="N° de Orden" readonly value="1">
@@ -54,7 +54,7 @@ if (isset($_GET['nro_orden'])) {
                     <input name="newEtaImp" type="text" class='input-field' placeholder="" required>
                 </div>
                 <div class="content">
-                    <label for="newNroDocImp"><b>N° Docuemento de Transporte</b></label>
+                    <label for="newNroDocImp"><b>N° Documento de Transporte</b></label>
                     <input name="newFechaDocImp" type="text" class='input-field' placeholder="" required>
                 </div>
                 <div class="content">
@@ -153,7 +153,7 @@ if (isset($_GET['nro_orden'])) {
     <!--  Usuario 3 -->
     <?php if ($tipoUsu == 3) : ?>
         <div>
-            <form action="../../func/tools/editarImportacion.php" id='editImp' class='input-group-editImp' method="POST">
+            <form action="../../func/tools/editarImportacion.php?nro_orden=<?php echo $_GET['nro_orden'] ?>" id='editImp' class='input-group-editImp' method="POST">
                 <div class="content">
                     <label for="newnroOrdenImp"><b>N° de Orden</b></label>
                     <input name="newnroOrdenImp" type="text" class='input-field' placeholder="N° de Orden" readonly value="1">
@@ -261,7 +261,7 @@ if (isset($_GET['nro_orden'])) {
     <!-- Usuario 5 -->
     <?php if ($tipoUsu == 5) : ?>
         <div>
-            <form action="../../func/tools/editarImportacion.php" id='editImp' class='input-group-editImp' method="POST">
+            <form action="../../func/tools/editarImportacion.php?nro_orden=<?php echo $_GET['nro_orden'] ?>" id='editImp' class='input-group-editImp' method="POST">
                 <div class="content">
                     <label for="newnroOrdenImp"><b>N° de Orden</b></label>
                     <input name="newnroOrdenImp" type="text" class='input-field' placeholder="N° de Orden" readonly value="1">
@@ -304,7 +304,7 @@ if (isset($_GET['nro_orden'])) {
 
     <?php if ($tipoUsu == 7) : ?>
         <div>
-            <form action="../../func/tools/editarImportacion.php" id='editImp' class='input-group-editImp' method="POST">
+            <form action="../../func/tools/editarImportacion.php?nro_orden=<?php echo $_GET['nro_orden'] ?>" id='editImp' class='input-group-editImp' method="POST">
                 <div class="content">
                     <label for="newnroOrdenImp"><b>N° de Orden</b></label>
                     <input name="newnroOrdenImp" type="text" class='input-field' placeholder="N° de Orden" readonly value="1">
