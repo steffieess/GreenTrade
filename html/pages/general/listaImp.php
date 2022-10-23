@@ -47,27 +47,27 @@ if (isset($_GET['id_imp_exp'])) {
                 </div>
                 <div class="content">
                     <label for="newobsImp"><b>Observaciones</b></label>
-                    <input name="newobsImp" type="text" class='input-field' placeholder="Obervaciones" autocomplete="off value="<?php echo $observaciones; ?>">
+                    <input name="newobsImp" type="text" class='input-field' placeholder="Obervaciones" autocomplete="off" value="<?php echo $observaciones; ?>">
                 </div>
                 <div class="content">
                     <label for="newReservaImp"><b>N° Reserva</b></label>
-                    <input name="newReservaImp" type="text" class='input-field' placeholder="" required autocomplete="off>
+                    <input name="newReservaImp" type="text" class='input-field' placeholder="" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newEdtImp"><b>Fecha EDT</b></label>
-                    <input name="newEdtImp" type="text" class='input-field' placeholder="" required autocomplete="off>
+                    <input name="newEdtImp" type="text" class='input-field' placeholder="" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newEtaImp"><b>Fecha ETA</b></label>
-                    <input name="newEtaImp" type="text" class='input-field' placeholder="" required autocomplete="off>
+                    <input name="newEtaImp" type="text" class='input-field' placeholder="" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newNroDocImp"><b>N° Documento de Transporte</b></label>
-                    <input name="newFechaDocImp" type="text" class='input-field' placeholder="" required autocomplete="off>
+                    <input name="newFechaDocImp" type="text" class='input-field' placeholder="" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newFechaDocImp"><b>Fecha del Documento de Transporte</b></label>
-                    <input name="newFechaDocImp" type="text" class='input-field' placeholder="" required autocomplete="off>
+                    <input name="newFechaDocImp" type="text" class='input-field' placeholder="" required autocomplete="off">
                 </div>
 
 
@@ -213,27 +213,27 @@ if (isset($_GET['id_imp_exp'])) {
 
                 <div class="content">
                     <label for="newMercaderiaImp"><b>Mercadería</b></label>
-                    <input name="newMercaderiaImp" type="text" class='input-field' placeholder="" required autocomplete="off>
+                    <input name="newMercaderiaImp" type="text" class='input-field' placeholder="" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newCantBultosImp"><b>Cantidad de Bultos</b></label>
-                    <input name="newCantBultosImp" type="text" class='input-field' placeholder="" required autocomplete="off>
+                    <input name="newCantBultosImp" type="text" class='input-field' placeholder="" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newPesoImp"><b>Peso Estimado</b></label>
-                    <input name="newPesoImp" type="text" class='input-field' placeholder="" required autocomplete="off>
+                    <input name="newPesoImp" type="text" class='input-field' placeholder="" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newVolumenImp"><b>Volumen Estimado</b></label>
-                    <input name="newVolumenImp" type="text" class='input-field' placeholder="" required autocomplete="off>
+                    <input name="newVolumenImp" type="text" class='input-field' placeholder="" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newNroContenedorImp"><b>N° Contenedor</b></label>
-                    <input name="newNroContenedorImp" type="text" class='input-field' placeholder="" required autocomplete="off>
+                    <input name="newNroContenedorImp" type="text" class='input-field' placeholder="" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newTipoContenedorImp"><b>Tipo de Contenedor</b></label>
-                    <input name="newTipoContenedorImp" type="text" class='input-field' placeholder="" required autocomplete="off>
+                    <input name="newTipoContenedorImp" type="text" class='input-field' placeholder="" required autocomplete="off">
                 </div>
                 <div class="content">
                     <span style="font-size: 15px;"><b>Commercial Invoice</b></span>
@@ -259,24 +259,24 @@ if (isset($_GET['id_imp_exp'])) {
                 </div>
                 <div class="content">
                     <label for="newLinkImp"><b>Link Seguimiento</b></label>
-                    <input name="newLinkImp" type="text" class='input-field' placeholder="" autocomplete="off>
+                    <input name="newLinkImp" type="text" class='input-field' placeholder="" autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newNroSegImp"><b>N° Seguimiento</b></label>
-                    <input name="newNroSegImp" type="text" class='input-field' placeholder="" autocomplete="off>
+                    <input name="newNroSegImp" type="text" class='input-field' placeholder="" autocomplete="off">
                 </div>
 
                 <div class="content">
                     <label for="newNroPolizaImp"><b>N° Póliza de Seguro</b></label>
-                    <input name="newNroPolizaImp" type="text" class='input-field' placeholder="" autocomplete="off>
+                    <input name="newNroPolizaImp" type="text" class='input-field' placeholder="" autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newFechaPolizaImp"><b>Fecha Póliza de Seguro</b></label>
-                    <input name="newFechaPolizaImp" type="text" class='input-field' placeholder="" autocomplete="off>
+                    <input name="newFechaPolizaImp" type="text" class='input-field' placeholder="" autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newPrimaPolizaImp"><b>Monto Prima Póliza de Seguro</b></label>
-                    <input name="newPrimaPolizaImp" type="text" class='input-field' placeholder="" autocomplete="off>
+                    <input name="newPrimaPolizaImp" type="text" class='input-field' placeholder="" autocomplete="off">
                 </div>
                 <div class="content">
                     <span style="font-size: 15px;"><b>Póliza de Seguro</b></span>
@@ -314,59 +314,59 @@ if (isset($_GET['id_imp_exp'])) {
                 </div>
                 <div class="content">
                     <label for="newobsImp"><b>Observaciones</b></label>
-                    <input name="newobsImp" type="text" class='input-field' placeholder="Obervaciones" autocomplete="off>
+                    <input name="newobsImp" type="text" class='input-field' placeholder="Obervaciones" autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newReservaImp"><b>N° Reserva</b></label>
-                    <input name="newReservaImp" type="text" class='input-field' placeholder="" required autocomplete="off>
+                    <input name="newReservaImp" type="text" class='input-field' placeholder="" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newEdtImp"><b>Fecha EDT</b></label>
-                    <input name="newEdtImp" type="text" class='input-field' placeholder="" required autocomplete="off>
+                    <input name="newEdtImp" type="text" class='input-field' placeholder="" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newEtaImp"><b>Fecha ETA</b></label>
-                    <input name="newEtaImp" type="text" class='input-field' placeholder="" required autocomplete="off>
+                    <input name="newEtaImp" type="text" class='input-field' placeholder="" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newNroDocImp"><b>N° Docuemento de Transporte</b></label>
-                    <input name="newFechaDocImp" type="text" class='input-field' placeholder="" required autocomplete="off>
+                    <input name="newFechaDocImp" type="text" class='input-field' placeholder="" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newFechaDocImp"><b>Fecha del Documento de Transporte</b></label>
-                    <input name="newFechaDocImp" type="text" class='input-field' placeholder="" required autocomplete="off>
+                    <input name="newFechaDocImp" type="text" class='input-field' placeholder="" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newTipoEmbarqueImp"><b>Tipo de Embarque</b></label>
-                    <input name="newTipoEmbarqueImp" type="text" class='input-field' placeholder="" required autocomplete="off>
+                    <input name="newTipoEmbarqueImp" type="text" class='input-field' placeholder="" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newTipoDesembarqueImp"><b>Tipo de Desembarque</b></label>
-                    <input name="newTipoDesembarqueImp" type="text" class='input-field' placeholder="" required autocomplete="off>
+                    <input name="newTipoDesembarqueImp" type="text" class='input-field' placeholder="" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newMercaderiaImp"><b>Mercadería</b></label>
-                    <input name="newMercaderiaImp" type="text" class='input-field' placeholder="" required autocomplete="off>
+                    <input name="newMercaderiaImp" type="text" class='input-field' placeholder="" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newCantBultosImp"><b>Cantidad de Bultos</b></label>
-                    <input name="newCantBultosImp" type="text" class='input-field' placeholder="" required autocomplete="off>
+                    <input name="newCantBultosImp" type="text" class='input-field' placeholder="" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newPesoImp"><b>Peso Estimado</b></label>
-                    <input name="newPesoImp" type="text" class='input-field' placeholder="" required autocomplete="off>
+                    <input name="newPesoImp" type="text" class='input-field' placeholder="" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newVolumenImp"><b>Volumen Estimado</b></label>
-                    <input name="newVolumenImp" type="text" class='input-field' placeholder="" required autocomplete="off>
+                    <input name="newVolumenImp" type="text" class='input-field' placeholder="" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newNroContenedorImp"><b>N° Contenedor</b></label>
-                    <input name="newNroContenedorImp" type="text" class='input-field' placeholder="" required autocomplete="off>
+                    <input name="newNroContenedorImp" type="text" class='input-field' placeholder="" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newTipoContenedorImp"><b>Tipo de Contenedor</b></label>
-                    <input name="newTipoContenedorImp" type="text" class='input-field' placeholder="" required autocomplete="off>
+                    <input name="newTipoContenedorImp" type="text" class='input-field' placeholder="" required autocomplete="off">
                 </div>
                 <div class="content">
                     <span style="font-size: 15px;"><b>Commercial Invoice</b></span>
@@ -422,15 +422,15 @@ if (isset($_GET['id_imp_exp'])) {
                 </div>
                 <div class="content">
                     <label for="newobsImp"><b>Observaciones</b></label>
-                    <input name="newobsImp" type="text" class='input-field' placeholder="Obervaciones" autocomplete="off>
+                    <input name="newobsImp" type="text" class='input-field' placeholder="Obervaciones" autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newLinkImp"><b>Link Seguimiento</b></label>
-                    <input name="newLinkImp" type="text" class='input-field' placeholder="" autocomplete="off>
+                    <input name="newLinkImp" type="text" class='input-field' placeholder="" autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newNroSegImp"><b>N° Seguimiento</b></label>
-                    <input name="newNroSegImp" type="text" class='input-field' placeholder="" autocomplete="off>
+                    <input name="newNroSegImp" type="text" class='input-field' placeholder="" autocomplete="off">
                 </div>
                 <div>
                     <input class="submit-btn" type="submit" value="Guardar" name="editImp">
@@ -465,20 +465,20 @@ if (isset($_GET['id_imp_exp'])) {
                 </div>
                 <div class="content">
                     <label for="newobsImp"><b>Observaciones</b></label>
-                    <input name="newobsImp" type="text" class='input-field' placeholder="Obervaciones" autocomplete="off>
+                    <input name="newobsImp" type="text" class='input-field' placeholder="Obervaciones" autocomplete="off">
                 </div>
 
                 <div class="content">
                     <label for="newNroPolizaImp"><b>N° Póliza de Seguro</b></label>
-                    <input name="newNroPolizaImp" type="text" class='input-field' placeholder="" autocomplete="off>
+                    <input name="newNroPolizaImp" type="text" class='input-field' placeholder="" autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newFechaPolizaImp"><b>Fecha Póliza de Seguro</b></label>
-                    <input name="newFechaPolizaImp" type="text" class='input-field' placeholder="" autocomplete="off>
+                    <input name="newFechaPolizaImp" type="text" class='input-field' placeholder="" autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="newPrimaPolizaImp"><b>Monto Prima Póliza de Seguro</b></label>
-                    <input name="newPrimaPolizaImp" type="text" class='input-field' placeholder="" autocomplete="off>
+                    <input name="newPrimaPolizaImp" type="text" class='input-field' placeholder="" autocomplete="off">
                 </div>
                 <div class="content">
                     <span style="font-size: 15px;"><b>Póliza de Seguro</b></span>
