@@ -49,7 +49,7 @@
             </div>
             
             <?php
-                $sqlProveedor = ("SELECT * FROM empresa WHERE usuario_empresa = '$usuEmpresaM' AND tipo_empresa_id_tipoempresa = 2");
+                $sqlProveedor = ("SELECT * FROM empresa WHERE usuario_empresa = '$usuEmpresaM' AND tipo_empresa_id_tipoempresa = 3");
                 $dataProveedor = mysqli_query($connc, $sqlProveedor);
             ?>
             <div class="form-group">
@@ -64,7 +64,7 @@
             </div>
 
             <?php
-                $sqlFFWW = ("SELECT * FROM empresa WHERE usuario_empresa = '$usuEmpresaM' AND tipo_empresa_id_tipoempresa = 4");
+                $sqlFFWW = ("SELECT * FROM empresa WHERE usuario_empresa = '$usuEmpresaM' AND tipo_empresa_id_tipoempresa = 5");
                 $dataFFWW = mysqli_query($connc, $sqlFFWW);
             ?>
             <div class="form-group">

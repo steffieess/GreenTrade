@@ -51,11 +51,11 @@
             <h1>Iniciar Sesión</h1>
             <div class="content">
                 <label for="correo"><b>Correo</b></label>
-                <input name="correo" type="text" class='input-field' placeholder="greentrade@greentrade.com" required>
+                <input name="correo" type="text" class='input-field' placeholder="greentrade@greentrade.com" required autocomplete="off">
             </div>
             <div class="content">
                 <label for="psw"><b>Contraseña</b></label>
-                <input name="clave" type="password" class='input-field' placeholder="••••••••••••" required>
+                <input name="clave" type="password" class='input-field' placeholder="••••••••••••" required autocomplete="off">
             </div>
             <div>
                 <input class="submit-btn" type="submit" value="Ingresar" name="Ingresar">
@@ -68,52 +68,52 @@
                 <h1>Registrar Empresa</h1>
                 <div class="content">
                     <label for="razon"><b>Razón social</b></label>
-                    <input name="razon" type="text" class='input-field' placeholder="Razón social" required>
+                    <input name="razon" type="text" class='input-field' placeholder="Razón social" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="direc_empresa"><b>Dirección Empresa</b></label>
-                    <input name="direc_empresa" type="text" class='input-field' placeholder="Dirección Empresa" required>
+                    <input name="direc_empresa" type="text" class='input-field' placeholder="Dirección Empresa" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="tel_empresa"><b>Teléfono Empresa</b></label>
-                    <input name="tel_empresa" type="text" class='input-field' placeholder="Teléfono Empresa" required>
+                    <input name="tel_empresa" type="tel" pattern="[0-9]{9}" class='input-field'  placeholder="Teléfono Empresa" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="mail_empresa"><b>Correo Empresa</b></label>
-                    <input name="mail_empresa" type="text" class='input-field' placeholder="greentrade@greentrade.com" required>
+                    <input name="mail_empresa" type="text" class='input-field' placeholder="greentrade@greentrade.com" required autocomplete="off">
                 </div>
                 <h3>Representante de la Empresa</h3>
                 <div class="content">
                     <label for="rut_user"><b>Rut representante</b></label>
-                    <input name="rut_user" type="text" class='input-field' placeholder="11111111-1" required>
+                    <input name="rut_user" type="text" class='input-field' placeholder="11111111-1" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="nom_user"><b>Nombre representante</b></label>
-                    <input name="nom_user" type="text" class='input-field' placeholder="Nombre representante" required>
+                    <input name="nom_user" type="text" class='input-field' placeholder="Nombre representante" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="appat_user"><b>Apellido paterno representante</b></label>
-                    <input name="appat_user" type="text" class='input-field' placeholder="Apellido Paterno" required>
+                    <input name="appat_user" type="text" class='input-field' placeholder="Apellido Paterno" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="apmat_user"><b>Apellido materno representante</b></label>
-                    <input name="apmat_user" type="text" class='input-field' placeholder="Apellido Materno" required>
+                    <input name="apmat_user" type="text" class='input-field' placeholder="Apellido Materno" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="mail_user"><b>Correo representante</b></label>
-                    <input name="mail_user" type="text" class='input-field' placeholder="greentrade@greentrade.com" required>
+                    <input name="mail_user" type="text" class='input-field' placeholder="greentrade@greentrade.com" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="tel_user"><b>Teléfono representante</b></label>
-                    <input name="tel_user" type="text" class='input-field' placeholder="Teléfono" required>
+                    <input name="tel_user" type="tel" pattern="[0-9]{9}" class='input-field' placeholder="Teléfono" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="clave_user"><b>Crear contraseña representante</b></label>
-                    <input name="clave_user" type="password" class='input-field' placeholder="••••••••••••" required>
+                    <input name="clave_user" type="password" minlength="6" maxlength="6" class='input-field' placeholder="••••••••••••" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="clave_user_valid"><b>Repita contraseña creada</b></label>
-                    <input name="clave_user_valid" type="password" class='input-field' placeholder="••••••••••••" required>
+                    <input name="clave_user_valid" type="password" minlength="6" maxlength="6" class='input-field' placeholder="••••••••••••" required autocomplete="off">
                 </div>
                 <div>
                     <input class="submit-btn" type="submit" value="Registrar" name="Registrar">

@@ -68,7 +68,7 @@
             </div>
             <div class="content">
                 <label for="telEmpresa"><b>Teléfono Empresa</b></label>
-                <input name="telEmpresa" type="text" class='input-field' placeholder="Teléfono Empresa" required>
+                <input name="telEmpresa" type="tel" pattern="[0-9]{9}" class='input-field' placeholder="Teléfono Empresa" required>
             </div>
             <div class="content">
                 <label for="correoEmpresa"><b>Correo Empresa</b></label>

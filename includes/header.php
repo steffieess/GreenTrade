@@ -137,7 +137,7 @@
    <header class="p-3 bg-dark text-white">
       <div class="container">
          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <a href="../general/inicio.php" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
                   <use xlink:href="#bootstrap" />
                </svg>
@@ -157,11 +157,17 @@
                   <?php endif ?>
 
                   <?php if ($tipoUsu == 3 || $tipoUsu == 4 || $tipoUsu == 5 || $tipoUsu == 6 || $tipoUsu == 7) : ?>
+                     <li><a href="../general/inicio.php"><img src="../../img/logo.png" alt=""></a></li>
+                     <li><a href="../general/inicio.php" class="nav-link px-2 text-white" style="font-size: 15px;">GreenTrade</a></li>
+                     <li><a href="../general/homepage.php" class="nav-link px-2 text-white" style="font-size: 15px;">Inicio</a></li>
                      <li><a href="../general/importaciones.php" class="nav-link px-2 text-white" style="font-size: 15px;">Importaciones</a></li>
                      <li><a href="../general/exportaciones.php" class="nav-link px-2 text-white" style="font-size: 15px;">Exportaciones</a></li>
                   <?php endif ?>
 
                   <?php if ($tipoUsu == 8) : ?>
+                     <li><a href="../general/inicio.php"><img src="../../img/logo.png" alt=""></a></li>
+                     <li><a href="../general/inicio.php" class="nav-link px-2 text-white" style="font-size: 15px;">GreenTrade</a></li>
+                     <li><a href="../general/homepage.php" class="nav-link px-2 text-white" style="font-size: 15px;">Inicio</a></li>
                   <li><a href="../Reciclador/solicitudes.php" class="nav-link px-2 text-white" style="font-size: 15px;">Solicitudes</a></li>
                   <li><a href="../Reciclador/historial.php" class="nav-link px-2 text-white" style="font-size: 15px;">Historial</a></li>
                   <?php endif ?>
@@ -170,7 +176,6 @@
                   <li><a href="../general/inicio.php"><img src="../../img/logo.png" alt=""></a></li>
                   <li><a href="../general/inicio.php" class="nav-link px-2 text-white" style="font-size: 15px;">GreenTrade</a></li>
                   <li><a href="../general/vision.php" class="nav-link px-2 text-white" style="font-size: 15px;">Visión</a></li>
-                  <li><a href="../general/vision.php" class="nav-link px-2 text-white" style="font-size: 15px;">Prémium</a></li>
                <?php endif ?>
             </ul>
             <?php if (!empty($dataUserM)) : ?>

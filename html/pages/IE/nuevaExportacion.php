@@ -49,14 +49,14 @@
             </div>
 
             <?php
-                $sqlProveedor = ("SELECT * FROM empresa WHERE usuario_empresa = '$usuEmpresaM' AND tipo_empresa_id_tipoempresa = 2");
+                $sqlProveedor = ("SELECT * FROM empresa WHERE usuario_empresa = '$usuEmpresaM' AND tipo_empresa_id_tipoempresa = 3");
                 $dataProveedor = mysqli_query($connc, $sqlProveedor);
             ?>
             <div class="form-group">
                 <label for="proveedor"><b>Proveedor</b></label>
                 <select class="form-control" name="proveedor" id="proveedor">
                     <?php while ($rowProveedor = mysqli_fetch_array($dataProveedor)){ ?>
-                        <option class="form-control" value="<?php echo $rowProveedor['id_empresa']; ?>">
+                        <option class="form-control" value="<?php echo $rowProveedor['razon_social']; ?>">
                         <?php echo $rowProveedor['razon_social'];?>
                     </option>
                     <?php } ?>
@@ -64,14 +64,14 @@
             </div>
 
             <?php
-                $sqlFFWW = ("SELECT * FROM empresa WHERE usuario_empresa = '$usuEmpresaM' AND tipo_empresa_id_tipoempresa = 4");
+                $sqlFFWW = ("SELECT * FROM empresa WHERE usuario_empresa = '$usuEmpresaM' AND tipo_empresa_id_tipoempresa = 5");
                 $dataFFWW = mysqli_query($connc, $sqlFFWW);
             ?>
             <div class="form-group">
                 <label for="ffww"><b>FFWW o Cía Transportadora</b></label>
                 <select class="form-control" name="ffww" id="ffww">
                     <?php while ($rowFFWW = mysqli_fetch_array($dataFFWW)){ ?>
-                        <option class="form-control" value="<?php echo $rowFFWW['id_empresa']; ?>">
+                        <option class="form-control" value="<?php echo $rowFFWW['razon_social']; ?>">
                         <?php echo $rowFFWW['razon_social'];?>
                     </option>
                     <?php } ?>

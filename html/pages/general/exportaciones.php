@@ -41,57 +41,220 @@
 } ?>
 
 <section>
-    <h1 class="heading-title"> Exportaciones </h1>
+
+    <h1 class="heading-title"> Importaciones </h1>
     <div class="text-end">
-    <?php
+        <?php
         if ($tipoUsu == 2) {
 
         ?>
-            <a href="../IE/nuevaExportacion.php" class="btn">Nueva Exportación</a>
+            <a href="../IE/nuevaImportacion.php" class="btn">Nueva Importación</a>
         <?php } ?>
+
     </div>
-    <?php
-    $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2";
-    $queryImpExpList = mysqli_query($connc, $queryImpExp);
-    ?>
-    <div class="table-responsive">
-        <div class="col-md-8 table-user">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>N° de Orden</th>
-                        <th>País de Origen</th>
-                        <th>País de Destino</th>
-                        <th>Embarque</th>
-                        <th>Desembarque</th>
-                        <th>Incotem</th>
-                        <th>Observaciones</th>
-                        <th>Ver más</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php if (mysqli_num_rows($queryImpExpList) != 0) { ?>
-                        <?php while ($dataImpExp = mysqli_fetch_array($queryImpExpList)) { ?>
-                            <tr>
-                                <td><?php echo $dataImpExp['nro_orden']; ?></td>
-                                <td><?php echo $dataImpExp['origen']; ?></td>
-                                <td><?php echo $dataImpExp['destino']; ?></td>
-                                <td><?php echo $dataImpExp['embarque']; ?></td>
-                                <td><?php echo $dataImpExp['desembarque']; ?></td>
-                                <td><?php echo $dataImpExp['incoterm']; ?></td>
-                                <td><?php echo $dataImpExp['observaciones']; ?></td>
-                                <td>
-                                    <div class="doc"><a href="#"> <i class="fa-solid fa-eye"></i> </a></div>
-                                </td>
-                            </tr>
+
+    <?php if ($tipoUsu == 1 || $tipoUsu == 2) { ?>
+
+        <?php
+        $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 ";
+        $queryImpExpList = mysqli_query($connc, $queryImpExp);
+        ?>
+        <div class="table-responsive">
+            <div class="col-md-8 table-user">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>N° de Orden</th>
+                            <th>País de Origen</th>
+                            <th>País de Destino</th>
+                            <th>Embarque</th>
+                            <th>Desembarque</th>
+                            <th>Incotem</th>
+                            <th>Observaciones</th>
+                            <th>Ver más</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php if (mysqli_num_rows($queryImpExpList) != 0) { ?>
+                            <?php while ($dataImpExp = mysqli_fetch_array($queryImpExpList)) { ?>
+                                <tr>
+                                    <td><?php echo $dataImpExp['nro_orden']; ?></td>
+                                    <td><?php echo $dataImpExp['origen']; ?></td>
+                                    <td><?php echo $dataImpExp['destino']; ?></td>
+                                    <?php if ($dataImpExp['puerto_areo_embarque'] == NULL) { ?>
+                                        <td>Sin información</td>
+                                    <?php } else { ?>
+                                        <td><?php echo $dataImpExp['puerto_areo_embarque']; ?></td>
+                                    <?php } ?>
+                                    <?php if ($dataImpExp['puerto_areo_desembarque'] == NULL) { ?>
+                                        <td>Sin información</td>
+                                    <?php } else { ?>
+                                        <td><?php echo $dataImpExp['puerto_areo_desembarque']; ?></td>
+                                    <?php } ?>
+                                    <td><?php echo $dataImpExp['incoterm']; ?></td>
+                                    <td><?php echo $dataImpExp['observaciones']; ?></td>
+                                    <td><a href="../general/listaExp.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-eye"></i></a></td>
+                                </tr>
+                            <?php } ?>
+                        <?php } else { ?>
                         <?php } ?>
-                    <?php } else { ?>
-                    <?php } ?>
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
+    <?php } elseif ($tipoUsu == 3) { ?>
+
+        <?php
+        $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usuproveedor = '$razonM' ";
+        $queryImpExpList = mysqli_query($connc, $queryImpExp);
+        ?>
+        <div class="table-responsive">
+            <div class="col-md-8 table-user">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>N° de Orden</th>
+                            <th>País de Origen</th>
+                            <th>País de Destino</th>
+                            <th>Embarque</th>
+                            <th>Desembarque</th>
+                            <th>Incotem</th>
+                            <th>Observaciones</th>
+                            <th>Ver más</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php if (mysqli_num_rows($queryImpExpList) != 0) { ?>
+                            <?php while ($dataImpExp = mysqli_fetch_array($queryImpExpList)) { ?>
+                                <tr>
+                                    <td><?php echo $dataImpExp['nro_orden']; ?></td>
+                                    <td><?php echo $dataImpExp['origen']; ?></td>
+                                    <td><?php echo $dataImpExp['destino']; ?></td>
+                                    <?php if ($dataImpExp['puerto_areo_embarque'] == NULL) { ?>
+                                        <td>Sin información</td>
+                                    <?php } else { ?>
+                                        <td><?php echo $dataImpExp['puerto_areo_embarque']; ?></td>
+                                    <?php } ?>
+                                    <?php if ($dataImpExp['puerto_areo_desembarque'] == NULL) { ?>
+                                        <td>Sin información</td>
+                                    <?php } else { ?>
+                                        <td><?php echo $dataImpExp['puerto_areo_desembarque']; ?></td>
+                                    <?php } ?>
+                                    <td><?php echo $dataImpExp['incoterm']; ?></td>
+                                    <td><?php echo $dataImpExp['observaciones']; ?></td>
+                                    <td><a href="../general/listaExp.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-eye"></i></a></td>
+                                </tr>
+                            <?php } ?>
+                        <?php } else { ?>
+                        <?php } ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    <?php } elseif ($tipoUsu == 5) { ?>
+
+        <?php
+        $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usutrasportadora = '$razonM' ";
+        $queryImpExpList = mysqli_query($connc, $queryImpExp);
+        ?>
+        <div class="table-responsive">
+            <div class="col-md-8 table-user">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>N° de Orden</th>
+                            <th>País de Origen</th>
+                            <th>País de Destino</th>
+                            <th>Embarque</th>
+                            <th>Desembarque</th>
+                            <th>Incotem</th>
+                            <th>Observaciones</th>
+                            <th>Ver más</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php if (mysqli_num_rows($queryImpExpList) != 0) { ?>
+                            <?php while ($dataImpExp = mysqli_fetch_array($queryImpExpList)) { ?>
+                                <tr>
+                                    <td><?php echo $dataImpExp['nro_orden']; ?></td>
+                                    <td><?php echo $dataImpExp['origen']; ?></td>
+                                    <td><?php echo $dataImpExp['destino']; ?></td>
+                                    <?php if ($dataImpExp['puerto_areo_embarque'] == NULL) { ?>
+                                        <td>Sin información</td>
+                                    <?php } else { ?>
+                                        <td><?php echo $dataImpExp['puerto_areo_embarque']; ?></td>
+                                    <?php } ?>
+                                    <?php if ($dataImpExp['puerto_areo_desembarque'] == NULL) { ?>
+                                        <td>Sin información</td>
+                                    <?php } else { ?>
+                                        <td><?php echo $dataImpExp['puerto_areo_desembarque']; ?></td>
+                                    <?php } ?>
+                                    <td><?php echo $dataImpExp['incoterm']; ?></td>
+                                    <td><?php echo $dataImpExp['observaciones']; ?></td>
+                                    <td><a href="../general/listaExp.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-eye"></i></a></td>
+                                </tr>
+                            <?php } ?>
+                        <?php } else { ?>
+                        <?php } ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    <?php } elseif ($tipoUsu == 7) { ?>
+
+        <?php
+        $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usuaseguradora = '$razonM' ";
+        $queryImpExpList = mysqli_query($connc, $queryImpExp);
+        ?>
+        <div class="table-responsive">
+            <div class="col-md-8 table-user">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>N° de Orden</th>
+                            <th>País de Origen</th>
+                            <th>País de Destino</th>
+                            <th>Embarque</th>
+                            <th>Desembarque</th>
+                            <th>Incotem</th>
+                            <th>Observaciones</th>
+                            <th>Ver más</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php if (mysqli_num_rows($queryImpExpList) != 0) { ?>
+                            <?php while ($dataImpExp = mysqli_fetch_array($queryImpExpList)) { ?>
+                                <tr>
+                                    <td><?php echo $dataImpExp['nro_orden']; ?></td>
+                                    <td><?php echo $dataImpExp['origen']; ?></td>
+                                    <td><?php echo $dataImpExp['destino']; ?></td>
+                                    <?php if ($dataImpExp['puerto_areo_embarque'] == NULL) { ?>
+                                        <td>Sin información</td>
+                                    <?php } else { ?>
+                                        <td><?php echo $dataImpExp['puerto_areo_embarque']; ?></td>
+                                    <?php } ?>
+                                    <?php if ($dataImpExp['puerto_areo_desembarque'] == NULL) { ?>
+                                        <td>Sin información</td>
+                                    <?php } else { ?>
+                                        <td><?php echo $dataImpExp['puerto_areo_desembarque']; ?></td>
+                                    <?php } ?>
+                                    <td><?php echo $dataImpExp['incoterm']; ?></td>
+                                    <td><?php echo $dataImpExp['observaciones']; ?></td>
+                                    <td><a href="../general/listaExp.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-eye"></i></a></td>
+                                </tr>
+                            <?php } ?>
+                        <?php } else { ?>
+                        <?php } ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    <?php }  ?>
 </section>
+
 <!--body section ends-->
 
 <!-- footer section starts  -->

@@ -688,6 +688,12 @@ img {
     width: 280px;
     transition: .5s;
 }
+.input-group-login-clave {
+    top: 80px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
 
 .input-group-register {
     top: 120px;
@@ -935,4 +941,14 @@ tr:hover td {
 
 .submit-btn{
     font-weight: bold;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
 }

@@ -28,7 +28,7 @@ if (isset($_GET['id_imp_exp'])) {
     <?php if ($tipoUsu == 1 || $tipoUsu == 2) : ?>
         <div>
             <form action="../../func/tools/editarImportacion.php?id_imp_exp=<?php echo $_GET['id_imp_exp'] ?>" id='editImp' class='input-group-editImp' method="POST">
-            <!-- IGNACIO ESTUVO AQUÍ-->
+                <!-- IGNACIO ESTUVO AQUÍ-->
                 <div class="content">
                     <label for="newnroOrdenImp"><b>N° de Orden</b></label>
                     <input name="newnroOrdenImp" type="text" class='input-field' placeholder="N° de Orden" value="<?php echo $nOrden; ?>" readonly>

@@ -23,7 +23,7 @@ if (isset($_GET['rut_usuario'])) {
         <form action="../../func/tools/editarUsuario.php?rut_usuario=<?php echo $_GET['rut_usuario'] ?>" id='editUsuario' class='input-group-editUsuario' method="POST">
             <div class="content">
                 <label for="newTelUser"><b>Nuevo Telefóno</b></label>
-                <input name="newTelUser" type="text" class='input-field' placeholder="Ingrese nuevo teléfono" value="<?php echo $tel; ?>" required autocomplete="off">
+                <input name="newTelUser" type="tel" pattern="[0-9]{9}" class='input-field' placeholder="Ingrese nuevo teléfono" value="<?php echo $tel; ?>" required autocomplete="off">
             </div>
 
             <div class="form-group">
