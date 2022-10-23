@@ -15,7 +15,9 @@ if ($sqlcantidad > 0) {
     while ($dataDE = mysqli_fetch_array($sqlexec)) {
         $rut = $dataDE['rut_usuario'];
         $parteNumerica = str_replace(substr($rut, -2, 2), '', $rut);
-        if ($clave != $parteNumerica) {
+        if ($clave == $parteNumerica && password_verify($clave, $dataDE['password']) == $parteNumerica) {
+            $pasa = 2;
+        } else {
             if (password_verify($clave, $dataDE['password'])) {
                 $pasa = 1;
             } else {
@@ -23,8 +25,6 @@ if ($sqlcantidad > 0) {
                 $_SESSION['message_type'] = 'Error';
                 echo "<script> window.location='../../pages/general/login_register.php'; </script>";
             }
-        } else {
-            $pasa = 2;
         }
     }
 } else {
