@@ -42,13 +42,13 @@
 
 <section>
 
-    <h1 class="heading-title"> Importaciones </h1>
+    <h1 class="heading-title"> EXportaciones </h1>
     <div class="text-end">
         <?php
         if ($tipoUsu == 2) {
 
         ?>
-            <a href="../IE/nuevaImportacion.php" class="btn">Nueva Importación</a>
+            <a href="../IE/nuevaExportacion.php" class="btn">Nueva Exportación</a>
         <?php } ?>
 
     </div>

@@ -60,27 +60,27 @@
             </div>
             <div class="content">
                 <label for="rutUsuarioExt"><b>Rut Usuario</b></label>
-                <input name="rutUsuarioExt" type="text" class='input-field' placeholder="11111111-1" required>
+                <input name="rutUsuarioExt" type="text" class='input-field' placeholder="11111111-1" required autocomplete="off">
             </div>
             <div class="content">
                 <label for="nomUsuarioExt"><b>Nombre Usuario</b></label>
-                <input name="nomUsuarioExt" type="text" class='input-field' placeholder="Nombre Usuario" required>
+                <input name="nomUsuarioExt" type="text" class='input-field' placeholder="Nombre Usuario" required autocomplete="off">
             </div>
             <div class="content">
                 <label for="appUsuarioExt"><b>Apellido Paterno Usuario</b></label>
-                <input name="appUsuarioExt" type="text" class='input-field' placeholder="Apellido Paterno" required>
+                <input name="appUsuarioExt" type="text" class='input-field' placeholder="Apellido Paterno" required autocomplete="off">
             </div>
             <div class="content">
                 <label for="apmUsuarioExt"><b>Apellido Materno Usuario</b></label>
-                <input name="apmUsuarioExt" type="text" class='input-field' placeholder="Apellido Materno" required>
+                <input name="apmUsuarioExt" type="text" class='input-field' placeholder="Apellido Materno" required autocomplete="off"> 
             </div>
             <div class="content">
                 <label for="mailUsuarioExt"><b>Correo Usuario</b></label>
-                <input name="mailUsuarioExt" type="text" class='input-field' placeholder="greentrade@greentrade.com" required>
+                <input name="mailUsuarioExt" type="text" class='input-field' placeholder="greentrade@greentrade.com" required autocomplete="off">
             </div>
             <div class="content">
                 <label for="telUsuarioExt"><b>Teléfono Usuario</b></label>
-                <input name="telUsuarioExt" type="tel" pattern="[0-9]{9}" class='input-field' placeholder="Teléfono Usuario" required>
+                <input name="telUsuarioExt" type="tel" pattern="[0-9]{9}" class='input-field' placeholder="Teléfono Usuario" required autocomplete="off">
             </div>
             <div>
                 <input class="submit-btn" type="submit" value="Registrar Usuario Externo" name="regUsuarioExt">

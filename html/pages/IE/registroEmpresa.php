@@ -60,19 +60,19 @@
 
             <div class="content">
                 <label for="razonSocial"><b>Razón Social</b></label>
-                <input name="razonSocial" type="text" class='input-field' placeholder="Razón Social" required>
+                <input name="razonSocial" type="text" class='input-field' placeholder="Razón Social" required autocomplete="off">
             </div>
             <div class="content">
                 <label for="dicEmpresa"><b>Dirección Empresa</b></label>
-                <input name="dicEmpresa" type="text" class='input-field' placeholder="Dirección Empresa" required>
+                <input name="dicEmpresa" type="text" class='input-field' placeholder="Dirección Empresa" required autocomplete="off">
             </div>
             <div class="content">
                 <label for="telEmpresa"><b>Teléfono Empresa</b></label>
-                <input name="telEmpresa" type="tel" pattern="[0-9]{9}" class='input-field' placeholder="Teléfono Empresa" required>
+                <input name="telEmpresa" type="tel" pattern="[0-9]{9}" class='input-field' placeholder="Teléfono Empresa" required autocomplete="off">
             </div>
             <div class="content">
                 <label for="correoEmpresa"><b>Correo Empresa</b></label>
-                <input name="correoEmpresa" type="text" class='input-field' placeholder="Correo Empresa" required>
+                <input name="correoEmpresa" type="text" class='input-field' placeholder="Correo Empresa" required autocomplete="off">
             </div>
             <input class="submit-btn" type="submit" value="Registrar Empresa" name="regEmpresa">
     </div>
