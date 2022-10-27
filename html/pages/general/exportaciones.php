@@ -1,5 +1,6 @@
 <!-- header section starts  -->
 <?php include("../../../includes/header.php"); ?>
+<?php include("../../func/tools/paginadorExp.php"); ?>
 <!-- header section ends -->
 
 <!--body section starts-->
@@ -42,7 +43,20 @@
 
 <section>
 
-    <h1 class="heading-title"> EXportaciones </h1>
+    <h1 class="heading-title"> Exportaciones </h1>
+
+    <div class="card card-body col-md-2">
+        <form action="exportaciones.php" method="POST">
+
+            <div class="form-group">
+                <label for="nroOrdenImp">Buscar N° de Orden</label>
+                <input name="buscar" type="text" class='input-field' placeholder="N° de Orden" autocomplete="off">
+            </div>
+
+            <input type="submit" name="buscarNroOrden" class="btn btn-success btn-block" value="Buscar">
+        </form>
+    </div>
+
     <div class="text-end">
         <?php
         if ($tipoUsu == 2) {
@@ -55,10 +69,22 @@
 
     <?php if ($tipoUsu == 1 || $tipoUsu == 2) { ?>
 
-        <?php
-        $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 ";
-        $queryImpExpList = mysqli_query($connc, $queryImpExp);
-        ?>
+        <!-- search section starts-->
+        <?php if (isset($_POST['buscarNroOrden'])) { ?>
+            <?php if ($_POST['buscar'] != '') {
+                $buscar = $_POST['buscar'];
+                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND nro_orden = '$buscar'";
+                $queryImpExpList = mysqli_query($connc, $queryImpExp);
+            } else {
+                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 LIMIT $iniciar,$imp_x_pagina";
+                $queryImpExpList = mysqli_query($connc, $queryImpExp);
+            } ?>
+        <?php } else {
+            $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 LIMIT $iniciar,$imp_x_pagina";
+            $queryImpExpList = mysqli_query($connc, $queryImpExp);
+        } ?>
+        <!-- search section ends-->
+
         <div class="table-responsive">
             <div class="col-md-8 table-user">
                 <table class="table">
@@ -104,10 +130,22 @@
         </div>
     <?php } elseif ($tipoUsu == 3) { ?>
 
-        <?php
-        $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usuproveedor = '$razonM' ";
-        $queryImpExpList = mysqli_query($connc, $queryImpExp);
-        ?>
+        <!-- search section starts-->
+        <?php if (isset($_POST['buscarNroOrden'])) { ?>
+            <?php if ($_POST['buscar'] != '') {
+                $buscar = $_POST['buscar'];
+                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usuproveedor = '$razonM' AND nro_orden = '$buscar'";
+                $queryImpExpList = mysqli_query($connc, $queryImpExp);
+            } else {
+                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usuproveedor = '$razonM' LIMIT $iniciar,$imp_x_pagina";
+                $queryImpExpList = mysqli_query($connc, $queryImpExp);
+            } ?>
+        <?php } else {
+            $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usuproveedor = '$razonM' LIMIT $iniciar,$imp_x_pagina";
+            $queryImpExpList = mysqli_query($connc, $queryImpExp);
+        } ?>
+        <!-- search section ends-->
+
         <div class="table-responsive">
             <div class="col-md-8 table-user">
                 <table class="table">
@@ -154,10 +192,22 @@
 
     <?php } elseif ($tipoUsu == 5) { ?>
 
-        <?php
-        $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usutrasportadora = '$razonM' ";
-        $queryImpExpList = mysqli_query($connc, $queryImpExp);
-        ?>
+        <!-- search section starts-->
+        <?php if (isset($_POST['buscarNroOrden'])) { ?>
+            <?php if ($_POST['buscar'] != '') {
+                $buscar = $_POST['buscar'];
+                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usutrasportadora = '$razonM' AND nro_orden = '$buscar'";
+                $queryImpExpList = mysqli_query($connc, $queryImpExp);
+            } else {
+                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usutrasportadora = '$razonM' LIMIT $iniciar,$imp_x_pagina";
+                $queryImpExpList = mysqli_query($connc, $queryImpExp);
+            } ?>
+        <?php } else {
+            $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usutrasportadora = '$razonM' LIMIT $iniciar,$imp_x_pagina";
+            $queryImpExpList = mysqli_query($connc, $queryImpExp);
+        } ?>
+        <!-- search section ends-->
+
         <div class="table-responsive">
             <div class="col-md-8 table-user">
                 <table class="table">
@@ -204,10 +254,22 @@
 
     <?php } elseif ($tipoUsu == 7) { ?>
 
-        <?php
-        $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usuaseguradora = '$razonM' ";
-        $queryImpExpList = mysqli_query($connc, $queryImpExp);
-        ?>
+        <!-- search section starts-->
+        <?php if (isset($_POST['buscarNroOrden'])) { ?>
+            <?php if ($_POST['buscar'] != '') {
+                $buscar = $_POST['buscar'];
+                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usuaseguradora = '$razonM' AND nro_orden = '$buscar'";
+                $queryImpExpList = mysqli_query($connc, $queryImpExp);
+            } else {
+                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usuaseguradora = '$razonM' LIMIT $iniciar,$imp_x_pagina";
+                $queryImpExpList = mysqli_query($connc, $queryImpExp);
+            } ?>
+        <?php } else {
+            $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usuaseguradora = '$razonM' LIMIT $iniciar,$imp_x_pagina";
+            $queryImpExpList = mysqli_query($connc, $queryImpExp);
+        } ?>
+        <!-- search section ends-->
+
         <div class="table-responsive">
             <div class="col-md-8 table-user">
                 <table class="table">
@@ -253,6 +315,30 @@
         </div>
 
     <?php }  ?>
+    <center>
+        <ul class="pagination">
+
+            <?php if ($_GET['pagina'] > 1) { ?>
+                <li><a href=" exportaciones.php?pagina=<?php echo $_GET['pagina'] - 1 ?>"> &laquo;</a></li>
+            <?php } else { ?>
+
+            <?php } ?>
+
+            <?php for ($i = 0; $i < $paginas; $i++) : ?>
+                <li <?php echo $_GET['pagina'] == $i + 1 ? 'class="active"' : '' ?>>
+                    <a href="exportaciones.php?pagina=<?php echo $i + 1 ?>">
+                        <?php echo $i + 1 ?>
+                    </a>
+                </li>
+            <?php endfor ?>
+
+            <?php if ($_GET['pagina'] < $paginas) { ?>
+                <li><a href=" exportaciones.php?pagina=<?php echo $_GET['pagina'] + 1 ?>"> &raquo;</a></li>
+            <?php } else { ?>
+
+            <?php } ?>
+        </ul>
+    </center>
 </section>
 
 <!--body section ends-->

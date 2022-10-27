@@ -98,10 +98,16 @@ img {
     display: initial;
 }
 
+
+
 .btn:hover {
     background-color: #75AF61 !important;
     color: white;
     border: #222;
+}
+
+.btn {
+    --bs-btn-border-width: 0px;
 }
 
 
@@ -952,3 +958,39 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
 }
+
+/*paginador styles starts*/
+
+
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;    
+    background-color: #000 ;
+    font-family: Lato, Helvetica, sans-serif!important;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color:white;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    background-color: black ;
+    font-family: Lato, Helvetica, sans-serif!important;
+}
+
+
+ul.pagination li.active  a{
+    background-color: var(--main-color);
+    color: white;
+    border: 1px solid var(--white);
+    z-index: auto !important;
+}
+
+ul.pagination li a:hover:not(.active) {background-color: #75AF61;}
+
+/*paginador styles ends*/

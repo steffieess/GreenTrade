@@ -41,25 +41,45 @@
 <!--body section starts-->
 <section>
     <h1 class="heading-title"> Usuarios </h1>
+    <div class="card card-body col-md-2">
+        <form action="usuario.php" method="POST">
+
+            <div class="form-group">
+                <label for="buscarUsuario">Buscar usuario</label>
+                <input name="buscar" type="text" class='input-field' placeholder="Rut" autocomplete="off">
+            </div>
+
+            <input type="submit" name="buscarUsuario" class="btn btn-success btn-block" value="Buscar">
+        </form>
+    </div>
     <div class="text-end">
         <?php
-            if ($tipoUsu == 1) {
+        if ($tipoUsu == 1) {
 
         ?>
             <a href="../IE/registroUsuario.php" class="btn">Nuevo Usuario Colaborador</a>
         <?php } ?>
         <?php
-            if ($tipoUsu == 2) {
+        if ($tipoUsu == 2) {
 
         ?>
             <a href="../IE/registroUsuarioExterno.php" class="btn">Nuevo Usuario Externo</a>
         <?php } ?>
     </div>
 
-    <?php
-    $querySuppliers = "SELECT * FROM usuario INNER JOIN empresa ON usuario.empresa_id_empresa = empresa.id_empresa WHERE empresa.usuario_empresa = '$usuEmpresaM' ORDER BY empresa.id_empresa ASC";
-    $queryUserSuppliers = mysqli_query($connc, $querySuppliers);
-    ?>
+    <?php if (isset($_POST['buscarUsuario'])) { ?>
+        <?php if ($_POST['buscar'] != '') {
+            $buscar = $_POST['buscar'];
+            $querySuppliers = "SELECT * FROM usuario INNER JOIN empresa ON usuario.empresa_id_empresa = empresa.id_empresa WHERE empresa.usuario_empresa = '$usuEmpresaM' AND rut_usuario = '$buscar' ORDER BY empresa.id_empresa ASC";
+            $queryUserSuppliers = mysqli_query($connc, $querySuppliers);
+        } else {
+            $querySuppliers = "SELECT * FROM usuario INNER JOIN empresa ON usuario.empresa_id_empresa = empresa.id_empresa WHERE empresa.usuario_empresa = '$usuEmpresaM' ORDER BY empresa.id_empresa ASC";
+            $queryUserSuppliers = mysqli_query($connc, $querySuppliers);
+        } ?>
+    <?php } else {
+        $querySuppliers = "SELECT * FROM usuario INNER JOIN empresa ON usuario.empresa_id_empresa = empresa.id_empresa WHERE empresa.usuario_empresa = '$usuEmpresaM' ORDER BY empresa.id_empresa ASC";
+        $queryUserSuppliers = mysqli_query($connc, $querySuppliers);
+    } ?>
 
     <div class="table-responsive">
         <div class="col-md-8 table-user ">
@@ -90,11 +110,11 @@
                                 <td><?php echo $dataUserSuppliers['razon_social']; ?></td>
                                 <?php
                                 if ($dataUserSuppliers['status'] == 0) { ?>
-                                <td>Habilitado</td>
-                                <?php }else{?>
-                                <td>Deshabilitado</td>
-                                <?php }?>
-                                <td><a href="../general/editarUsuario.php?rut_usuario=<?php echo $dataUserSuppliers['rut_usuario']?>"><i class="fa-solid fa-user-pen"></i></a></td>
+                                    <td>Habilitado</td>
+                                <?php } else { ?>
+                                    <td>Deshabilitado</td>
+                                <?php } ?>
+                                <td><a href="../general/editarUsuario.php?rut_usuario=<?php echo $dataUserSuppliers['rut_usuario'] ?>"><i class="fa-solid fa-user-pen"></i></a></td>
                             </tr>
                         <?php } ?>
                     <?php } else { ?>

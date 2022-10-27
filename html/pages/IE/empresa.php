@@ -39,6 +39,19 @@
 <!--body section starts-->
 <section>
     <h1 class="heading-title"> Empresas </h1>
+
+    <div class="card card-body col-md-2">
+        <form action="empresa.php" method="POST">
+
+            <div class="form-group">
+                <label for="buscarEmpresa">Buscar empresa</label>
+                <input name="buscar" type="text" class='input-field' placeholder="Razón social" autocomplete="off">
+            </div>
+
+            <input type="submit" name="buscarEmpresa" class="btn btn-success btn-block" value="Buscar">
+        </form>
+    </div>
+
     <div class="text-end">
         <?php
         if ($tipoUsu == 2) {
@@ -48,10 +61,19 @@
         <?php } ?>
     </div>
 
-    <?php
-    $queryEmpresa = "SELECT * FROM empresa INNER JOIN tipo_empresa ON empresa.tipo_empresa_id_tipoempresa = tipo_empresa.id_tipoempresa WHERE usuario_empresa = '$usuEmpresaM'";
+    <?php if (isset($_POST['buscarEmpresa'])) { ?>
+        <?php if ($_POST['buscar'] != '') {
+            $buscar = $_POST['buscar'];
+            $queryEmpresa = "SELECT * FROM empresa INNER JOIN tipo_empresa ON empresa.tipo_empresa_id_tipoempresa = tipo_empresa.id_tipoempresa WHERE usuario_empresa = '$usuEmpresaM' AND razon_social = '$buscar'";
+            $queryEmpresaList = mysqli_query($connc, $queryEmpresa);
+        } else {
+            $queryEmpresa = "SELECT * FROM empresa INNER JOIN tipo_empresa ON empresa.tipo_empresa_id_tipoempresa = tipo_empresa.id_tipoempresa WHERE usuario_empresa = '$usuEmpresaM'";
     $queryEmpresaList = mysqli_query($connc, $queryEmpresa);
-    ?>
+        } ?>
+    <?php } else {
+        $queryEmpresa = "SELECT * FROM empresa INNER JOIN tipo_empresa ON empresa.tipo_empresa_id_tipoempresa = tipo_empresa.id_tipoempresa WHERE usuario_empresa = '$usuEmpresaM'";
+        $queryEmpresaList = mysqli_query($connc, $queryEmpresa);
+    } ?>
 
     <div class="table-responsive">
         <div class="col-md-8 table-user">
@@ -75,7 +97,7 @@
                                 <td><?php echo $dataEmpresa['direccion_empresa']; ?></td>
                                 <td><?php echo $dataEmpresa['tel_empresa']; ?></td>
                                 <td><?php echo $dataEmpresa['mail_empresa']; ?></td>
-                                <td><a href="../general/editEmpresa.php?id_empresa=<?php echo $dataEmpresa['id_empresa']?>"><i class="fa-solid fa-user-pen"></i></a></td>
+                                <td><a href="../general/editEmpresa.php?id_empresa=<?php echo $dataEmpresa['id_empresa'] ?>"><i class="fa-solid fa-user-pen"></i></a></td>
                             </tr>
                         <?php } ?>
                     <?php } else { ?>

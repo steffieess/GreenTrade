@@ -131,6 +131,19 @@
       overflow: hidden;
       padding-right: 0px !important;
    }
+
+   .salir {
+      --bs-nav-link-padding-y: 0.5rem;
+      --bs-nav-link-font-weight: ;
+      --bs-nav-link-color: var(--bs-link-color);
+      --bs-nav-link-hover-color: var(--bs-link-hover-color);
+      --bs-nav-link-disabled-color: #6c757d;
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style: none;
+   }
 </style>
 
 <body>
@@ -154,7 +167,6 @@
                      <li><a href="../IE/usuario.php" class="nav-link px-2 text-white" style="font-size: 15px;">Usuarios</a></li>
                      <li><a href="../IE/empresa.php" class="nav-link px-2 text-white" style="font-size: 15px;">Empresas</a></li>
                      <li><a href="../IE/reciclaje.php" class="nav-link px-2 text-white" style="font-size: 15px;">Reciclaje</a></li>
-                     <li><a href="#" class="nav-link px-2 text-white" style="font-size: 15px; color:#7DBC66 !important;"><?php echo $nombreP ?></a></li>
                   <?php endif ?>
 
                   <?php if ($tipoUsu == 3 || $tipoUsu == 4 || $tipoUsu == 5 || $tipoUsu == 6 || $tipoUsu == 7) : ?>
@@ -163,16 +175,15 @@
                      <li><a href="../general/homepage.php" class="nav-link px-2 text-white" style="font-size: 15px;">Inicio</a></li>
                      <li><a href="../general/importaciones.php" class="nav-link px-2 text-white" style="font-size: 15px;">Importaciones</a></li>
                      <li><a href="../general/exportaciones.php" class="nav-link px-2 text-white" style="font-size: 15px;">Exportaciones</a></li>
-                     <li><a href="#" class="nav-link px-2 text-white" style="font-size: 15px; color:#7DBC66 !important;"><?php echo $nombreP ?></a></li>
                   <?php endif ?>
 
                   <?php if ($tipoUsu == 8) : ?>
                      <li><a href="../general/inicio.php"><img src="../../img/logo.png" alt=""></a></li>
                      <li><a href="../general/inicio.php" class="nav-link px-2 text-white" style="font-size: 15px;">GreenTrade</a></li>
                      <li><a href="../general/homepage.php" class="nav-link px-2 text-white" style="font-size: 15px;">Inicio</a></li>
-                  <li><a href="../Reciclador/solicitudes.php" class="nav-link px-2 text-white" style="font-size: 15px;">Solicitudes</a></li>
-                  <li><a href="../Reciclador/historial.php" class="nav-link px-2 text-white" style="font-size: 15px;">Historial</a></li>
-                  <li><a href="#" class="nav-link px-2 text-white" style="font-size: 15px; color:#7DBC66 !important;"><?php echo $nombreP ?></a></li>
+                     <li><a href="../Reciclador/solicitudes.php" class="nav-link px-2 text-white" style="font-size: 15px;">Solicitudes</a></li>
+                     <li><a href="../Reciclador/historial.php" class="nav-link px-2 text-white" style="font-size: 15px;">Historial</a></li>
+
                   <?php endif ?>
 
                <?php else : ?>
@@ -182,8 +193,9 @@
                <?php endif ?>
             </ul>
             <?php if (!empty($dataUserM)) : ?>
-               <div class="text-end">
-                  <a href="../../func/tools/salir.php" class="btn"><i class="fa-solid fa-right-from-bracket"></i> Salir</a>
+               <div class="text-end salir">
+                  <a class="nav-link px-2 text-white" style="margin-top:0.1rem; font-size: 15px; color:#7DBC66 !important;"><?php echo $nombreP ?></a>
+                  <a class="btn" href="../../func/tools/salir.php"><i class="fa-solid fa-right-from-bracket"></i> Salir</a>
                </div>
             <?php else : ?>
                <div class="text-end">

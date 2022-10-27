@@ -254,6 +254,10 @@ if (isset($_GET['id_imp_exp'])) {
                     <input type="file" name="documentoTransporte" id="newDocTransporteImp" accept=".pdf" class='fancy-file'>
                 </div>
                 <div class="content">
+                    <span style="font-size: 15px;"><b>Póliza de Seguro</b></span>
+                    <input type="file" name="polizaSeguro" id="newPolizaImp" accept=".pdf" class='fancy-file'>
+                </div>
+                <div class="content">
                     <span style="font-size: 15px;"><b>Otros</b></span>
                     <input type="file" name="otros" id="newOtroImp" accept=".pdf" class='fancy-file'>
                 </div>
@@ -277,10 +281,6 @@ if (isset($_GET['id_imp_exp'])) {
                 <div class="content">
                     <label for="newPrimaPolizaImp"><b>Monto Prima Póliza de Seguro</b></label>
                     <input name="newPrimaPolizaImp" type="text" class='input-field' placeholder="" autocomplete="off">
-                </div>
-                <div class="content">
-                    <span style="font-size: 15px;"><b>Póliza de Seguro</b></span>
-                    <input type="file" name="polizaSeguro" id="newPolizaImp" accept=".pdf" class='fancy-file'>
                 </div>
                 <div>
                     <input class="submit-btn" type="submit" value="Guardar" name="editImp">
