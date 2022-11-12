@@ -61,7 +61,7 @@ if (isset($_POST['regImp'])) {
         if ($resultImpo) {
             $_SESSION['message'] = 'Importación creada exitosamente';
             $_SESSION['message_type'] = 'Exitoso';
-            echo "<script> window.location='../../pages/general/importaciones.php'; </script>";
+            echo "<script> window.location='../../pages/general/importaciones.php?pagina=1'; </script>";
         } else {
             $_SESSION['message'] = 'Error al crear importación';
             $_SESSION['message_type'] = 'Error';

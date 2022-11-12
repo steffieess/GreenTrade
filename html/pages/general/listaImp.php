@@ -186,8 +186,6 @@ if (isset($_GET['id_imp_exp'])) {
         <div>
             <form action="../../func/tools/editarImportacion.php?id_imp_exp=<?php echo $_GET['id_imp_exp'] ?>" id='editImp' class='input-group-editImp' method="POST" enctype="multipart/form-data">
                 
-            
-            <!-- IGNACIO ESTUVO AQUÍ-->
             <div class="content">
                     <input name="xxx" id="xxx" type="hidden" class='input-field' placeholder="N° de Orden" value="<?php echo $id_imp_exp; ?>" readonly>
                 </div>
@@ -254,16 +252,7 @@ if (isset($_GET['id_imp_exp'])) {
                     <label for="newViaTransporteImp"><b>Categoria</b></label>
                     <input name="newViaTransporteImp" id="newViaTransporteImp" type="text" class='input-field' placeholder="" required autocomplete="off"  value="<?php if($categoria==null){echo '';}else{echo $categoria;} ?>">
                 </div>
-<!--
-                <div class="content">
-                    <label for="newTipoEmbarqueImp"><b>SubCategoria</b></label>
-                    <input name="newTipoEmbarqueImp" type="text" class='input-field' placeholder="" required autocomplete="off">
-                </div>
 
-    -->
-                <!-- IGNACIO ESTUVO AQUÍ-->
-
-                
                 <div class="content">
                     <label for="newCantBultosImp"><b>Cantidad de Bultos</b></label>
                     <input name="newCantBultosImp" id="newCantBultosImp" type="text" class='input-field' placeholder="" required autocomplete="off" value="<?php if($bultos==null){echo '';}else{echo $bultos;} ?>">
@@ -286,7 +275,7 @@ if (isset($_GET['id_imp_exp'])) {
                 </div>
                 <div class="content">
                     
-                    <span style="font-size: 15px;"><b>Commercial Invoice &emsp;&emsp;</b><input type="checkbox" name="checkci" value="" <?php if($obligatorio1!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;">Documento Obligatorio</span>
+                    <span style="font-size: 15px;"><b>Commercial Invoice &emsp;&emsp;</b><input type="checkbox" name="checkci" value="" <?php if($obligatorio1!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;"> Documento Obligatorio</span>
                     <?php if($variable1 !='nada'){ ?>
                         <img src="../../img/pdf.png" style="width: 100%;max-width:50px;height:70px">
                         <p><a href="cargar.php?id=<?php echo $id1; ?>" target="_blank"><?php echo $nom_documento1 ?></a></p>
@@ -295,7 +284,7 @@ if (isset($_GET['id_imp_exp'])) {
 
                 </div>
                 <div class="content">
-                    <span style="font-size: 15px;"><b>Packing List &emsp;&emsp;</b><input type="checkbox" name="checkpl" value="" <?php if($obligatorio2!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;">Documento Obligatorio</span>
+                    <span style="font-size: 15px;"><b>Packing List &emsp;&emsp;</b><input type="checkbox" name="checkpl" value="" <?php if($obligatorio2!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;"> Documento Obligatorio</span>
                     <?php if($variable2 !='nada'){ ?>
                         <img src="../../img/pdf.png" style="width: 100%;max-width:50px;height:70px">
                         <p><a href="cargar.php?id=<?php echo $id2; ?>" target="_blank"><?php echo $nom_documento2 ?></a></p>
@@ -304,7 +293,7 @@ if (isset($_GET['id_imp_exp'])) {
 
                 </div>
                 <div class="content">
-                    <span style="font-size: 15px;"><b>Certificado de Origen &emsp;&emsp;</b><input type="checkbox" name="checkco" value="" <?php if($obligatorio3!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;">Documento Obligatorio</span>
+                    <span style="font-size: 15px;"><b>Certificado de Origen &emsp;&emsp;</b><input type="checkbox" name="checkco" value="" <?php if($obligatorio3!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;"> Documento Obligatorio</span>
                     <?php if($variable3 !='nada'){ ?>
                         <img src="../../img/pdf.png" style="width: 100%;max-width:50px;height:70px">
                         <p><a href="cargar.php?id=<?php echo $id3; ?>" target="_blank"><?php echo $nom_documento3 ?></a></p>
@@ -312,7 +301,7 @@ if (isset($_GET['id_imp_exp'])) {
                     <input type="file" name="certificadoOrigen" id="certificadoOrigen" accept=".pdf" class='fancy-file'>
                 </div>
                 <div class="content">
-                    <span style="font-size: 15px;"><b>Documento de Transporte &emsp;&emsp;</b><input type="checkbox" name="checkdt" value="" <?php if($obligatorio4!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;">Documento Obligatorio</span>
+                    <span style="font-size: 15px;"><b>Documento de Transporte &emsp;&emsp;</b><input type="checkbox" name="checkdt" value="" <?php if($obligatorio4!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;"> Documento Obligatorio</span>
                     <?php if($variable4 !='nada'){ ?>
                         <img src="../../img/pdf.png" style="width: 100%;max-width:50px;height:70px">
                         <p><a href="cargar.php?id=<?php echo $id4; ?>" target="_blank"><?php echo $nom_documento4 ?></a></p>
@@ -320,7 +309,7 @@ if (isset($_GET['id_imp_exp'])) {
                     <input type="file" name="documentoTransporte" id="documentoTransporte" accept=".pdf" class='fancy-file'>
                 </div>
                 <div class="content">
-                    <span style="font-size: 15px;"><b>Póliza de Seguro &emsp;&emsp;</b><input type="checkbox" name="checkps" value="" <?php if($obligatorio5!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;">Documento Obligatorio</span>
+                    <span style="font-size: 15px;"><b>Póliza de Seguro &emsp;&emsp;</b><input type="checkbox" name="checkps" value="" <?php if($obligatorio5!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;"> Documento Obligatorio</span>
                     <?php if($variable5 !='nada'){ ?>
                         <img src="../../img/pdf.png" style="width: 100%;max-width:50px;height:70px">
                         <p><a href="cargar.php?id=<?php echo $id5; ?>" target="_blank"><?php echo $nom_documento5 ?></a></p>
@@ -328,7 +317,7 @@ if (isset($_GET['id_imp_exp'])) {
                     <input type="file" name="polizaSeguro" id="polizaSeguro" accept=".pdf" class='fancy-file'>
                 </div>
                 <div class="content">
-                    <span style="font-size: 15px;"><b>Otros &emsp;&emsp;</b><input type="checkbox" name="checko" value="" <?php if($obligatorio6!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;">Documento Obligatorio</span>
+                    <span style="font-size: 15px;"><b>Otros &emsp;&emsp;</b><input type="checkbox" name="checko" value="" <?php if($obligatorio6!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;"> Documento Obligatorio</span>
                     <?php if($variable6 !='nada'){ ?>
                         <img src="../../img/pdf.png" style="width: 100%;max-width:50px;height:70px">
                         <p><a href="cargar.php?id=<?php echo $id6; ?>" target="_blank"><?php echo $nom_documento6 ?></a></p>
@@ -369,7 +358,7 @@ if (isset($_GET['id_imp_exp'])) {
     <!--  Usuario 3 -->
     <?php if ($tipoUsu == 3) : ?>
         <div>
-            <form action="../../func/tools/editarImportacion.php?nro_orden=<?php echo $_GET['nro_orden'] ?>" id='editImp' class='input-group-editImp' method="POST" enctype="multipart/form-data">
+        <form action="../../func/tools/editarImportacion.php?id_imp_exp=<?php echo $_GET['id_imp_exp'] ?>" id='editImp' class='input-group-editImp' method="POST" enctype="multipart/form-data">
             <div class="content">
                     <input name="xxx" id="xxx" type="hidden" class='input-field' placeholder="N° de Orden" value="<?php echo $id_imp_exp; ?>" readonly>
                 </div>
@@ -458,7 +447,7 @@ if (isset($_GET['id_imp_exp'])) {
 
                 <div class="content">
                     
-                    <span style="font-size: 15px;"><b>Commercial Invoice &emsp;&emsp;</b><input type="checkbox" name="checkci" value="" <?php if($obligatorio1!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;">Documento Obligatorio</span>
+                    <span style="font-size: 15px;"><b>Commercial Invoice &emsp;&emsp;</b><input type="checkbox" name="checkci" value="" <?php if($obligatorio1!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;"> Documento Obligatorio</span>
                     <?php if($variable1 !='nada'){ ?>
                         <img src="../../img/pdf.png" style="width: 100%;max-width:50px;height:70px">
                         <p><a href="cargar.php?id=<?php echo $id1; ?>" target="_blank"><?php echo $nom_documento1 ?></a></p>
@@ -467,7 +456,7 @@ if (isset($_GET['id_imp_exp'])) {
 
                 </div>
                 <div class="content">
-                    <span style="font-size: 15px;"><b>Packing List &emsp;&emsp;</b><input type="checkbox" name="checkpl" value="" <?php if($obligatorio2!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;">Documento Obligatorio</span>
+                    <span style="font-size: 15px;"><b>Packing List &emsp;&emsp;</b><input type="checkbox" name="checkpl" value="" <?php if($obligatorio2!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;"> Documento Obligatorio</span>
                     <?php if($variable2 !='nada'){ ?>
                         <img src="../../img/pdf.png" style="width: 100%;max-width:50px;height:70px">
                         <p><a href="cargar.php?id=<?php echo $id2; ?>" target="_blank"><?php echo $nom_documento2 ?></a></p>
@@ -476,7 +465,7 @@ if (isset($_GET['id_imp_exp'])) {
 
                 </div>
                 <div class="content">
-                    <span style="font-size: 15px;"><b>Certificado de Origen &emsp;&emsp;</b><input type="checkbox" name="checkco" value="" <?php if($obligatorio3!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;">Documento Obligatorio</span>
+                    <span style="font-size: 15px;"><b>Certificado de Origen &emsp;&emsp;</b><input type="checkbox" name="checkco" value="" <?php if($obligatorio3!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;"> Documento Obligatorio</span>
                     <?php if($variable3 !='nada'){ ?>
                         <img src="../../img/pdf.png" style="width: 100%;max-width:50px;height:70px">
                         <p><a href="cargar.php?id=<?php echo $id3; ?>" target="_blank"><?php echo $nom_documento3 ?></a></p>
@@ -484,7 +473,7 @@ if (isset($_GET['id_imp_exp'])) {
                     <input type="file" name="certificadoOrigen" id="certificadoOrigen" accept=".pdf" class='fancy-file'>
                 </div>
                 <div class="content">
-                    <span style="font-size: 15px;"><b>Documento de Transporte &emsp;&emsp;</b><input type="checkbox" name="checkdt" value="" <?php if($obligatorio4!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;">Documento Obligatorio</span>
+                    <span style="font-size: 15px;"><b>Documento de Transporte &emsp;&emsp;</b><input type="checkbox" name="checkdt" value="" <?php if($obligatorio4!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;"> Documento Obligatorio</span>
                     <?php if($variable4 !='nada'){ ?>
                         <img src="../../img/pdf.png" style="width: 100%;max-width:50px;height:70px">
                         <p><a href="cargar.php?id=<?php echo $id4; ?>" target="_blank"><?php echo $nom_documento4 ?></a></p>
@@ -492,7 +481,7 @@ if (isset($_GET['id_imp_exp'])) {
                     <input type="file" name="documentoTransporte" id="documentoTransporte" accept=".pdf" class='fancy-file'>
                 </div>
                 <div class="content">
-                    <span style="font-size: 15px;"><b>Otros &emsp;&emsp;</b><input type="checkbox" name="checko" value="" <?php if($obligatorio6!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;">Documento Obligatorio</span>
+                    <span style="font-size: 15px;"><b>Otros &emsp;&emsp;</b><input type="checkbox" name="checko" value="" <?php if($obligatorio6!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;"> Documento Obligatorio</span>
                     <?php if($variable6 !='nada'){ ?>
                         <img src="../../img/pdf.png" style="width: 100%;max-width:50px;height:70px">
                         <p><a href="cargar.php?id=<?php echo $id6; ?>" target="_blank"><?php echo $nom_documento6 ?></a></p>
@@ -512,7 +501,7 @@ if (isset($_GET['id_imp_exp'])) {
     <!-- Usuario 5 -->
     <?php if ($tipoUsu == 5) : ?>
         <div>
-            <form action="../../func/tools/editarImportacion.php?nro_orden=<?php echo $_GET['nro_orden'] ?>" id='editImp' class='input-group-editImp' method="POST">
+        <form action="../../func/tools/editarImportacion.php?id_imp_exp=<?php echo $_GET['id_imp_exp'] ?>" id='editImp' class='input-group-editImp' method="POST" enctype="multipart/form-data">
             <div class="content">
                     <input name="xxx" id="xxx" type="hidden" class='input-field' placeholder="N° de Orden" value="<?php echo $id_imp_exp; ?>" readonly>
                 </div>
@@ -558,7 +547,7 @@ if (isset($_GET['id_imp_exp'])) {
 
     <?php if ($tipoUsu == 7) : ?>
         <div>
-            <form action="../../func/tools/editarImportacion.php?nro_orden=<?php echo $_GET['nro_orden'] ?>" id='editImp' class='input-group-editImp' method="POST" enctype="multipart/form-data">
+        <form action="../../func/tools/editarImportacion.php?id_imp_exp=<?php echo $_GET['id_imp_exp'] ?>" id='editImp' class='input-group-editImp' method="POST" enctype="multipart/form-data">
             <div class="content">
                     <input name="xxx" id="xxx" type="hidden" class='input-field' placeholder="N° de Orden" value="<?php echo $id_imp_exp; ?>" readonly>
                 </div>
@@ -596,7 +585,7 @@ if (isset($_GET['id_imp_exp'])) {
                     <input name="newPrimaPolizaImp" id="newPrimaPolizaImp" type="text" class='input-field' placeholder="" autocomplete="off" value="<?php if($montopoliza==null){echo '';}else{echo $montopoliza;} ?>">
                 </div>
                 <div class="content">
-                    <span style="font-size: 15px;"><b>Póliza de Seguro &emsp;&emsp;</b><input type="checkbox" name="checkps" value="" <?php if($obligatorio5!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;">Documento Obligatorio</span>
+                    <span style="font-size: 15px;"><b>Póliza de Seguro &emsp;&emsp;</b><input type="checkbox" name="checkps" value="" <?php if($obligatorio5!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;"> Documento Obligatorio</span>
                     <?php if($variable5 !='nada'){ ?>
                         <img src="../../img/pdf.png" style="width: 100%;max-width:50px;height:70px">
                         <p><a href="cargar.php?id=<?php echo $id5; ?>" target="_blank"><?php echo $nom_documento5 ?></a></p>

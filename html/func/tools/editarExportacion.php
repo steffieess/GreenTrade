@@ -256,7 +256,7 @@ if (isset($_POST['editImp'])) {
 
         $_SESSION['message'] = 'Importación modificada exitosamente';
         $_SESSION['message_type'] = 'Exitoso';
-        echo "<script> window.location='../../pages/general/importaciones.php?pagina=1'; </script>";
+        echo "<script> window.location='../../pages/general/exportaciones.php?pagina=1'; </script>";
        
     } else if ($tipoUsu == 3) {
         $observaciones = $_POST['newobsImp'];
@@ -464,7 +464,7 @@ if (isset($_POST['editImp'])) {
 
         $_SESSION['message'] = 'Importación modificada exitosamente';
         $_SESSION['message_type'] = 'Exitoso';
-        echo "<script> window.location='../../pages/general/importaciones.php?pagina=1'; </script>";
+        echo "<script> window.location='../../pages/general/exportaciones.php?pagina=1'; </script>";
 
     } else if ($tipoUsu == 5) {
         $observaciones = $_POST['newobsImp'];
@@ -482,7 +482,7 @@ if (isset($_POST['editImp'])) {
  
          $_SESSION['message'] = 'Importación modificada exitosamente';
          $_SESSION['message_type'] = 'Exitoso';
-         echo "<script> window.location='../../pages/general/importaciones.php?pagina=1'; </script>";
+         echo "<script> window.location='../../pages/general/exportaciones.php?pagina=1'; </script>";
 
     } else if ($tipoUsu == 7) {
         $observaciones = $_POST['newobsImp'];
@@ -529,11 +529,11 @@ if (isset($_POST['editImp'])) {
 
         $_SESSION['message'] = 'Importación modificada exitosamente';
          $_SESSION['message_type'] = 'Exitoso';
-         echo "<script> window.location='../../pages/general/importaciones.php?pagina=1'; </script>";
+         echo "<script> window.location='../../pages/general/exportaciones.php?pagina=1'; </script>";
 
     }
 } else {
     $_SESSION['message'] = 'Error';
     $_SESSION['message_type'] = 'Error';
-    echo "<script> window.location='../../pages/general/importaciones.php?pagina=1'; </script>";
+    echo "<script> window.location='../../pages/general/exportaciones.php?pagina=1'; </script>";
 }
