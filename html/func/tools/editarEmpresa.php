@@ -31,10 +31,10 @@ if (isset($_POST['editEmpresa'])) {
         } else {
             $_SESSION['message'] = 'Error al editar empresa';
             $_SESSION['message_type'] = 'Error';
-            echo "<script> window.location='../../pages/general/editarEmpresa.php'; </script>";
+            echo "<script> window.location='../../pages/general/editEmpresa.php?id_empresa=$id_empresa'; </script>";
         }
 } else {
     $_SESSION['message'] = 'Error';
     $_SESSION['message_type'] = 'Error';
-    echo "<script> window.location='../../pages/general/editarEmpresa.php'; </script>";
+    echo "<script> window.location='../../pages/general/editEmpresa.php?id_empresa=$id_empresa'; </script>";
 }

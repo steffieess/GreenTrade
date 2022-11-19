@@ -41,7 +41,7 @@
     <h1 class="heading-title"> Empresas </h1>
 
     <div class="card card-body col-md-2">
-        <form action="empresa.php" method="POST">
+        <form action="empresa.php?pagina=1" method="POST">
 
             <div class="form-group">
                 <label for="buscarEmpresa">Buscar empresa</label>

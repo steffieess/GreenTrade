@@ -185,6 +185,14 @@
                      <li><a href="../Reciclador/historial.php" class="nav-link px-2 text-white" style="font-size: 15px;">Historial</a></li>
 
                   <?php endif ?>
+                  <?php if ($tipoUsu == 9) : ?>
+                     <li><a href="../general/inicio.php"><img src="../../img/logo.png" alt=""></a></li>
+                     <li><a href="../general/inicio.php" class="nav-link px-2 text-white" style="font-size: 15px;">GreenTrade</a></li>
+                     <li><a href="../general/homepage.php" class="nav-link px-2 text-white" style="font-size: 15px;">Inicio</a></li>
+                     <li><a href="../general/cambioImpExp.php" class="nav-link px-2 text-white" style="font-size: 15px;">Importación | Exportación</a></li>
+                     <li><a href="../IE/usuario.php" class="nav-link px-2 text-white" style="font-size: 15px;">Usuarios</a></li>
+
+                  <?php endif ?>
 
                <?php else : ?>
                   <li><a href="../general/inicio.php"><img src="../../img/logo.png" alt=""></a></li>

@@ -67,63 +67,115 @@
         <?php } ?>
     </div>
 
-    <?php if (isset($_POST['buscarUsuario'])) { ?>
-        <?php if ($_POST['buscar'] != '') {
-            $buscar = $_POST['buscar'];
-            $querySuppliers = "SELECT * FROM usuario INNER JOIN empresa ON usuario.empresa_id_empresa = empresa.id_empresa WHERE empresa.usuario_empresa = '$usuEmpresaM' AND rut_usuario = '$buscar' ORDER BY empresa.id_empresa ASC";
-            $queryUserSuppliers = mysqli_query($connc, $querySuppliers);
-        } else {
+    <?php if ($tipoUsu != 9) { ?>
+        <?php if (isset($_POST['buscarUsuario'])) { ?>
+            <?php if ($_POST['buscar'] != '') {
+                $buscar = $_POST['buscar'];
+                $querySuppliers = "SELECT * FROM usuario INNER JOIN empresa ON usuario.empresa_id_empresa = empresa.id_empresa WHERE empresa.usuario_empresa = '$usuEmpresaM' AND rut_usuario = '$buscar' ORDER BY empresa.id_empresa ASC";
+                $queryUserSuppliers = mysqli_query($connc, $querySuppliers);
+            } else {
+                $querySuppliers = "SELECT * FROM usuario INNER JOIN empresa ON usuario.empresa_id_empresa = empresa.id_empresa WHERE empresa.usuario_empresa = '$usuEmpresaM' ORDER BY empresa.id_empresa ASC";
+                $queryUserSuppliers = mysqli_query($connc, $querySuppliers);
+            } ?>
+        <?php } else {
             $querySuppliers = "SELECT * FROM usuario INNER JOIN empresa ON usuario.empresa_id_empresa = empresa.id_empresa WHERE empresa.usuario_empresa = '$usuEmpresaM' ORDER BY empresa.id_empresa ASC";
             $queryUserSuppliers = mysqli_query($connc, $querySuppliers);
         } ?>
-    <?php } else {
-        $querySuppliers = "SELECT * FROM usuario INNER JOIN empresa ON usuario.empresa_id_empresa = empresa.id_empresa WHERE empresa.usuario_empresa = '$usuEmpresaM' ORDER BY empresa.id_empresa ASC";
-        $queryUserSuppliers = mysqli_query($connc, $querySuppliers);
-    } ?>
 
-    <div class="table-responsive">
-        <div class="col-md-8 table-user ">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Rut</th>
-                        <th>Nombre</th>
-                        <th>Apellido Paterno</th>
-                        <th>Apellido Materno</th>
-                        <th>Correo</th>
-                        <th>Teléfono</th>
-                        <th>Razón social</th>
-                        <th>Estado</th>
-                        <th>Modificar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php if (mysqli_num_rows($queryUserSuppliers) != 0) { ?>
-                        <?php while ($dataUserSuppliers = mysqli_fetch_array($queryUserSuppliers)) { ?>
-                            <tr>
-                                <td><?php echo $dataUserSuppliers['rut_usuario']; ?></td>
-                                <td><?php echo $dataUserSuppliers['nom_usuario']; ?></td>
-                                <td><?php echo $dataUserSuppliers['ap_paterno']; ?></td>
-                                <td><?php echo $dataUserSuppliers['ap_materno']; ?></td>
-                                <td><?php echo $dataUserSuppliers['mail_usuario']; ?></td>
-                                <td><?php echo $dataUserSuppliers['tel_usuario']; ?></td>
-                                <td><?php echo $dataUserSuppliers['razon_social']; ?></td>
-                                <?php
-                                if ($dataUserSuppliers['status'] == 0) { ?>
-                                    <td>Habilitado</td>
-                                <?php } else { ?>
-                                    <td>Deshabilitado</td>
-                                <?php } ?>
-                                <td><a href="../general/editarUsuario.php?rut_usuario=<?php echo $dataUserSuppliers['rut_usuario'] ?>"><i class="fa-solid fa-user-pen"></i></a></td>
-                            </tr>
+        <div class="table-responsive">
+            <div class="col-md-8 table-user ">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Rut</th>
+                            <th>Nombre</th>
+                            <th>Apellido Paterno</th>
+                            <th>Apellido Materno</th>
+                            <th>Correo</th>
+                            <th>Teléfono</th>
+                            <th>Razón social</th>
+                            <th>Estado</th>
+                            <th>Modificar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php if (mysqli_num_rows($queryUserSuppliers) != 0) { ?>
+                            <?php while ($dataUserSuppliers = mysqli_fetch_array($queryUserSuppliers)) { ?>
+                                <tr>
+                                    <td><?php echo $dataUserSuppliers['rut_usuario']; ?></td>
+                                    <td><?php echo $dataUserSuppliers['nom_usuario']; ?></td>
+                                    <td><?php echo $dataUserSuppliers['ap_paterno']; ?></td>
+                                    <td><?php echo $dataUserSuppliers['ap_materno']; ?></td>
+                                    <td><?php echo $dataUserSuppliers['mail_usuario']; ?></td>
+                                    <td><?php echo $dataUserSuppliers['tel_usuario']; ?></td>
+                                    <td><?php echo $dataUserSuppliers['razon_social']; ?></td>
+                                    <?php
+                                    if ($dataUserSuppliers['status'] == 0) { ?>
+                                        <td>Habilitado</td>
+                                    <?php } else { ?>
+                                        <td>Deshabilitado</td>
+                                    <?php } ?>
+                                    <td><a href="../general/editarUsuario.php?rut_usuario=<?php echo $dataUserSuppliers['rut_usuario'] ?>"><i class="fa-solid fa-user-pen"></i></a></td>
+                                </tr>
+                            <?php } ?>
+                        <?php } else { ?>
+
                         <?php } ?>
-                    <?php } else { ?>
-
-                    <?php } ?>
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
+    <?php } elseif ($tipoUsu == 9) {?>
+        <?php if (isset($_POST['buscarUsuario'])) { ?>
+            <?php if ($_POST['buscar'] != '') {
+                $buscar = $_POST['buscar'];
+                $querySuppliers = "SELECT * FROM usuario INNER JOIN empresa ON usuario.empresa_id_empresa = empresa.id_empresa WHERE  rut_usuario = '$buscar' AND rut_usuario != '$rutP' ORDER BY empresa.id_empresa ASC";
+                $queryUserSuppliers = mysqli_query($connc, $querySuppliers);
+            } else {
+                $querySuppliers = "SELECT * FROM usuario INNER JOIN empresa ON usuario.empresa_id_empresa = empresa.id_empresa WHERE rut_usuario != '$rutP' ORDER BY empresa.id_empresa ASC";
+                $queryUserSuppliers = mysqli_query($connc, $querySuppliers);
+            } ?>
+        <?php } else {
+            $querySuppliers = "SELECT * FROM usuario INNER JOIN empresa ON usuario.empresa_id_empresa = empresa.id_empresa WHERE rut_usuario != '$rutP' ORDER BY empresa.id_empresa ASC";
+            $queryUserSuppliers = mysqli_query($connc, $querySuppliers);
+        } ?>
+
+        <div class="table-responsive">
+            <div class="col-md-8 table-user ">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Rut</th>
+                            <th>Nombre Completo</th>
+                            <th>Empresa</th>
+                            <th>Estado</th>
+                            <th>Modificar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php if (mysqli_num_rows($queryUserSuppliers) != 0) { ?>
+                            <?php while ($dataUserSuppliers = mysqli_fetch_array($queryUserSuppliers)) { ?>
+                                <tr>
+                                    <td><?php echo $dataUserSuppliers['rut_usuario']; ?></td>
+                                    <td><?php echo $dataUserSuppliers['nom_usuario'] .' '. $dataUserSuppliers['ap_paterno'] .' '. $dataUserSuppliers['ap_materno']; ?></td>
+                                    <td><?php echo $dataUserSuppliers['razon_social']; ?></td>
+                                    <?php
+                                    if ($dataUserSuppliers['status'] == 0) { ?>
+                                        <td>Habilitado</td>
+                                    <?php } else { ?>
+                                        <td>Deshabilitado</td>
+                                    <?php } ?>
+                                    <td><a href="../general/editUser.php?rut_usuario=<?php echo $dataUserSuppliers['rut_usuario'] ?>"><i class="fa-solid fa-user-pen"></i></a></td>
+                                </tr>
+                            <?php } ?>
+                        <?php } else { ?>
+
+                        <?php } ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    <?php }?>
 </section>
 
 <!--body section ends-->

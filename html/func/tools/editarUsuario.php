@@ -29,10 +29,10 @@ if (isset($_POST['editUser'])) {
         } else {
             $_SESSION['message'] = 'Error al editar usuario';
             $_SESSION['message_type'] = 'Error';
-            echo "<script> window.location='../../pages/general/editarUsuario.php'; </script>";
+            echo "<script> window.location='../../pages/general/editarUsuario.php?rut_usuario=$rutUsu'; </script>";
         }
 } else {
     $_SESSION['message'] = 'Error';
     $_SESSION['message_type'] = 'Error';
-    echo "<script> window.location='../../pages/general/editarUsuario.php'; </script>";
+    echo "<script> window.location='../../pages/general/editarUsuario.php?rut_usuario=$rutUsu'; </script>";
 }

@@ -46,7 +46,7 @@
     <h1 class="heading-title"> Exportaciones </h1>
 
     <div class="card card-body col-md-2">
-        <form action="exportaciones.php" method="POST">
+        <form action="exportaciones.php?pagina=1" method="POST">
 
             <div class="form-group">
                 <label for="nroOrdenImp">Buscar N° de Orden</label>

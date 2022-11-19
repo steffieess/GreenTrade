@@ -47,7 +47,7 @@
     <h1 class="heading-title"> Importaciones </h1>
 
     <div class="card card-body col-md-2">
-        <form action="importaciones.php" method="POST">
+        <form action="importaciones.php?pagina=1" method="POST">
 
             <div class="form-group">
                 <label for="nroOrdenImp">Buscar N° de Orden</label>
