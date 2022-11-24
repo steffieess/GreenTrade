@@ -32,13 +32,12 @@ if (isset($_GET['id_imp_exp'])) {
         $montopoliza = $row['monto_prima_poliza'];
     }
 
-    $queryMercaderia = "SELECT * FROM mercaderia WHERE imp_exp_id_imp_exp = '$id_imp_exp'";
+    $queryMercaderia = "SELECT * FROM mercaderia m INNER JOIN subcategoria s ON m.subcategoria_id_subcategoria = s.id_subcategoria WHERE imp_exp_id_imp_exp = '$id_imp_exp'";
     $queryeditMercaderia = mysqli_query($connc, $queryMercaderia);
     if (mysqli_num_rows($queryeditMercaderia) == 1) {
         $row = mysqli_fetch_array($queryeditMercaderia);
         //echo mysqli_num_rows($queryeditMercaderia);
-        $descripcion = $row['descripcion'];
-        $categoria = $row['categoria'];
+        $subcategoria = $row['subcategoria'];
     }
 
     $querySeguimiento = "SELECT * FROM seguimiento WHERE imp_exp_id_imp_exp = '$id_imp_exp'";
@@ -243,14 +242,29 @@ if (isset($_GET['id_imp_exp'])) {
 
                 </div>
 
-                <div class="content">
-                    <label for="newMercaderiaImp"><b>Mercadería</b></label>
-                    <input name="newMercaderiaImp" id="newMercaderiaImp" type="text" class='input-field' placeholder="" required autocomplete="off"  value="<?php if($descripcion==null){echo '';}else{echo $descripcion;} ?>">
-                </div>
+                <?php
+                $sqlSub = ("SELECT * FROM subcategoria");
+                $dataSub = mysqli_query($connc, $sqlSub);
+                ?>
+                <div class="form-group">
+                    <label for="newMercaderiaImp"><b>Mercaderia</b></label>
+                    <select class="form-control" name="newMercaderiaImp" id="newMercaderiaImp">
 
-                <div class="content">
-                    <label for="newViaTransporteImp"><b>Categoria</b></label>
-                    <input name="newViaTransporteImp" id="newViaTransporteImp" type="text" class='input-field' placeholder="" required autocomplete="off"  value="<?php if($categoria==null){echo '';}else{echo $categoria;} ?>">
+                        <?php while ($rowSub = mysqli_fetch_array($dataSub)){ ?>
+                            <?php if ($subcategoria == $rowSub['subcategoria']) { ?>
+
+                            <option class="form-control" value="<?php echo $rowSub['id_subcategoria']; ?>" selected>
+                            <?php echo $rowSub['subcategoria'];?>
+                            </option>
+
+                            <?php } else { ?> 
+                                <option class="form-control" value="<?php echo $rowSub['id_subcategoria']; ?>" >
+                            <?php echo $rowSub['subcategoria'];?>
+                            </option>
+                            <?php } ?>
+                        <?php } ?>
+
+                    </select>
                 </div>
 
                 <div class="content">
@@ -414,15 +428,31 @@ if (isset($_GET['id_imp_exp'])) {
 
                 </div>
 
-                <div class="content">
-                    <label for="newMercaderiaImp"><b>Mercadería</b></label>
-                    <input name="newMercaderiaImp" id="newMercaderiaImp" type="text" class='input-field' placeholder="" required autocomplete="off"  value="<?php if($descripcion==null){echo '';}else{echo $descripcion;} ?>">
+                <?php
+                $sqlSub = ("SELECT * FROM subcategoria");
+                $dataSub = mysqli_query($connc, $sqlSub);
+                ?>
+                <div class="form-group">
+                    <label for="newMercaderiaImp"><b>Mercaderia</b></label>
+                    <select class="form-control" name="newMercaderiaImp" id="newMercaderiaImp">
+
+                        <?php while ($rowSub = mysqli_fetch_array($dataSub)){ ?>
+                            <?php if ($subcategoria == $rowSub['subcategoria']) { ?>
+
+                            <option class="form-control" value="<?php echo $rowSub['id_subcategoria']; ?>" selected>
+                            <?php echo $rowSub['subcategoria'];?>
+                            </option>
+
+                            <?php } else { ?> 
+                                <option class="form-control" value="<?php echo $rowSub['id_subcategoria']; ?>" >
+                            <?php echo $rowSub['subcategoria'];?>
+                            </option>
+                            <?php } ?>
+                        <?php } ?>
+
+                    </select>
                 </div>
 
-                <div class="content">
-                    <label for="newViaTransporteImp"><b>Categoria</b></label>
-                    <input name="newViaTransporteImp" id="newViaTransporteImp" type="text" class='input-field' placeholder="" required autocomplete="off"  value="<?php if($categoria==null){echo '';}else{echo $categoria;} ?>">
-                </div>
                
                 <div class="content">
                     <label for="newCantBultosImp"><b>Cantidad de Bultos</b></label>

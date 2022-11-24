@@ -14,7 +14,6 @@ if (isset($_POST['editImp'])) {
         $pol = $_POST['newEmbarquePuertoAereoImp'];
         $pod = $_POST['newDesembarquePuertoAereoImp'];
         $mercaderia = $_POST['newMercaderiaImp']; //otra tabla
-        $categoria = $_POST['newViaTransporteImp']; //otra tabla
         //echo $categoria;
         //  $subcategoria = $_POST['newTipoEmbarqueImp']; //otra tabla
         $bultos = $_POST['newCantBultosImp'];
@@ -37,7 +36,7 @@ if (isset($_POST['editImp'])) {
         
         
         //update de mercaderia
-        $queryUpdateMerca = "UPDATE mercaderia SET descripcion = '$mercaderia', categoria='$categoria' WHERE imp_exp_id_imp_exp='$nro_orden'";
+        $queryUpdateMerca = "UPDATE mercaderia SET subcategoria_id_subcategoria = '$mercaderia' WHERE imp_exp_id_imp_exp='$nro_orden'";
         $resultMerca = mysqli_query($connc, $queryUpdateMerca);
 
         //update de seguimiento
@@ -268,7 +267,6 @@ if (isset($_POST['editImp'])) {
         $pol = $_POST['newEmbarquePuertoAereoImp'];
         $pod = $_POST['newDesembarquePuertoAereoImp'];
         $mercaderia = $_POST['newMercaderiaImp']; //otra tabla
-        $categoria = $_POST['newViaTransporteImp']; //otra tabla
         //echo $categoria;
         //  $subcategoria = $_POST['newTipoEmbarqueImp']; //otra tabla
         $bultos = $_POST['newCantBultosImp'];
@@ -285,8 +283,8 @@ if (isset($_POST['editImp'])) {
          
          
          //update de mercaderia
-         $queryUpdateMerca = "UPDATE mercaderia SET descripcion = '$mercaderia', categoria='$categoria' WHERE imp_exp_id_imp_exp='$nro_orden'";
-         $resultMerca = mysqli_query($connc, $queryUpdateMerca);
+        $queryUpdateMerca = "UPDATE mercaderia SET subcategoria_id_subcategoria = '$mercaderia' WHERE imp_exp_id_imp_exp='$nro_orden'";
+        $resultMerca = mysqli_query($connc, $queryUpdateMerca);
  
          if (isset($_POST['checkci'])) {
             
