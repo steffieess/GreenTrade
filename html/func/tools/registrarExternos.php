@@ -26,7 +26,7 @@ if (isset($_POST['regUsuarioExt'])) {
     if (!preg_match("/^[0-9]*$/", $parteNumerica)) {
         $_SESSION['message'] = 'El RUT solo debe contener números';
         $_SESSION['message_type'] = 'Error';
-        echo "<script> window.location='../../pages/general/registroUsuarioExterno.php'; </script>";
+        echo "<script> window.location='../../pages/IE/registroUsuarioExterno.php'; </script>";
     } else {
 
         $guionYVerificador = substr($rut_user, -2, 2);
@@ -34,19 +34,19 @@ if (isset($_POST['regUsuarioExt'])) {
         if (strlen($guionYVerificador) != 2) {
             $_SESSION['message'] = 'Error en el largo del dígito verificador';
             $_SESSION['message_type'] = 'Error';
-            echo "<script> window.location='../../pages/general/registroUsuarioExterno.php'; </script>";
+            echo "<script> window.location='../../pages/IE/registroUsuarioExterno.php'; </script>";
         } else {
             // obliga a que el dígito verificador tenga la forma -[0-9] o -[kK]
             if (!preg_match('/(^[-]{1}+[0-9kK]).{0}$/', $guionYVerificador)) {
                 $_SESSION['message'] = 'El dígito verificador no cuenta con el patrón requerido';
                 $_SESSION['message_type'] = 'Error';
-                echo "<script> window.location='../../pages/general/registroUsuarioExterno.php'; </script>";
+                echo "<script> window.location='../../pages/IE/registroUsuarioExterno.php'; </script>";
             } else {
                 // Valida que sólo sean números, excepto el último dígito que pueda ser k
                 if (!preg_match("/^[0-9.]+[-]?+[0-9kK]{1}/", $rut_user)) {
                     $_SESSION['message'] = 'Error al digitar el RUT';
                     $_SESSION['message_type'] = 'Error';
-                    echo "<script> window.location='../../pages/general/registroUsuarioExterno.php'; </script>";
+                    echo "<script> window.location='../../pages/IE/registroUsuarioExterno.php'; </script>";
                 } else {
 
                     $rutV = preg_replace('/[\.\-]/i', '', $rut_user);
@@ -99,7 +99,7 @@ if (isset($_POST['regUsuarioExt'])) {
                     } else {
                         $_SESSION['message'] = 'El RUT ingresado no es válido';
                         $_SESSION['message_type'] = 'Error';
-                        echo "<script> window.location='../../pages/general/registroUsuarioExterno.php'; </script>";
+                        echo "<script> window.location='../../pages/IE/registroUsuarioExterno.php'; </script>";
                     }
                 }
             }

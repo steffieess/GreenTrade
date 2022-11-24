@@ -32,12 +32,13 @@ if (isset($_GET['id_imp_exp'])) {
         $montopoliza = $row['monto_prima_poliza'];
     }
 
-    $queryMercaderia = "SELECT * FROM mercaderia WHERE imp_exp_id_imp_exp = '$id_imp_exp'";
+    $queryMercaderia = "SELECT * FROM mercaderia m INNER JOIN subcategoria s ON m.subcategoria_id_subcategoria = s.id_subcategoria INNER JOIN categoria c ON s.categoria_id_categoria = c.id_categoria WHERE imp_exp_id_imp_exp = '$id_imp_exp'";
     $queryeditMercaderia = mysqli_query($connc, $queryMercaderia);
     if (mysqli_num_rows($queryeditMercaderia) == 1) {
         $row = mysqli_fetch_array($queryeditMercaderia);
         //echo mysqli_num_rows($queryeditMercaderia);
-        $descripcion = $row['descripcion'];
+        $subcategoria = $row['subcategoria'];
+        $id_categoria = $row['id_categoria'];
         $categoria = $row['categoria'];
     }
 
@@ -179,6 +180,23 @@ if (isset($_GET['id_imp_exp'])) {
 }
 ?>
 
+        <script language="javascript" src="../../../js/jquery-3.6.1.min.js"></script>
+		
+		<script language="javascript">
+			$(document).ready(function(){
+				$("#cbx_estado").change(function () {
+					
+					$("#cbx_estado option:selected").each(function () {
+						id_estado = $(this).val();
+						$.post("../general/getCategoria.php", { id_estado: id_estado }, function(data){
+							$("#newMercaderiaImp").html(data);
+						});            
+					});
+				})
+			});
+
+		</script>
+
 <!--body section starts-->
 
 <section class="reg-import">
@@ -245,11 +263,45 @@ if (isset($_GET['id_imp_exp'])) {
                 </div>
 
                 <?php
-                $sqlSub = ("SELECT * FROM subcategoria");
-                $dataSub = mysqli_query($connc, $sqlSub);
+                $sqlCat = ("SELECT * FROM categoria");
+                $resultado = mysqli_query($connc, $sqlCat);
                 ?>
+
                 <div class="form-group">
-                    <label for="newMercaderiaImp"><b>Mercaderia</b></label>
+                    <div> <label for="newMercaderiaImp"><b>Categoría</b></label> 
+                        <select class="form-control" name="cbx_estado" id="cbx_estado">
+                        <?php if($subcategoria == NULL) {?>
+                        <option value="">Seleccionar categoría</option>
+                
+                        <?php while($row = $resultado->fetch_assoc()) { ?>
+                            <option value="<?php echo $row['id_categoria']; ?>"><?php echo $row['categoria']; ?></option>
+
+                        <?php } ?>
+                        <?php }else{ ?>
+                                <?php while($row = $resultado->fetch_assoc()) { ?>
+                                    <?php if($row['id_categoria'] == $id_categoria) { ?>
+                                        <option value="<?php echo $row['id_categoria']; ?>" selected><?php echo $row['categoria']; ?></option>
+                                <?php }else{ ?>
+                                    <option value="<?php echo $row['id_categoria']; ?>"><?php echo $row['categoria']; ?></option>
+                                <?php } ?>
+                            <?php } ?>
+                        <?php } ?>
+                    </select>
+                </div>
+                
+                
+                <div> 
+                    <label for="newMercaderiaImp"><b>Mercadería</b></label> 
+                    <?php if(!isset($subcategoria)) {?>
+                    <select class="form-control" name="newMercaderiaImp" id="newMercaderiaImp"></select>
+                    <?php }else{ ?>
+
+                        <?php
+                        $sqlSub = ("SELECT * FROM subcategoria WHERE categoria_id_categoria = '$id_categoria'");
+                        $dataSub = mysqli_query($connc, $sqlSub);
+                        ?>
+
+                <div class="form-group">
                     <select class="form-control" name="newMercaderiaImp" id="newMercaderiaImp">
 
                         <?php while ($rowSub = mysqli_fetch_array($dataSub)){ ?>
@@ -267,6 +319,8 @@ if (isset($_GET['id_imp_exp'])) {
                         <?php } ?>
 
                     </select>
+                </div>
+                    <?php } ?>
                 </div>
 
                 <div class="content">
@@ -431,11 +485,45 @@ if (isset($_GET['id_imp_exp'])) {
                 </div>
 
                 <?php
-                $sqlSub = ("SELECT * FROM subcategoria");
-                $dataSub = mysqli_query($connc, $sqlSub);
+                $sqlCat = ("SELECT * FROM categoria");
+                $resultado = mysqli_query($connc, $sqlCat);
                 ?>
+
                 <div class="form-group">
-                    <label for="newMercaderiaImp"><b>Mercaderia</b></label>
+                    <div> <label for="newMercaderiaImp"><b>Categoría</b></label> 
+                        <select class="form-control" name="cbx_estado" id="cbx_estado">
+                        <?php if($subcategoria == NULL) {?>
+                        <option value="">Seleccionar categoría</option>
+                
+                        <?php while($row = $resultado->fetch_assoc()) { ?>
+                            <option value="<?php echo $row['id_categoria']; ?>"><?php echo $row['categoria']; ?></option>
+
+                        <?php } ?>
+                        <?php }else{ ?>
+                                <?php while($row = $resultado->fetch_assoc()) { ?>
+                                    <?php if($row['id_categoria'] == $id_categoria) { ?>
+                                        <option value="<?php echo $row['id_categoria']; ?>" selected><?php echo $row['categoria']; ?></option>
+                                <?php }else{ ?>
+                                    <option value="<?php echo $row['id_categoria']; ?>"><?php echo $row['categoria']; ?></option>
+                                <?php } ?>
+                            <?php } ?>
+                        <?php } ?>
+                    </select>
+                </div>
+                
+                
+                <div> 
+                    <label for="newMercaderiaImp"><b>Mercadería</b></label> 
+                    <?php if(!isset($subcategoria)) {?>
+                    <select class="form-control" name="newMercaderiaImp" id="newMercaderiaImp"></select>
+                    <?php }else{ ?>
+
+                        <?php
+                        $sqlSub = ("SELECT * FROM subcategoria WHERE categoria_id_categoria = '$id_categoria'");
+                        $dataSub = mysqli_query($connc, $sqlSub);
+                        ?>
+
+                <div class="form-group">
                     <select class="form-control" name="newMercaderiaImp" id="newMercaderiaImp">
 
                         <?php while ($rowSub = mysqli_fetch_array($dataSub)){ ?>
@@ -453,6 +541,8 @@ if (isset($_GET['id_imp_exp'])) {
                         <?php } ?>
 
                     </select>
+                </div>
+                    <?php } ?>
                 </div>
                
                 <div class="content">
