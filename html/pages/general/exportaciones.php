@@ -97,7 +97,9 @@
                             <th>Desembarque</th>
                             <th>Incotem</th>
                             <th>Observaciones</th>
+                            <th>Estado</th>
                             <th>Ver más</th>
+                            <th>Cerrar</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -119,7 +121,9 @@
                                     <?php } ?>
                                     <td><?php echo $dataImpExp['incoterm']; ?></td>
                                     <td><?php echo $dataImpExp['observaciones']; ?></td>
+                                    <td><?php echo $dataImpExp['estado']; ?></td>
                                     <td><a href="../general/listaExp.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-eye"></i></a></td>
+                                    <td><a href="../general/cerrarImpExp.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-file-circle-check"></i></a></td>
                                 </tr>
                             <?php } ?>
                         <?php } else { ?>
