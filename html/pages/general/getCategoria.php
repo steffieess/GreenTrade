@@ -10,7 +10,7 @@
 	
 	while($rowM = $resultadoSub->fetch_assoc())
 	{
-		$html.= "<option value='".$rowM['id_subcategoria']."'>".$rowM['subcategoria']."</option>";
+		$html.= "<option value='".$rowM['id_subcategoria']."'>".utf8_encode($rowM['subcategoria'])."</option>";
 	}
 	
 	echo $html;

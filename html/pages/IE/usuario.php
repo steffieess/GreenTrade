@@ -157,8 +157,8 @@
                             <?php while ($dataUserSuppliers = mysqli_fetch_array($queryUserSuppliers)) { ?>
                                 <tr>
                                     <td><?php echo $dataUserSuppliers['rut_usuario']; ?></td>
-                                    <td><?php echo $dataUserSuppliers['nom_usuario'] .' '. $dataUserSuppliers['ap_paterno'] .' '. $dataUserSuppliers['ap_materno']; ?></td>
-                                    <td><?php echo $dataUserSuppliers['razon_social']; ?></td>
+                                    <td><?php echo utf8_encode($dataUserSuppliers['nom_usuario'] .' '. $dataUserSuppliers['ap_paterno'] .' '. $dataUserSuppliers['ap_materno']); ?></td>
+                                    <td><?php echo utf8_encode($dataUserSuppliers['razon_social']); ?></td>
                                     <?php
                                     if ($dataUserSuppliers['status'] == 0) { ?>
                                         <td>Habilitado</td>

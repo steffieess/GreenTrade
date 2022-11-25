@@ -24,7 +24,7 @@ if (isset($_GET['id_empresa'])) {
         <form action="../../func/tools/editarEmpresa.php?id_empresa=<?php echo $_GET['id_empresa']?>" id='editUsuario' class='input-group-editUsuario' method="POST">
             <div class="content">
                 <label for="newDirecEmp"><b>Nuevo Telefóno</b></label>
-                <input name="newDirecEmp" type="text" class='input-field' placeholder="Ingrese nueva dirección" value="<?php echo $direccion; ?>" required autocomplete="off">
+                <input name="newDirecEmp" type="text" class='input-field' placeholder="Ingrese nueva dirección" value="<?php echo utf8_encode($direccion); ?>" required autocomplete="off">
             </div>
 
             <div class="content">
@@ -34,7 +34,7 @@ if (isset($_GET['id_empresa'])) {
 
             <div class="content">
                 <label for="newCorreoEmp"><b>Nuevo Telefóno</b></label>
-                <input name="newCorreoEmp" type="text" class='input-field' placeholder="Ingrese nuevo correo" value="<?php echo $correo; ?>" required autocomplete="off">
+                <input name="newCorreoEmp" type="text" class='input-field' placeholder="Ingrese nuevo correo" value="<?php echo utf8_encode($correo); ?>" required autocomplete="off">
             </div>
 
             <div>

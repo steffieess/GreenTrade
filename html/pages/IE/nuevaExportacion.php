@@ -57,7 +57,7 @@
                 <select class="form-control" name="proveedor" id="proveedor">
                     <?php while ($rowProveedor = mysqli_fetch_array($dataProveedor)){ ?>
                         <option class="form-control" value="<?php echo $rowProveedor['razon_social']; ?>">
-                        <?php echo $rowProveedor['razon_social'];?>
+                        <?php echo utf8_encode($rowProveedor['razon_social']);?>
                     </option>
                     <?php } ?>
                 </select>
@@ -72,7 +72,7 @@
                 <select class="form-control" name="ffww" id="ffww">
                     <?php while ($rowFFWW = mysqli_fetch_array($dataFFWW)){ ?>
                         <option class="form-control" value="<?php echo $rowFFWW['razon_social']; ?>">
-                        <?php echo $rowFFWW['razon_social'];?>
+                        <?php echo utf8_encode($rowFFWW['razon_social']);?>
                     </option>
                     <?php } ?>
                 </select>
@@ -87,7 +87,7 @@
                 <select class="form-control" name="id_paisOrigenExp" id="id_paisOrigenExp">
                     <?php while ($rowPais = mysqli_fetch_array($dataPais)){ ?>
                         <option class="form-control" value="<?php echo $rowPais['nombre_pais']; ?>">
-                        <?php echo $rowPais['nombre_pais'];?>
+                        <?php echo utf8_encode($rowPais['nombre_pais']);?>
                     </option>
                     <?php } ?>
                 </select>
@@ -102,7 +102,7 @@
                 <select class="form-control" name="id_paisDestinoExp" id="id_paisDestinoExp">
                     <?php while ($rowPais = mysqli_fetch_array($dataPais)){ ?>
                         <option class="form-control" value="<?php echo $rowPais['nombre_pais']; ?>">
-                        <?php echo $rowPais['nombre_pais'];?>
+                        <?php echo utf8_encode($rowPais['nombre_pais']);?>
                     </option>
                     <?php } ?>
                 </select>

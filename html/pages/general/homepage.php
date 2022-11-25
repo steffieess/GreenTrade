@@ -46,7 +46,7 @@
     <div class="container-usuario">
         <article class="fondo-usuario">
             <img src="../../img/usuario.png" alt="">
-            <h1 class="heading-title">Buenas Tardes, <?php echo $nombreP ?></h1>
+            <h1 class="heading-title">Buenas Tardes, <?php echo utf8_encode($nombreP) ?></h1>
         </article>
     </div>
 </section>

@@ -214,19 +214,19 @@ if (isset($_GET['id_imp_exp'])) {
                 </div>
                 <div class="content">
                     <label for="newnpaisOrigenImp"><b>País de Origen</b></label>
-                    <input name="newnpaisOrigenImp" id="newnpaisOrigenImp" type="text" class='input-field' placeholder="N° de Orden" value="<?php echo $origen; ?>" readonly>
+                    <input name="newnpaisOrigenImp" id="newnpaisOrigenImp" type="text" class='input-field' placeholder="N° de Orden" value="<?php echo utf8_encode($origen); ?>" readonly>
                 </div>
                 <div class="content">
                     <label for="newnpaisDestinoImp"><b>País de Destino</b></label>
-                    <input name="newnpaisDestinoImp" id="newnpaisDestinoImp" type="text" class='input-field' placeholder="N° de Orden" value="<?php echo $destino; ?>" readonly>
+                    <input name="newnpaisDestinoImp" id="newnpaisDestinoImp" type="text" class='input-field' placeholder="N° de Orden" value="<?php echo utf8_encode($destino); ?>" readonly>
                 </div>
                 <div class="content">
                     <label for="newincotemImp"><b>Incotem</b></label>
-                    <input name="newincotemImp" id="newincotemImp" type="text" class='input-field' placeholder="Incotem" value="<?php echo $incoterm; ?>" readonly>
+                    <input name="newincotemImp" id="newincotemImp" type="text" class='input-field' placeholder="Incotem" value="<?php echo utf8_encode($incoterm); ?>" readonly>
                 </div>
                 <div class="content">
                     <label for="newobsImp"><b>Observaciones</b></label>
-                    <input name="newobsImp" id="newobsImp"  type="text" class='input-field' placeholder="Obervaciones" autocomplete="off" value="<?php echo $observaciones; ?>">
+                    <input name="newobsImp" id="newobsImp"  type="text" class='input-field' placeholder="Obervaciones" autocomplete="off" value="<?php echo utf8_encode($observaciones); ?>">
                 </div>
                 <div class="content">
                     <label for="newReservaImp"><b>N° Reserva</b></label>
@@ -252,13 +252,13 @@ if (isset($_GET['id_imp_exp'])) {
 
                 <div class="form-group">
                     <label for="newEmbarquePuertoAereoImp"><b>POL / AOL</b></label>
-                    <input name="newEmbarquePuertoAereoImp" id="newEmbarquePuertoAereoImp" type="text" class='input-field' placeholder="" required autocomplete="off"  value="<?php if($pol==null){echo '';}else{echo $pol;} ?>">
+                    <input name="newEmbarquePuertoAereoImp" id="newEmbarquePuertoAereoImp" type="text" class='input-field' placeholder="" required autocomplete="off"  value="<?php if($pol==null){echo '';}else{echo utf8_encode($pol);} ?>">
 
                 </div>
 
                 <div class="form-group">
                     <label for="newDesembarquePuertoAereoImp"><b>POD / AOD</b></label>
-                    <input name="newDesembarquePuertoAereoImp" id="newDesembarquePuertoAereoImp" type="text" class='input-field' placeholder="" required autocomplete="off"  value="<?php if($pod==null){echo '';}else{echo $pod;} ?>">
+                    <input name="newDesembarquePuertoAereoImp" id="newDesembarquePuertoAereoImp" type="text" class='input-field' placeholder="" required autocomplete="off"  value="<?php if($pod==null){echo '';}else{echo utf8_encode($pod);} ?>">
 
                 </div>
 
@@ -274,15 +274,15 @@ if (isset($_GET['id_imp_exp'])) {
                         <option value="">Seleccionar categoría</option>
                 
                         <?php while($row = $resultado->fetch_assoc()) { ?>
-                            <option value="<?php echo $row['id_categoria']; ?>"><?php echo $row['categoria']; ?></option>
+                            <option value="<?php echo $row['id_categoria']; ?>"><?php echo utf8_encode($row['categoria']); ?></option>
 
                         <?php } ?>
                         <?php }else{ ?>
                                 <?php while($row = $resultado->fetch_assoc()) { ?>
                                     <?php if($row['id_categoria'] == $id_categoria) { ?>
-                                        <option value="<?php echo $row['id_categoria']; ?>" selected><?php echo $row['categoria']; ?></option>
+                                        <option value="<?php echo $row['id_categoria']; ?>" selected><?php echo utf8_encode($row['categoria']); ?></option>
                                 <?php }else{ ?>
-                                    <option value="<?php echo $row['id_categoria']; ?>"><?php echo $row['categoria']; ?></option>
+                                    <option value="<?php echo $row['id_categoria']; ?>"><?php echo utf8_encode($row['categoria']); ?></option>
                                 <?php } ?>
                             <?php } ?>
                         <?php } ?>
@@ -308,12 +308,12 @@ if (isset($_GET['id_imp_exp'])) {
                             <?php if ($subcategoria == $rowSub['subcategoria']) { ?>
 
                             <option class="form-control" value="<?php echo $rowSub['id_subcategoria']; ?>" selected>
-                            <?php echo $rowSub['subcategoria'];?>
+                            <?php echo utf8_encode($rowSub['subcategoria']);?>
                             </option>
 
                             <?php } else { ?> 
                                 <option class="form-control" value="<?php echo $rowSub['id_subcategoria']; ?>" >
-                            <?php echo $rowSub['subcategoria'];?>
+                            <?php echo utf8_encode($rowSub['subcategoria']);?>
                             </option>
                             <?php } ?>
                         <?php } ?>
@@ -341,14 +341,14 @@ if (isset($_GET['id_imp_exp'])) {
                 </div>
                 <div class="content">
                     <label for="newTipoContenedorImp"><b>Tipo de Contenedor</b></label>
-                    <input name="newTipoContenedorImp" id="newTipoContenedorImp" type="text" class='input-field' placeholder="" required autocomplete="off" value="<?php if($tipocontenedor==null){echo '';}else{echo $tipocontenedor;} ?>">
+                    <input name="newTipoContenedorImp" id="newTipoContenedorImp" type="text" class='input-field' placeholder="" required autocomplete="off" value="<?php if($tipocontenedor==null){echo '';}else{echo utf8_encode($tipocontenedor);} ?>">
                 </div>
                 <div class="content">
                     
                     <span style="font-size: 15px;"><b>Commercial Invoice &emsp;&emsp;</b><input type="checkbox" name="checkci" value="" <?php if($obligatorio1!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;"> Documento Obligatorio</span>
                     <?php if($variable1 !='nada'){ ?>
                         <img src="../../img/pdf.png" style="width: 100%;max-width:50px;height:70px">
-                        <p><a href="cargar.php?id=<?php echo $id1; ?>" target="_blank"><?php echo $nom_documento1 ?></a></p>
+                        <p><a href="cargar.php?id=<?php echo $id1; ?>" target="_blank"><?php echo utf8_encode($nom_documento1) ?></a></p>
                     <?php } ?>
                     <input type="file" name="comercialInvoice" id="comercialInvoice" accept=".pdf" class='fancy-file'>
 
@@ -357,7 +357,7 @@ if (isset($_GET['id_imp_exp'])) {
                     <span style="font-size: 15px;"><b>Packing List &emsp;&emsp;</b><input type="checkbox" name="checkpl" value="" <?php if($obligatorio2!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;"> Documento Obligatorio</span>
                     <?php if($variable2 !='nada'){ ?>
                         <img src="../../img/pdf.png" style="width: 100%;max-width:50px;height:70px">
-                        <p><a href="cargar.php?id=<?php echo $id2; ?>" target="_blank"><?php echo $nom_documento2 ?></a></p>
+                        <p><a href="cargar.php?id=<?php echo $id2; ?>" target="_blank"><?php echo utf8_encode($nom_documento2) ?></a></p>
                     <?php } ?>
                     <input type="file" name="packingList" id="packingList" accept=".pdf" class='fancy-file'>
 
@@ -366,7 +366,7 @@ if (isset($_GET['id_imp_exp'])) {
                     <span style="font-size: 15px;"><b>Certificado de Origen &emsp;&emsp;</b><input type="checkbox" name="checkco" value="" <?php if($obligatorio3!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;"> Documento Obligatorio</span>
                     <?php if($variable3 !='nada'){ ?>
                         <img src="../../img/pdf.png" style="width: 100%;max-width:50px;height:70px">
-                        <p><a href="cargar.php?id=<?php echo $id3; ?>" target="_blank"><?php echo $nom_documento3 ?></a></p>
+                        <p><a href="cargar.php?id=<?php echo $id3; ?>" target="_blank"><?php echo utf8_encode($nom_documento3) ?></a></p>
                     <?php } ?>
                     <input type="file" name="certificadoOrigen" id="certificadoOrigen" accept=".pdf" class='fancy-file'>
                 </div>
@@ -374,7 +374,7 @@ if (isset($_GET['id_imp_exp'])) {
                     <span style="font-size: 15px;"><b>Documento de Transporte &emsp;&emsp;</b><input type="checkbox" name="checkdt" value="" <?php if($obligatorio4!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;"> Documento Obligatorio</span>
                     <?php if($variable4 !='nada'){ ?>
                         <img src="../../img/pdf.png" style="width: 100%;max-width:50px;height:70px">
-                        <p><a href="cargar.php?id=<?php echo $id4; ?>" target="_blank"><?php echo $nom_documento4 ?></a></p>
+                        <p><a href="cargar.php?id=<?php echo $id4; ?>" target="_blank"><?php echo utf8_encode($nom_documento4) ?></a></p>
                     <?php } ?>
                     <input type="file" name="documentoTransporte" id="documentoTransporte" accept=".pdf" class='fancy-file'>
                 </div>
@@ -382,7 +382,7 @@ if (isset($_GET['id_imp_exp'])) {
                     <span style="font-size: 15px;"><b>Póliza de Seguro &emsp;&emsp;</b><input type="checkbox" name="checkps" value="" <?php if($obligatorio5!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;"> Documento Obligatorio</span>
                     <?php if($variable5 !='nada'){ ?>
                         <img src="../../img/pdf.png" style="width: 100%;max-width:50px;height:70px">
-                        <p><a href="cargar.php?id=<?php echo $id5; ?>" target="_blank"><?php echo $nom_documento5 ?></a></p>
+                        <p><a href="cargar.php?id=<?php echo $id5; ?>" target="_blank"><?php echo utf8_encode($nom_documento5) ?></a></p>
                     <?php } ?>
                     <input type="file" name="polizaSeguro" id="polizaSeguro" accept=".pdf" class='fancy-file'>
                 </div>
@@ -390,13 +390,13 @@ if (isset($_GET['id_imp_exp'])) {
                     <span style="font-size: 15px;"><b>Otros &emsp;&emsp;</b><input type="checkbox" name="checko" value="" <?php if($obligatorio6!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;"> Documento Obligatorio</span>
                     <?php if($variable6 !='nada'){ ?>
                         <img src="../../img/pdf.png" style="width: 100%;max-width:50px;height:70px">
-                        <p><a href="cargar.php?id=<?php echo $id6; ?>" target="_blank"><?php echo $nom_documento6 ?></a></p>
+                        <p><a href="cargar.php?id=<?php echo $id6; ?>" target="_blank"><?php echo utf8_encode($nom_documento6) ?></a></p>
                     <?php } ?>
                     <input type="file" name="newOtroImp" id="newOtroImp" accept=".pdf" class='fancy-file'>
                 </div>
                 <div class="content">
                     <label for="newLinkImp"><b>Link Seguimiento</b></label>
-                    <input name="newLinkImp" id="newLinkImp" type="text" class='input-field' placeholder="" autocomplete="off" value="<?php if($link==null){echo '';}else{echo $link;} ?>">
+                    <input name="newLinkImp" id="newLinkImp" type="text" class='input-field' placeholder="" autocomplete="off" value="<?php if($link==null){echo '';}else{echo utf8_encode($link);} ?>">
                 </div>
                 <div class="content">
                     <label for="newNroSegImp"><b>N° Seguimiento</b></label>
@@ -438,19 +438,19 @@ if (isset($_GET['id_imp_exp'])) {
                 </div>
                 <div class="content">
                     <label for="newnpaisOrigenImp"><b>País de Origen</b></label>
-                    <input name="newnpaisOrigenImp" id="newnpaisOrigenImp" type="text" class='input-field' placeholder="N° de Orden" value="<?php echo $origen; ?>" readonly>
+                    <input name="newnpaisOrigenImp" id="newnpaisOrigenImp" type="text" class='input-field' placeholder="N° de Orden" value="<?php echo utf8_encode($origen); ?>" readonly>
                 </div>
                 <div class="content">
                     <label for="newnpaisDestinoImp"><b>País de Destino</b></label>
-                    <input name="newnpaisDestinoImp" id="newnpaisDestinoImp" type="text" class='input-field' placeholder="N° de Orden" value="<?php echo $destino; ?>" readonly>
+                    <input name="newnpaisDestinoImp" id="newnpaisDestinoImp" type="text" class='input-field' placeholder="N° de Orden" value="<?php echo utf8_encode($destino); ?>" readonly>
                 </div>
                 <div class="content">
                     <label for="newincotemImp"><b>Incotem</b></label>
-                    <input name="newincotemImp" id="newincotemImp" type="text" class='input-field' placeholder="Incotem" value="<?php echo $incoterm; ?>" readonly>
+                    <input name="newincotemImp" id="newincotemImp" type="text" class='input-field' placeholder="Incotem" value="<?php echo utf8_encode($incoterm); ?>" readonly>
                 </div>
                 <div class="content">
                     <label for="newobsImp"><b>Observaciones</b></label>
-                    <input name="newobsImp" id="newobsImp"  type="text" class='input-field' placeholder="Obervaciones" autocomplete="off" value="<?php echo $observaciones; ?>">
+                    <input name="newobsImp" id="newobsImp"  type="text" class='input-field' placeholder="Obervaciones" autocomplete="off" value="<?php echo utf8_encode($observaciones); ?>">
                 </div>
                 <div class="content">
                     <label for="newReservaImp"><b>N° Reserva</b></label>
@@ -474,13 +474,13 @@ if (isset($_GET['id_imp_exp'])) {
                 </div>
                 <div class="form-group">
                     <label for="newEmbarquePuertoAereoImp"><b>POL / AOL</b></label>
-                    <input name="newEmbarquePuertoAereoImp" id="newEmbarquePuertoAereoImp" type="text" class='input-field' placeholder="" required autocomplete="off"  value="<?php if($pol==null){echo '';}else{echo $pol;} ?>">
+                    <input name="newEmbarquePuertoAereoImp" id="newEmbarquePuertoAereoImp" type="text" class='input-field' placeholder="" required autocomplete="off"  value="<?php if($pol==null){echo '';}else{echo utf8_encode($pol);} ?>">
 
                 </div>
 
                 <div class="form-group">
                     <label for="newDesembarquePuertoAereoImp"><b>POD / AOD</b></label>
-                    <input name="newDesembarquePuertoAereoImp" id="newDesembarquePuertoAereoImp" type="text" class='input-field' placeholder="" required autocomplete="off"  value="<?php if($pod==null){echo '';}else{echo $pod;} ?>">
+                    <input name="newDesembarquePuertoAereoImp" id="newDesembarquePuertoAereoImp" type="text" class='input-field' placeholder="" required autocomplete="off"  value="<?php if($pod==null){echo '';}else{echo utf8_encode($pod);} ?>">
 
                 </div>
 
@@ -496,15 +496,15 @@ if (isset($_GET['id_imp_exp'])) {
                         <option value="">Seleccionar categoría</option>
                 
                         <?php while($row = $resultado->fetch_assoc()) { ?>
-                            <option value="<?php echo $row['id_categoria']; ?>"><?php echo $row['categoria']; ?></option>
+                            <option value="<?php echo $row['id_categoria']; ?>"><?php echo utf8_encode($row['categoria']); ?></option>
 
                         <?php } ?>
                         <?php }else{ ?>
                                 <?php while($row = $resultado->fetch_assoc()) { ?>
                                     <?php if($row['id_categoria'] == $id_categoria) { ?>
-                                        <option value="<?php echo $row['id_categoria']; ?>" selected><?php echo $row['categoria']; ?></option>
+                                        <option value="<?php echo $row['id_categoria']; ?>" selected><?php echo utf8_encode($row['categoria']); ?></option>
                                 <?php }else{ ?>
-                                    <option value="<?php echo $row['id_categoria']; ?>"><?php echo $row['categoria']; ?></option>
+                                    <option value="<?php echo $row['id_categoria']; ?>"><?php echo utf8_encode($row['categoria']); ?></option>
                                 <?php } ?>
                             <?php } ?>
                         <?php } ?>
@@ -530,12 +530,12 @@ if (isset($_GET['id_imp_exp'])) {
                             <?php if ($subcategoria == $rowSub['subcategoria']) { ?>
 
                             <option class="form-control" value="<?php echo $rowSub['id_subcategoria']; ?>" selected>
-                            <?php echo $rowSub['subcategoria'];?>
+                            <?php echo utf8_encode($rowSub['subcategoria']);?>
                             </option>
 
                             <?php } else { ?> 
                                 <option class="form-control" value="<?php echo $rowSub['id_subcategoria']; ?>" >
-                            <?php echo $rowSub['subcategoria'];?>
+                            <?php echo utf8_encode($rowSub['subcategoria']);?>
                             </option>
                             <?php } ?>
                         <?php } ?>
@@ -563,7 +563,7 @@ if (isset($_GET['id_imp_exp'])) {
                 </div>
                 <div class="content">
                     <label for="newTipoContenedorImp"><b>Tipo de Contenedor</b></label>
-                    <input name="newTipoContenedorImp" id="newTipoContenedorImp" type="text" class='input-field' placeholder="" required autocomplete="off" value="<?php if($tipocontenedor==null){echo '';}else{echo $tipocontenedor;} ?>">
+                    <input name="newTipoContenedorImp" id="newTipoContenedorImp" type="text" class='input-field' placeholder="" required autocomplete="off" value="<?php if($tipocontenedor==null){echo '';}else{echo utf8_encode($tipocontenedor);} ?>">
                 </div>
 
                 <div class="content">
@@ -571,7 +571,7 @@ if (isset($_GET['id_imp_exp'])) {
                     <span style="font-size: 15px;"><b>Commercial Invoice &emsp;&emsp;</b><input type="checkbox" name="checkci" value="" <?php if($obligatorio1!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;"> Documento Obligatorio</span>
                     <?php if($variable1 !='nada'){ ?>
                         <img src="../../img/pdf.png" style="width: 100%;max-width:50px;height:70px">
-                        <p><a href="cargar.php?id=<?php echo $id1; ?>" target="_blank"><?php echo $nom_documento1 ?></a></p>
+                        <p><a href="cargar.php?id=<?php echo $id1; ?>" target="_blank"><?php echo utf8_encode($nom_documento1) ?></a></p>
                     <?php } ?>
                     <input type="file" name="comercialInvoice" id="comercialInvoice" accept=".pdf" class='fancy-file'>
 
@@ -580,7 +580,7 @@ if (isset($_GET['id_imp_exp'])) {
                     <span style="font-size: 15px;"><b>Packing List &emsp;&emsp;</b><input type="checkbox" name="checkpl" value="" <?php if($obligatorio2!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;"> Documento Obligatorio</span>
                     <?php if($variable2 !='nada'){ ?>
                         <img src="../../img/pdf.png" style="width: 100%;max-width:50px;height:70px">
-                        <p><a href="cargar.php?id=<?php echo $id2; ?>" target="_blank"><?php echo $nom_documento2 ?></a></p>
+                        <p><a href="cargar.php?id=<?php echo $id2; ?>" target="_blank"><?php echo utf8_encode($nom_documento2) ?></a></p>
                     <?php } ?>
                     <input type="file" name="packingList" id="packingList" accept=".pdf" class='fancy-file'>
 
@@ -589,7 +589,7 @@ if (isset($_GET['id_imp_exp'])) {
                     <span style="font-size: 15px;"><b>Certificado de Origen &emsp;&emsp;</b><input type="checkbox" name="checkco" value="" <?php if($obligatorio3!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;"> Documento Obligatorio</span>
                     <?php if($variable3 !='nada'){ ?>
                         <img src="../../img/pdf.png" style="width: 100%;max-width:50px;height:70px">
-                        <p><a href="cargar.php?id=<?php echo $id3; ?>" target="_blank"><?php echo $nom_documento3 ?></a></p>
+                        <p><a href="cargar.php?id=<?php echo $id3; ?>" target="_blank"><?php echo utf8_encode($nom_documento3) ?></a></p>
                     <?php } ?>
                     <input type="file" name="certificadoOrigen" id="certificadoOrigen" accept=".pdf" class='fancy-file'>
                 </div>
@@ -597,7 +597,7 @@ if (isset($_GET['id_imp_exp'])) {
                     <span style="font-size: 15px;"><b>Documento de Transporte &emsp;&emsp;</b><input type="checkbox" name="checkdt" value="" <?php if($obligatorio4!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;"> Documento Obligatorio</span>
                     <?php if($variable4 !='nada'){ ?>
                         <img src="../../img/pdf.png" style="width: 100%;max-width:50px;height:70px">
-                        <p><a href="cargar.php?id=<?php echo $id4; ?>" target="_blank"><?php echo $nom_documento4 ?></a></p>
+                        <p><a href="cargar.php?id=<?php echo $id4; ?>" target="_blank"><?php echo utf8_encode($nom_documento4) ?></a></p>
                     <?php } ?>
                     <input type="file" name="documentoTransporte" id="documentoTransporte" accept=".pdf" class='fancy-file'>
                 </div>
@@ -605,7 +605,7 @@ if (isset($_GET['id_imp_exp'])) {
                     <span style="font-size: 15px;"><b>Otros &emsp;&emsp;</b><input type="checkbox" name="checko" value="" <?php if($obligatorio6!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;"> Documento Obligatorio</span>
                     <?php if($variable6 !='nada'){ ?>
                         <img src="../../img/pdf.png" style="width: 100%;max-width:50px;height:70px">
-                        <p><a href="cargar.php?id=<?php echo $id6; ?>" target="_blank"><?php echo $nom_documento6 ?></a></p>
+                        <p><a href="cargar.php?id=<?php echo $id6; ?>" target="_blank"><?php echo utf8_encode($nom_documento6) ?></a></p>
                     <?php } ?>
                     <input type="file" name="newOtroImp" id="newOtroImp" accept=".pdf" class='fancy-file'>
                 </div>
@@ -632,23 +632,23 @@ if (isset($_GET['id_imp_exp'])) {
                 </div>
                 <div class="content">
                     <label for="newnpaisOrigenImp"><b>País de Origen</b></label>
-                    <input name="newnpaisOrigenImp" id="newnpaisOrigenImp" type="text" class='input-field' placeholder="N° de Orden" value="<?php echo $origen; ?>" readonly>
+                    <input name="newnpaisOrigenImp" id="newnpaisOrigenImp" type="text" class='input-field' placeholder="N° de Orden" value="<?php echo utf8_encode($origen); ?>" readonly>
                 </div>
                 <div class="content">
                     <label for="newnpaisDestinoImp"><b>País de Destino</b></label>
-                    <input name="newnpaisDestinoImp" id="newnpaisDestinoImp" type="text" class='input-field' placeholder="N° de Orden" value="<?php echo $destino; ?>" readonly>
+                    <input name="newnpaisDestinoImp" id="newnpaisDestinoImp" type="text" class='input-field' placeholder="N° de Orden" value="<?php echo utf8_encode($destino); ?>" readonly>
                 </div>
                 <div class="content">
                     <label for="newincotemImp"><b>Incotem</b></label>
-                    <input name="newincotemImp" id="newincotemImp" type="text" class='input-field' placeholder="Incotem" value="<?php echo $incoterm; ?>" readonly>
+                    <input name="newincotemImp" id="newincotemImp" type="text" class='input-field' placeholder="Incotem" value="<?php echo utf8_encode($incoterm); ?>" readonly>
                 </div>
                 <div class="content">
                     <label for="newobsImp"><b>Observaciones</b></label>
-                    <input name="newobsImp" id="newobsImp"  type="text" class='input-field' placeholder="Obervaciones" autocomplete="off" value="<?php echo $observaciones; ?>">
+                    <input name="newobsImp" id="newobsImp"  type="text" class='input-field' placeholder="Obervaciones" autocomplete="off" value="<?php echo utf8_encode($observaciones); ?>">
                 </div>
                 <div class="content">
                     <label for="newLinkImp"><b>Link Seguimiento</b></label>
-                    <input name="newLinkImp" id="newLinkImp" type="text" class='input-field' placeholder="" autocomplete="off" value="<?php if($link==null){echo '';}else{echo $link;} ?>">
+                    <input name="newLinkImp" id="newLinkImp" type="text" class='input-field' placeholder="" autocomplete="off" value="<?php if($link==null){echo '';}else{echo utf8_encode($link);} ?>">
                 </div>
                 <div class="content">
                     <label for="newNroSegImp"><b>N° Seguimiento</b></label>
@@ -678,19 +678,19 @@ if (isset($_GET['id_imp_exp'])) {
                 </div>
                 <div class="content">
                     <label for="newnpaisOrigenImp"><b>País de Origen</b></label>
-                    <input name="newnpaisOrigenImp" id="newnpaisOrigenImp" type="text" class='input-field' placeholder="N° de Orden" value="<?php echo $origen; ?>" readonly>
+                    <input name="newnpaisOrigenImp" id="newnpaisOrigenImp" type="text" class='input-field' placeholder="N° de Orden" value="<?php echo utf8_encode($origen); ?>" readonly>
                 </div>
                 <div class="content">
                     <label for="newnpaisDestinoImp"><b>País de Destino</b></label>
-                    <input name="newnpaisDestinoImp" id="newnpaisDestinoImp" type="text" class='input-field' placeholder="N° de Orden" value="<?php echo $destino; ?>" readonly>
+                    <input name="newnpaisDestinoImp" id="newnpaisDestinoImp" type="text" class='input-field' placeholder="N° de Orden" value="<?php echo utf8_encode($destino); ?>" readonly>
                 </div>
                 <div class="content">
                     <label for="newincotemImp"><b>Incotem</b></label>
-                    <input name="newincotemImp" id="newincotemImp" type="text" class='input-field' placeholder="Incotem" value="<?php echo $incoterm; ?>" readonly>
+                    <input name="newincotemImp" id="newincotemImp" type="text" class='input-field' placeholder="Incotem" value="<?php echo utf8_encode($incoterm); ?>" readonly>
                 </div>
                 <div class="content">
                     <label for="newobsImp"><b>Observaciones</b></label>
-                    <input name="newobsImp" id="newobsImp"  type="text" class='input-field' placeholder="Obervaciones" autocomplete="off" value="<?php echo $observaciones; ?>">
+                    <input name="newobsImp" id="newobsImp"  type="text" class='input-field' placeholder="Obervaciones" autocomplete="off" value="<?php echo utf8_encode($observaciones); ?>">
                 </div>
 
                 <div class="content">
@@ -709,7 +709,7 @@ if (isset($_GET['id_imp_exp'])) {
                     <span style="font-size: 15px;"><b>Póliza de Seguro &emsp;&emsp;</b><input type="checkbox" name="checkps" value="" <?php if($obligatorio5!=0){ ?> checked <?php } ?> ><span style="font-size: 15px;"> Documento Obligatorio</span>
                     <?php if($variable5 !='nada'){ ?>
                         <img src="../../img/pdf.png" style="width: 100%;max-width:50px;height:70px">
-                        <p><a href="cargar.php?id=<?php echo $id5; ?>" target="_blank"><?php echo $nom_documento5 ?></a></p>
+                        <p><a href="cargar.php?id=<?php echo $id5; ?>" target="_blank"><?php echo utf8_encode($nom_documento5) ?></a></p>
                     <?php } ?>
                     <input type="file" name="polizaSeguro" id="polizaSeguro" accept=".pdf" class='fancy-file'>
                 </div>

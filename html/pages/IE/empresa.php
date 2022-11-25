@@ -92,11 +92,11 @@
                     <?php if (mysqli_num_rows($queryEmpresaList) != 0) { ?>
                         <?php while ($dataEmpresa = mysqli_fetch_array($queryEmpresaList)) { ?>
                             <tr>
-                                <td><?php echo $dataEmpresa['nom_tipoempresa']; ?></td>
-                                <td><?php echo $dataEmpresa['razon_social']; ?></td>
-                                <td><?php echo $dataEmpresa['direccion_empresa']; ?></td>
-                                <td><?php echo $dataEmpresa['tel_empresa']; ?></td>
-                                <td><?php echo $dataEmpresa['mail_empresa']; ?></td>
+                                <td><?php echo utf8_encode($dataEmpresa['nom_tipoempresa']); ?></td>
+                                <td><?php echo utf8_encode($dataEmpresa['razon_social']); ?></td>
+                                <td><?php echo utf8_encode($dataEmpresa['direccion_empresa']); ?></td>
+                                <td><?php echo utf8_encode($dataEmpresa['tel_empresa']); ?></td>
+                                <td><?php echo utf8_encode($dataEmpresa['mail_empresa']); ?></td>
                                 <td><a href="../general/editEmpresa.php?id_empresa=<?php echo $dataEmpresa['id_empresa'] ?>"><i class="fa-solid fa-user-pen"></i></a></td>
                             </tr>
                         <?php } ?>

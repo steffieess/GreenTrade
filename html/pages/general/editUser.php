@@ -32,10 +32,10 @@ if (isset($_GET['rut_usuario'])) {
                 <input name="newTelUser" type="tel" class='input-field' placeholder="" value="<?php echo $rut_usuario; ?>" required autocomplete="off" readonly>
 
                 <label for="newTelUser"><b>Nombre Usuario</b></label>
-                <input name="newTelUser" type="tel" class='input-field' placeholder="" value="<?php echo $nombre . ' ' . $ap_paterno . ' ' . $ap_materno; ?>" required autocomplete="off" readonly>
+                <input name="newTelUser" type="tel" class='input-field' placeholder="" value="<?php echo utf8_encode($nombre . ' ' . $ap_paterno . ' ' . $ap_materno); ?>" required autocomplete="off" readonly>
 
                 <label for="newTelUser"><b>Empresa</b></label>
-                <input name="newTelUser" type="tel" class='input-field' placeholder="" value="<?php echo $razon; ?>" required autocomplete="off" readonly>
+                <input name="newTelUser" type="tel" class='input-field' placeholder="" value="<?php echo utf8_encode($razon); ?>" required autocomplete="off" readonly>
 
                 <div class="form-group">
 

@@ -76,11 +76,11 @@
                 $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND nro_orden = '$buscar'";
                 $queryImpExpList = mysqli_query($connc, $queryImpExp);
             } else {
-                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 LIMIT $iniciar,$imp_x_pagina";
+                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 ORDER BY fecha_creacion DESC, fecha_cierre ASC LIMIT $iniciar,$imp_x_pagina";
                 $queryImpExpList = mysqli_query($connc, $queryImpExp);
             } ?>
         <?php } else {
-            $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 LIMIT $iniciar,$imp_x_pagina";
+            $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 ORDER BY fecha_creacion DESC, fecha_cierre ASC LIMIT $iniciar,$imp_x_pagina";
             $queryImpExpList = mysqli_query($connc, $queryImpExp);
         } ?>
         <!-- search section ends-->
@@ -107,21 +107,21 @@
                             <?php while ($dataImpExp = mysqli_fetch_array($queryImpExpList)) { ?>
                                 <tr>
                                     <td><?php echo $dataImpExp['nro_orden']; ?></td>
-                                    <td><?php echo $dataImpExp['origen']; ?></td>
-                                    <td><?php echo $dataImpExp['destino']; ?></td>
+                                    <td><?php echo utf8_encode($dataImpExp['origen']); ?></td>
+                                    <td><?php echo utf8_encode($dataImpExp['destino']); ?></td>
                                     <?php if ($dataImpExp['puerto_areo_embarque'] == NULL) { ?>
                                         <td>Sin información</td>
                                     <?php } else { ?>
-                                        <td><?php echo $dataImpExp['puerto_areo_embarque']; ?></td>
+                                        <td><?php echo utf8_encode($dataImpExp['puerto_areo_embarque']); ?></td>
                                     <?php } ?>
                                     <?php if ($dataImpExp['puerto_areo_desembarque'] == NULL) { ?>
                                         <td>Sin información</td>
                                     <?php } else { ?>
-                                        <td><?php echo $dataImpExp['puerto_areo_desembarque']; ?></td>
+                                        <td><?php echo utf8_encode($dataImpExp['puerto_areo_desembarque']); ?></td>
                                     <?php } ?>
-                                    <td><?php echo $dataImpExp['incoterm']; ?></td>
-                                    <td><?php echo $dataImpExp['observaciones']; ?></td>
-                                    <td><?php echo $dataImpExp['estado']; ?></td>
+                                    <td><?php echo utf8_encode($dataImpExp['incoterm']); ?></td>
+                                    <td><?php echo utf8_encode($dataImpExp['observaciones']); ?></td>
+                                    <td><?php echo utf8_encode($dataImpExp['estado']); ?></td>
                                     <td><a href="../general/listaExp.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-eye"></i></a></td>
                                     <td><a href="../general/cerrarImpExp.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-file-circle-check"></i></a></td>
                                 </tr>
@@ -141,11 +141,11 @@
                 $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usuproveedor = '$razonM' AND nro_orden = '$buscar'";
                 $queryImpExpList = mysqli_query($connc, $queryImpExp);
             } else {
-                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usuproveedor = '$razonM' LIMIT $iniciar,$imp_x_pagina";
+                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usuproveedor = '$razonM' ORDER BY fecha_creacion DESC, fecha_cierre ASC LIMIT $iniciar,$imp_x_pagina";
                 $queryImpExpList = mysqli_query($connc, $queryImpExp);
             } ?>
         <?php } else {
-            $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usuproveedor = '$razonM' LIMIT $iniciar,$imp_x_pagina";
+            $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usuproveedor = '$razonM' ORDER BY fecha_creacion DESC, fecha_cierre ASC LIMIT $iniciar,$imp_x_pagina";
             $queryImpExpList = mysqli_query($connc, $queryImpExp);
         } ?>
         <!-- search section ends-->
@@ -170,20 +170,20 @@
                             <?php while ($dataImpExp = mysqli_fetch_array($queryImpExpList)) { ?>
                                 <tr>
                                     <td><?php echo $dataImpExp['nro_orden']; ?></td>
-                                    <td><?php echo $dataImpExp['origen']; ?></td>
-                                    <td><?php echo $dataImpExp['destino']; ?></td>
+                                    <td><?php echo utf8_encode($dataImpExp['origen']); ?></td>
+                                    <td><?php echo utf8_encode($dataImpExp['destino']); ?></td>
                                     <?php if ($dataImpExp['puerto_areo_embarque'] == NULL) { ?>
                                         <td>Sin información</td>
                                     <?php } else { ?>
-                                        <td><?php echo $dataImpExp['puerto_areo_embarque']; ?></td>
+                                        <td><?php echo utf8_encode($dataImpExp['puerto_areo_embarque']); ?></td>
                                     <?php } ?>
                                     <?php if ($dataImpExp['puerto_areo_desembarque'] == NULL) { ?>
                                         <td>Sin información</td>
                                     <?php } else { ?>
-                                        <td><?php echo $dataImpExp['puerto_areo_desembarque']; ?></td>
+                                        <td><?php echo utf8_encode($dataImpExp['puerto_areo_desembarque']); ?></td>
                                     <?php } ?>
-                                    <td><?php echo $dataImpExp['incoterm']; ?></td>
-                                    <td><?php echo $dataImpExp['observaciones']; ?></td>
+                                    <td><?php echo utf8_encode($dataImpExp['incoterm']); ?></td>
+                                    <td><?php echo utf8_encode($dataImpExp['observaciones']); ?></td>
                                     <td><a href="../general/listaExp.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-eye"></i></a></td>
                                 </tr>
                             <?php } ?>
@@ -203,11 +203,11 @@
                 $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usutrasportadora = '$razonM' AND nro_orden = '$buscar'";
                 $queryImpExpList = mysqli_query($connc, $queryImpExp);
             } else {
-                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usutrasportadora = '$razonM' LIMIT $iniciar,$imp_x_pagina";
+                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usutrasportadora = '$razonM' ORDER BY fecha_creacion DESC, fecha_cierre ASC LIMIT $iniciar,$imp_x_pagina";
                 $queryImpExpList = mysqli_query($connc, $queryImpExp);
             } ?>
         <?php } else {
-            $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usutrasportadora = '$razonM' LIMIT $iniciar,$imp_x_pagina";
+            $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usutrasportadora = '$razonM' ORDER BY fecha_creacion DESC, fecha_cierre ASC LIMIT $iniciar,$imp_x_pagina";
             $queryImpExpList = mysqli_query($connc, $queryImpExp);
         } ?>
         <!-- search section ends-->
@@ -232,20 +232,20 @@
                             <?php while ($dataImpExp = mysqli_fetch_array($queryImpExpList)) { ?>
                                 <tr>
                                     <td><?php echo $dataImpExp['nro_orden']; ?></td>
-                                    <td><?php echo $dataImpExp['origen']; ?></td>
-                                    <td><?php echo $dataImpExp['destino']; ?></td>
+                                    <td><?php echo utf8_encode($dataImpExp['origen']); ?></td>
+                                    <td><?php echo utf8_encode($dataImpExp['destino']); ?></td>
                                     <?php if ($dataImpExp['puerto_areo_embarque'] == NULL) { ?>
                                         <td>Sin información</td>
                                     <?php } else { ?>
-                                        <td><?php echo $dataImpExp['puerto_areo_embarque']; ?></td>
+                                        <td><?php echo utf8_encode($dataImpExp['puerto_areo_embarque']); ?></td>
                                     <?php } ?>
                                     <?php if ($dataImpExp['puerto_areo_desembarque'] == NULL) { ?>
                                         <td>Sin información</td>
                                     <?php } else { ?>
-                                        <td><?php echo $dataImpExp['puerto_areo_desembarque']; ?></td>
+                                        <td><?php echo utf8_encode($dataImpExp['puerto_areo_desembarque']); ?></td>
                                     <?php } ?>
-                                    <td><?php echo $dataImpExp['incoterm']; ?></td>
-                                    <td><?php echo $dataImpExp['observaciones']; ?></td>
+                                    <td><?php echo utf8_encode($dataImpExp['incoterm']); ?></td>
+                                    <td><?php echo utf8_encode($dataImpExp['observaciones']); ?></td>
                                     <td><a href="../general/listaExp.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-eye"></i></a></td>
                                 </tr>
                             <?php } ?>
@@ -265,11 +265,11 @@
                 $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usuaseguradora = '$razonM' AND nro_orden = '$buscar'";
                 $queryImpExpList = mysqli_query($connc, $queryImpExp);
             } else {
-                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usuaseguradora = '$razonM' LIMIT $iniciar,$imp_x_pagina";
+                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usuaseguradora = '$razonM' ORDER BY fecha_creacion DESC, fecha_cierre ASC LIMIT $iniciar,$imp_x_pagina";
                 $queryImpExpList = mysqli_query($connc, $queryImpExp);
             } ?>
         <?php } else {
-            $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usuaseguradora = '$razonM' LIMIT $iniciar,$imp_x_pagina";
+            $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 2 AND usuaseguradora = '$razonM' ORDER BY fecha_creacion DESC, fecha_cierre ASC LIMIT $iniciar,$imp_x_pagina";
             $queryImpExpList = mysqli_query($connc, $queryImpExp);
         } ?>
         <!-- search section ends-->
@@ -294,20 +294,20 @@
                             <?php while ($dataImpExp = mysqli_fetch_array($queryImpExpList)) { ?>
                                 <tr>
                                     <td><?php echo $dataImpExp['nro_orden']; ?></td>
-                                    <td><?php echo $dataImpExp['origen']; ?></td>
-                                    <td><?php echo $dataImpExp['destino']; ?></td>
+                                    <td><?php echo utf8_encode($dataImpExp['origen']); ?></td>
+                                    <td><?php echo utf8_encode($dataImpExp['destino']); ?></td>
                                     <?php if ($dataImpExp['puerto_areo_embarque'] == NULL) { ?>
                                         <td>Sin información</td>
                                     <?php } else { ?>
-                                        <td><?php echo $dataImpExp['puerto_areo_embarque']; ?></td>
+                                        <td><?php echo utf8_encode($dataImpExp['puerto_areo_embarque']); ?></td>
                                     <?php } ?>
                                     <?php if ($dataImpExp['puerto_areo_desembarque'] == NULL) { ?>
                                         <td>Sin información</td>
                                     <?php } else { ?>
-                                        <td><?php echo $dataImpExp['puerto_areo_desembarque']; ?></td>
+                                        <td><?php echo utf8_encode($dataImpExp['puerto_areo_desembarque']); ?></td>
                                     <?php } ?>
-                                    <td><?php echo $dataImpExp['incoterm']; ?></td>
-                                    <td><?php echo $dataImpExp['observaciones']; ?></td>
+                                    <td><?php echo utf8_encode($dataImpExp['incoterm']); ?></td>
+                                    <td><?php echo utf8_encode($dataImpExp['observaciones']); ?></td>
                                     <td><a href="../general/listaExp.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-eye"></i></a></td>
                                 </tr>
                             <?php } ?>

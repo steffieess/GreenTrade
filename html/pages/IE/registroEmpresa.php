@@ -52,7 +52,7 @@
                 <select class="form-control" name="id_tipoEmpresa" id="id_tipoEmpresa">
                     <?php while ($rowEmpresa = mysqli_fetch_array($dataEmpresa)) { ?>
                         <option class="form-control" value="<?php echo $rowEmpresa['id_tipoempresa']; ?>">
-                            <?php echo $rowEmpresa['nom_tipoempresa']; ?>
+                            <?php echo utf8_encode($rowEmpresa['nom_tipoempresa']); ?>
                         </option>
                     <?php } ?>
                 </select>
