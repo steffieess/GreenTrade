@@ -90,7 +90,7 @@ if (isset($_POST['editImp'])) {
 
 
         if (isset($_POST['checkpl'])) {
-
+            echo '<script">alert("1");</script>';
             if ($_FILES['packingList']['name'] != null) {
 
                 $tipoArchivo = $_FILES['packingList']['type'];
@@ -150,7 +150,7 @@ if (isset($_POST['editImp'])) {
 
 
                 $binariosImagen = mysqli_escape_string($connc, $binariosImagen);
-                $query = "UPDATE documento SET nom_documento ='$nombreArchivo', documento = '$binariosImagen', formato_doc='$tipoArchivo'
+                $query = "UPDATE documento SET nom_documento ='$nombreArchivo', documento = '$binariosImagen',
                 obligatorio=2, nro_paginas=$count WHERE imp_exp_id_imp_exp='$nro_orden' and tipo_documento_id_tipodoc=3";
                 $resultQuery = mysqli_query($connc, $query);
             }
@@ -184,7 +184,7 @@ if (isset($_POST['editImp'])) {
 
 
                 $binariosImagen = mysqli_escape_string($connc, $binariosImagen);
-                $query = "UPDATE documento SET nom_documento ='$nombreArchivo', documento = '$binariosImagen', formato_doc='$tipoArchivo'
+                $query = "UPDATE documento SET nom_documento ='$nombreArchivo', documento = '$binariosImagen',
                 obligatorio=2, nro_paginas=$count WHERE imp_exp_id_imp_exp='$nro_orden' and tipo_documento_id_tipodoc=4";
                 $resultQuery = mysqli_query($connc, $query);
             }
@@ -217,7 +217,7 @@ if (isset($_POST['editImp'])) {
 
 
                 $binariosImagen = mysqli_escape_string($connc, $binariosImagen);
-                $query = "UPDATE documento SET nom_documento ='$nombreArchivo', documento = '$binariosImagen', formato_doc='$tipoArchivo'
+                $query = "UPDATE documento SET nom_documento ='$nombreArchivo', documento = '$binariosImagen',
                 obligatorio=2, nro_paginas=$count WHERE imp_exp_id_imp_exp='$nro_orden' and tipo_documento_id_tipodoc=5";
                 $resultQuery = mysqli_query($connc, $query);
             }
@@ -250,7 +250,7 @@ if (isset($_POST['editImp'])) {
 
 
                 $binariosImagen = mysqli_escape_string($connc, $binariosImagen);
-                $query = "UPDATE documento SET nom_documento ='$nombreArchivo', documento = '$binariosImagen', formato_doc='$tipoArchivo'
+                $query = "UPDATE documento SET nom_documento ='$nombreArchivo', documento = '$binariosImagen',
                 obligatorio=2, nro_paginas=$count WHERE imp_exp_id_imp_exp='$nro_orden' and tipo_documento_id_tipodoc=6";
                 $resultQuery = mysqli_query($connc, $query);
             }
@@ -353,7 +353,7 @@ if (isset($_POST['editImp'])) {
 
 
                 $binariosImagen = mysqli_escape_string($connc, $binariosImagen);
-                $query = "UPDATE documento SET nom_documento ='$nombreArchivo', documento = '$binariosImagen', formato_doc='$tipoArchivo'
+                $query = "UPDATE documento SET nom_documento ='$nombreArchivo', documento = '$binariosImagen',
                 obligatorio=2, nro_paginas=$count WHERE imp_exp_id_imp_exp='$nro_orden' and tipo_documento_id_tipodoc=2";
                 $resultQuery = mysqli_query($connc, $query);
             }
@@ -387,7 +387,7 @@ if (isset($_POST['editImp'])) {
 
 
                 $binariosImagen = mysqli_escape_string($connc, $binariosImagen);
-                $query = "UPDATE documento SET nom_documento ='$nombreArchivo', documento = '$binariosImagen', formato_doc='$tipoArchivo'
+                $query = "UPDATE documento SET nom_documento ='$nombreArchivo', documento = '$binariosImagen',
                 obligatorio=2, nro_paginas=$count WHERE imp_exp_id_imp_exp='$nro_orden' and tipo_documento_id_tipodoc=3";
                 $resultQuery = mysqli_query($connc, $query);
             }
@@ -421,7 +421,7 @@ if (isset($_POST['editImp'])) {
 
 
                 $binariosImagen = mysqli_escape_string($connc, $binariosImagen);
-                $query = "UPDATE documento SET nom_documento ='$nombreArchivo', documento = '$binariosImagen', formato_doc='$tipoArchivo'
+                $query = "UPDATE documento SET nom_documento ='$nombreArchivo', documento = '$binariosImagen',
                 obligatorio=2, nro_paginas=$count WHERE imp_exp_id_imp_exp='$nro_orden' and tipo_documento_id_tipodoc=4";
                 $resultQuery = mysqli_query($connc, $query);
             }
@@ -454,7 +454,7 @@ if (isset($_POST['editImp'])) {
 
 
                 $binariosImagen = mysqli_escape_string($connc, $binariosImagen);
-                $query = "UPDATE documento SET nom_documento ='$nombreArchivo', documento = '$binariosImagen', formato_doc='$tipoArchivo'
+                $query = "UPDATE documento SET nom_documento ='$nombreArchivo', documento = '$binariosImagen',
                 obligatorio=2, nro_paginas=$count WHERE imp_exp_id_imp_exp='$nro_orden' and tipo_documento_id_tipodoc=6";
                 $resultQuery = mysqli_query($connc, $query);
             }
@@ -517,7 +517,7 @@ if (isset($_POST['editImp'])) {
 
 
                 $binariosImagen = mysqli_escape_string($connc, $binariosImagen);
-                $query = "UPDATE documento SET nom_documento ='$nombreArchivo', documento = '$binariosImagen', formato_doc='$tipoArchivo'
+                $query = "UPDATE documento SET nom_documento ='$nombreArchivo', documento = '$binariosImagen',
                 obligatorio=2, nro_paginas=$count WHERE imp_exp_id_imp_exp='$nro_orden' and tipo_documento_id_tipodoc=5";
                 $resultQuery = mysqli_query($connc, $query);
             }
