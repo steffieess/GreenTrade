@@ -46,7 +46,7 @@
         <form action="../../func/tools/registrarSuppliers.php" id='regUser' class='input-group-regUser' method="POST">
             <div class="content">
                 <label for="rutUsuario"><b>Rut Usuario</b></label>
-                <input name="rutUsuario" type="text" class='input-field' placeholder="11111111-1" required autocomplete="off">
+                <input name="rutUsuario" type="text" class='input-field' placeholder="11111111-1" autocomplete="off" required>
             </div>
             <div class="content">
                 <label for="nomUsuario"><b>Nombre Usuario</b></label>
@@ -66,7 +66,7 @@
             </div>
             <div class="content">
                 <label for="telUsuario"><b>Teléfono Usuario</b></label>
-                <input name="telUsuario" type="tel" pattern="[0-9]{9}" class='input-field' placeholder="Teléfono Usuario" required autocomplete="off">
+                <input name="telUsuario" type="tel"  class='input-field' placeholder="Teléfono Usuario" required autocomplete="off">
             </div>
             <div>
                 <input class="submit-btn" type="submit" value="Registrar Usuario" name="regUsuario">

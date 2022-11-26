@@ -1,18 +1,23 @@
 <?php
 require '../mantenedor/mantenedor.php';
 
+if (isset($_GET['id_imp_exp'])) {
+    $nro_orden = $_GET['id_imp_exp'];
+    $queryList = "SELECT * FROM imp_exp WHERE id_imp_exp = '$id_imp_exp'";
+    $queryEditList = mysqli_query($connc, $queryList);
+}
+
 if (isset($_POST['editImp'])) {
-    $nro_orden = $_POST['xxx'];
 
     if ($tipoUsu == 1 || $tipoUsu == 2) {
-        $observaciones = $_POST['newobsImp'];
+        $observaciones = utf8_decode($_POST['newobsImp']);
         $reserva = $_POST['newReservaImp'];
         $edt = $_POST['newEdtImp'];
         $eta = $_POST['newEtaImp'];
         $ndocumento = $_POST['newNroDocImp'];
         $fechadocumento = $_POST['newFechaDocImp'];
-        $pol = $_POST['newEmbarquePuertoAereoImp'];
-        $pod = $_POST['newDesembarquePuertoAereoImp'];
+        $pol = utf8_decode($_POST['newEmbarquePuertoAereoImp']);
+        $pod = utf8_decode($_POST['newDesembarquePuertoAereoImp']);
         $mercaderia = $_POST['newMercaderiaImp']; //otra tabla
         //echo $categoria;
         //  $subcategoria = $_POST['newTipoEmbarqueImp']; //otra tabla
@@ -20,7 +25,7 @@ if (isset($_POST['editImp'])) {
         $peso = $_POST['newPesoImp'];
         $volumen = $_POST['newVolumenImp'];
         $ncontendor = $_POST['newNroContenedorImp'];
-        $tipocontenedor = $_POST['newTipoContenedorImp'];
+        $tipocontenedor = utf8_decode($_POST['newTipoContenedorImp']);
         //otros datos
         $link = $_POST['newLinkImp']; //otra tabla
         $nsegumiento = $_POST['newNroSegImp']; //otra tabla
@@ -85,7 +90,9 @@ if (isset($_POST['editImp'])) {
 
 
         if (isset($_POST['checkpl'])) {
+
             if ($_FILES['packingList']['name'] != null) {
+
                 $tipoArchivo = $_FILES['packingList']['type'];
                 $nombreArchivo = $_FILES['packingList']['name'];
                 $tamanoArchivo = $_FILES['packingList']['size'];
@@ -107,13 +114,15 @@ if (isset($_POST['editImp'])) {
 
 
                 $binariosImagen = mysqli_escape_string($connc, $binariosImagen);
-                $query = "UPDATE documento SET nom_documento ='$nombreArchivo', documento = '$binariosImagen', formato_doc='$tipoArchivo'
+                $query = "UPDATE documento SET nom_documento ='$nombreArchivo', documento = '$binariosImagen',
                 obligatorio=2, nro_paginas=$count WHERE imp_exp_id_imp_exp='$nro_orden' and tipo_documento_id_tipodoc=2";
                 $resultQuery = mysqli_query($connc, $query);
+                echo mysqli_error($connc);
             }
         } else {
             //si esta desmarcado actualizamos el documento como no obligatorio
             $query = "UPDATE documento SET obligatorio=0 WHERE imp_exp_id_imp_exp='$nro_orden' and tipo_documento_id_tipodoc=2";
+            //echo $query = "UPDATE documento SET obligatorio=0 WHERE imp_exp_id_imp_exp='$nro_orden' and tipo_documento_id_tipodoc=1";
             $resultQuery = mysqli_query($connc, $query);
         }
 
@@ -255,14 +264,14 @@ if (isset($_POST['editImp'])) {
         $_SESSION['message_type'] = 'Exitoso';
         echo "<script> window.location='../../pages/general/importaciones.php?pagina=1'; </script>";
     } else if ($tipoUsu == 3) {
-        $observaciones = $_POST['newobsImp'];
+        $observaciones = utf8_decode($_POST['newobsImp']);
         $reserva = $_POST['newReservaImp'];
         $edt = $_POST['newEdtImp'];
         $eta = $_POST['newEtaImp'];
         $ndocumento = $_POST['newNroDocImp'];
         $fechadocumento = $_POST['newFechaDocImp'];
-        $pol = $_POST['newEmbarquePuertoAereoImp'];
-        $pod = $_POST['newDesembarquePuertoAereoImp'];
+        $pol = utf8_decode($_POST['newEmbarquePuertoAereoImp']);
+        $pod = utf8_decode($_POST['newDesembarquePuertoAereoImp']);
         $mercaderia = $_POST['newMercaderiaImp']; //otra tabla
         //echo $categoria;
         //  $subcategoria = $_POST['newTipoEmbarqueImp']; //otra tabla
@@ -270,7 +279,7 @@ if (isset($_POST['editImp'])) {
         $peso = $_POST['newPesoImp'];
         $volumen = $_POST['newVolumenImp'];
         $ncontendor = $_POST['newNroContenedorImp'];
-        $tipocontenedor = $_POST['newTipoContenedorImp'];
+        $tipocontenedor = utf8_decode($_POST['newTipoContenedorImp']);
 
         //update de importacion/exportación
         $queryUpdateImpo = "UPDATE imp_exp SET observaciones = '$observaciones', nro_reserva= $reserva, fecha_edt='$edt', fecha_eta='$eta', nro_doctrasporte=$ndocumento,
@@ -459,7 +468,7 @@ if (isset($_POST['editImp'])) {
         $_SESSION['message_type'] = 'Exitoso';
         echo "<script> window.location='../../pages/general/importaciones.php?pagina=1'; </script>";
     } else if ($tipoUsu == 5) {
-        $observaciones = $_POST['newobsImp'];
+        $observaciones = utf8_decode($_POST['newobsImp']);
         //otros datos
         $link = $_POST['newLinkImp']; //otra tabla
         $nsegumiento = $_POST['newNroSegImp']; //otra tabla
@@ -476,7 +485,7 @@ if (isset($_POST['editImp'])) {
         $_SESSION['message_type'] = 'Exitoso';
         echo "<script> window.location='../../pages/general/importaciones.php?pagina=1'; </script>";
     } else if ($tipoUsu == 7) {
-        $observaciones = $_POST['newobsImp'];
+        $observaciones = utf8_decode($_POST['newobsImp']);
         $npoliza = $_POST['newNroPolizaImp'];
         $fechapoliza = $_POST['newFechaPolizaImp'];
         $montopoliza = $_POST['newPrimaPolizaImp'];

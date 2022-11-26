@@ -68,7 +68,7 @@
             </div>
             <div class="content">
                 <label for="telEmpresa"><b>Teléfono Empresa</b></label>
-                <input name="telEmpresa" type="tel" pattern="[0-9]{9}" class='input-field' placeholder="Teléfono Empresa" required autocomplete="off">
+                <input name="telEmpresa" type="tel"  class='input-field' placeholder="Teléfono Empresa" required autocomplete="off">
             </div>
             <div class="content">
                 <label for="correoEmpresa"><b>Correo Empresa</b></label>

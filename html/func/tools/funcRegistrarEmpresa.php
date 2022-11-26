@@ -4,10 +4,10 @@ require '../mantenedor/mantenedor.php';
 if (isset($_POST['regEmpresa'])) {
 
     $tipo_empresa = $_POST['id_tipoEmpresa'];
-    $razon_social = $_POST['razonSocial'];
-    $dic_empresa = $_POST['dicEmpresa'];
+    $razon_social = utf8_decode($_POST['razonSocial']);
+    $dic_empresa = utf8_decode($_POST['dicEmpresa']);
     $tel_empresa = $_POST['telEmpresa'];
-    $correo_empresa = $_POST['correoEmpresa'];
+    $correo_empresa = utf8_decode($_POST['correoEmpresa']);
     
 
     $queryEmpresa = "SELECT * FROM empresa WHERE razon_social =  '$razon_social' AND usuario_empresa = '$usuEmpresaM'";

@@ -164,8 +164,8 @@
                      <li><a href="../general/inicio.php"><img src="../../img/logo.png" alt=""></a></li>
                      <li><a href="../general/inicio.php" class="nav-link px-2 text-white" style="font-size: 15px;">GreenTrade</a></li>
                      <li><a href="../general/homepage.php" class="nav-link px-2 text-white" style="font-size: 15px;">Inicio</a></li>
-                     <li><a href="../general/importaciones.php" class="nav-link px-2 text-white" style="font-size: 15px;">Importaciones</a></li>
-                     <li><a href="../general/exportaciones.php" class="nav-link px-2 text-white" style="font-size: 15px;">Exportaciones</a></li>
+                     <li><a href="../general/importaciones.php?pagina=1" class="nav-link px-2 text-white" style="font-size: 15px;">Importaciones</a></li>
+                     <li><a href="../general/exportaciones.php?pagina=1" class="nav-link px-2 text-white" style="font-size: 15px;">Exportaciones</a></li>
                      <li><a href="../IE/usuario.php" class="nav-link px-2 text-white" style="font-size: 15px;">Usuarios</a></li>
                      <li><a href="../IE/empresa.php" class="nav-link px-2 text-white" style="font-size: 15px;">Empresas</a></li>
                      <li><a href="../IE/reciclaje.php" class="nav-link px-2 text-white" style="font-size: 15px;">Reciclaje</a></li>
@@ -175,8 +175,8 @@
                      <li><a href="../general/inicio.php"><img src="../../img/logo.png" alt=""></a></li>
                      <li><a href="../general/inicio.php" class="nav-link px-2 text-white" style="font-size: 15px;">GreenTrade</a></li>
                      <li><a href="../general/homepage.php" class="nav-link px-2 text-white" style="font-size: 15px;">Inicio</a></li>
-                     <li><a href="../general/importaciones.php" class="nav-link px-2 text-white" style="font-size: 15px;">Importaciones</a></li>
-                     <li><a href="../general/exportaciones.php" class="nav-link px-2 text-white" style="font-size: 15px;">Exportaciones</a></li>
+                     <li><a href="../general/importaciones.php?pagina=1" class="nav-link px-2 text-white" style="font-size: 15px;">Importaciones</a></li>
+                     <li><a href="../general/exportaciones.php?pagina=1" class="nav-link px-2 text-white" style="font-size: 15px;">Exportaciones</a></li>
                   <?php endif ?>
 
                   <?php if ($tipoUsu == 8) : ?>
@@ -204,7 +204,7 @@
             </ul>
             <?php if (!empty($dataUserM)) : ?>
                <div class="text-end salir">
-                  <a class="nav-link px-2 text-white" style="margin-top:0.1rem; font-size: 15px; color:#7DBC66 !important;"><?php echo $nombreP ?></a>
+                  <a class="nav-link px-2 text-white" style="margin-top:0.1rem; font-size: 15px; color:#7DBC66 !important;"><?php echo utf8_encode($nombreP) ?></a>
                   <a class="btn" href="../../func/tools/salir.php"><i class="fa-solid fa-right-from-bracket"></i> Salir</a>
                </div>
             <?php else : ?>

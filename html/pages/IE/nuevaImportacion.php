@@ -45,7 +45,7 @@
         <form action="../../func/tools/registroImportacion.php" id='regImportacion' class='input-group-regImportacion' method="POST">
             <div class="content">
                 <label for="nroOrdenImp"><b>N° de Orden</b></label>
-                <input name="nroOrdenImp" type="number" class='input-field' placeholder="N° de Orden" required autocomplete="off">
+                <input name="nroOrdenImp" type="text" class='input-field' placeholder="N° de Orden" required autocomplete="off">
             </div>
             
             <?php
@@ -56,7 +56,7 @@
                 <label for="proveedor"><b>Proveedor</b></label>
                 <select class="form-control" name="proveedor" id="proveedor">
                     <?php while ($rowProveedor = mysqli_fetch_array($dataProveedor)){ ?>
-                        <option class="form-control" value="<?php echo $rowProveedor['razon_social']; ?>">
+                        <option class="form-control" value="<?php echo utf8_encode($rowProveedor['razon_social']); ?>">
                         <?php echo utf8_encode($rowProveedor['razon_social']);?>
                     </option>
                     <?php } ?>
@@ -71,7 +71,7 @@
                 <label for="ffww"><b>FFWW o Cía Transportadora</b></label>
                 <select class="form-control" name="ffww" id="ffww">
                     <?php while ($rowFFWW = mysqli_fetch_array($dataFFWW)){ ?>
-                        <option class="form-control" value="<?php echo $rowFFWW['razon_social']; ?>">
+                        <option class="form-control" value="<?php echo utf8_encode($rowFFWW['razon_social']); ?>">
                         <?php echo utf8_encode($rowFFWW['razon_social']);?>
                     </option>
                     <?php } ?>
@@ -86,7 +86,7 @@
                 <label for="id_paisOrigenImp"><b>País de Origen</b></label>
                 <select class="form-control" name="id_paisOrigenImp" id="id_paisOrigenImp">
                     <?php while ($rowPais = mysqli_fetch_array($dataPais)){ ?>
-                        <option class="form-control" value="<?php echo $rowPais['nombre_pais']; ?>">
+                        <option class="form-control" value="<?php echo utf8_encode($rowPais['nombre_pais']); ?>">
                         <?php echo utf8_encode($rowPais['nombre_pais']);?>
                     </option>
                     <?php } ?>
@@ -101,15 +101,15 @@
                 <label for="id_paisDestinoImp"><b>País de Destino</b></label>
                 <select class="form-control" name="id_paisDestinoImp" id="id_paisDestinoImp">
                     <?php while ($rowPais = mysqli_fetch_array($dataPais)){ ?>
-                        <option class="form-control" value="<?php echo $rowPais['nombre_pais']; ?>">
+                        <option class="form-control" value="<?php echo utf8_encode($rowPais['nombre_pais']); ?>">
                         <?php echo utf8_encode($rowPais['nombre_pais']);?>
                     </option>
                     <?php } ?>
                 </select>
             </div>
             <div class="content">
-                <label for="incotemImp"><b>Incotem</b></label>
-                <input name="incotemImp" type="text" maxlength="50" class='input-field' placeholder="Incotem" required autocomplete="off">
+                <label for="incotemImp"><b>Incoterm</b></label>
+                <input name="incotemImp" type="text" maxlength="50" class='input-field' placeholder="Incoterm" required autocomplete="off">
             </div>
             <div class="content">
                 <label for="obsImp"><b>Observaciones</b></label>

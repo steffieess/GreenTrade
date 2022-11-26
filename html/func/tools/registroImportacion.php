@@ -6,13 +6,13 @@ if (isset($_POST['regImp'])) {
     $Date =  date('Y-m-d ');
 
     $nroOrdenImp = $_POST['nroOrdenImp'];
-    $proveedor = $_POST['proveedor'];
-    $ffww = $_POST['ffww'];
-    $incotemImp = $_POST['incotemImp'];
-    $obsImp = $_POST['obsImp'];
+    $proveedor = utf8_decode($_POST['proveedor']);
+    $ffww = utf8_decode($_POST['ffww']);
+    $incotemImp = utf8_decode($_POST['incotemImp']);
+    $obsImp = utf8_decode($_POST['obsImp']);
 
-    $id_paisOrigenImp = $_POST['id_paisOrigenImp'];
-    $id_paisDestinoImp = $_POST['id_paisDestinoImp'];
+    $id_paisOrigenImp = utf8_decode($_POST['id_paisOrigenImp']);
+    $id_paisDestinoImp = utf8_decode($_POST['id_paisDestinoImp']);
 
     $id_imp_exp = $nroOrdenImp . $usuEmpresaM;
 

@@ -80,7 +80,7 @@
             </div>
             <div class="content">
                 <label for="telUsuarioExt"><b>Teléfono Usuario</b></label>
-                <input name="telUsuarioExt" type="tel" pattern="[0-9]{9}" class='input-field' placeholder="Teléfono Usuario" required autocomplete="off">
+                <input name="telUsuarioExt" type="tel"  class='input-field' placeholder="Teléfono Usuario" required autocomplete="off">
             </div>
             <div>
                 <input class="submit-btn" type="submit" value="Registrar Usuario Externo" name="regUsuarioExt">

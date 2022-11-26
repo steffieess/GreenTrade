@@ -3,16 +3,16 @@ require '../../../database/database.php';
 
 if (isset($_POST['Registrar'])) {
 
-    $razon = $_POST['razon'];
-    $direc_empresa = $_POST['direc_empresa'];
+    $razon = utf8_decode($_POST['razon']);
+    $direc_empresa = utf8_decode($_POST['direc_empresa']);
     $tel_empresa = $_POST['tel_empresa'];
     $mail_empresa = $_POST['mail_empresa'];
 
     $rut_user = $_POST['rut_user'];
 
-    $nom_user = $_POST['nom_user'];
-    $appat_user = $_POST['appat_user'];
-    $apmat_user = $_POST['apmat_user'];
+    $nom_user = utf8_decode($_POST['nom_user']);
+    $appat_user = utf8_decode($_POST['appat_user']);
+    $apmat_user = utf8_decode($_POST['apmat_user']);
     $mail_user = $_POST['mail_user'];
     $tel_user = $_POST['tel_user'];
     $clave_user = $_POST['clave_user'];

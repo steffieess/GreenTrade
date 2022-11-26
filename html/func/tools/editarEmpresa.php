@@ -16,9 +16,9 @@ if (isset($_GET['id_empresa'])) {
 
 if (isset($_POST['editEmpresa'])) {
     
-    $DirecEmp = $_POST['newDirecEmp'];
+    $DirecEmp = utf8_decode($_POST['newDirecEmp']);
     $TelEmp = $_POST['newTelEmp'];
-    $CorreoEmp = $_POST['newCorreoEmp'];
+    $CorreoEmp = utf8_decode($_POST['newCorreoEmp']);
     $idEmp = $_GET['id_empresa'];
     
         $queryUpdateEmp = "UPDATE empresa SET direccion_empresa ='$DirecEmp',  tel_empresa ='$TelEmp', mail_empresa='$CorreoEmp' WHERE id_empresa = '$idEmp'";

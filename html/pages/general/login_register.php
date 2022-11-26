@@ -76,7 +76,7 @@
                 </div>
                 <div class="content">
                     <label for="tel_empresa"><b>Teléfono Empresa</b></label>
-                    <input name="tel_empresa" type="tel" pattern="[0-9]{9}" class='input-field'  placeholder="Teléfono Empresa" required autocomplete="off">
+                    <input name="tel_empresa" type="tel"  class='input-field'  placeholder="Teléfono Empresa" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="mail_empresa"><b>Correo Empresa</b></label>
@@ -105,7 +105,7 @@
                 </div>
                 <div class="content">
                     <label for="tel_user"><b>Teléfono representante</b></label>
-                    <input name="tel_user" type="tel" pattern="[0-9]{9}" class='input-field' placeholder="Teléfono" required autocomplete="off">
+                    <input name="tel_user" type="tel" class='input-field' placeholder="Teléfono" required autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="clave_user"><b>Crear contraseña representante</b></label>

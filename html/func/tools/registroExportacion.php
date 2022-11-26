@@ -6,13 +6,13 @@ if (isset($_POST['regExp'])) {
     $Date =  date('Y-m-d ');
 
     $nroOrdenExp = $_POST['nroOrdenExp'];
-    $proveedor = $_POST['proveedor'];
-    $ffww = $_POST['ffww'];
-    $incotemExp = $_POST['incotemExp'];
-    $obsExp = $_POST['obsExp'];
+    $proveedor = utf8_decode($_POST['proveedor']);
+    $ffww = utf8_decode($_POST['ffww']);
+    $incotemExp = utf8_decode($_POST['incotemExp']);
+    $obsExp = utf8_decode($_POST['obsExp']);
 
-    $id_paisOrigenExp = $_POST['id_paisOrigenExp'];
-    $id_paisDestinoExp = $_POST['id_paisDestinoExp'];
+    $id_paisOrigenExp = utf8_decode($_POST['id_paisOrigenExp']);
+    $id_paisDestinoExp = utf8_decode($_POST['id_paisDestinoExp']);
 
     $id_imp_exp = $nroOrdenExp . $usuEmpresaM;
 

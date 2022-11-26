@@ -4,12 +4,11 @@ require '../mantenedor/mantenedor.php';
 if (isset($_POST['regUsuario'])) {
 
     $rut_user = $_POST['rutUsuario'];
-    $nom_user = $_POST['nomUsuario'];
-    $appat_user = $_POST['appUsuario'];
-    $apmat_user = $_POST['apmUsuario'];
+    $nom_user = utf8_decode($_POST['nomUsuario']);
+    $appat_user = utf8_decode($_POST['appUsuario']);
+    $apmat_user = utf8_decode($_POST['apmUsuario']);
     $mail_user = $_POST['mailUsuario'];
     $tel_user = $_POST['telUsuario'];
-
     
     // Quitar los últimos 2 valores (el guión y el dígito verificador) y luego verificar que sólo sea
     // numérico

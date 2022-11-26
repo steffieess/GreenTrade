@@ -96,7 +96,7 @@
                             <th>País de Destino</th>
                             <th>Embarque</th>
                             <th>Desembarque</th>
-                            <th>Incotem</th>
+                            <th>Incoterm</th>
                             <th>Observaciones</th>
                             <th>Estado</th>
                             <th>Ver más</th>
@@ -163,7 +163,7 @@
                             <th>País de Destino</th>
                             <th>Embarque</th>
                             <th>Desembarque</th>
-                            <th>Incotem</th>
+                            <th>Incoterm</th>
                             <th>Observaciones</th>
                             <th>Ver más</th>
                         </tr>
@@ -225,7 +225,7 @@
                             <th>País de Destino</th>
                             <th>Embarque</th>
                             <th>Desembarque</th>
-                            <th>Incotem</th>
+                            <th>Incoterm</th>
                             <th>Observaciones</th>
                             <th>Ver más</th>
                         </tr>
@@ -287,7 +287,7 @@
                             <th>País de Destino</th>
                             <th>Embarque</th>
                             <th>Desembarque</th>
-                            <th>Incotem</th>
+                            <th>Incoterm</th>
                             <th>Observaciones</th>
                             <th>Ver más</th>
                         </tr>
