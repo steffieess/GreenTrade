@@ -13,8 +13,8 @@ try {
 } catch (PDOException $e) {
   die('Connection Failed: ' . $e->getMessage());
 }
-    $id = $_GET['id'];
-    $queryDoc1 = "SELECT * FROM documento WHERE id_documento = '$id'";
+    $id_documento = $_GET['id'];
+    $queryDoc1 = "SELECT * FROM documento WHERE id_documento = '$id_documento'";
     $queryeditDoc1 = mysqli_query($connc, $queryDoc1);
     if (mysqli_num_rows($queryeditDoc1) == 1) {
         $row = mysqli_fetch_array($queryeditDoc1);
