@@ -45,11 +45,11 @@
         <form action="../../func/tools/registroExportacion.php" id='regImportacion' class='input-group-regExportacion' method="POST">
             <div class="content">
                 <label for="nroOrdenExp"><b>N° de Orden</b></label>
-                <input name="nroOrdenExp" type="number" class='input-field' placeholder="N° de Orden" required autocomplete="off">
+                <input name="nroOrdenExp" type="text" class='input-field' placeholder="N° de Orden" required autocomplete="off">
             </div>
 
             <?php
-                $sqlProveedor = ("SELECT * FROM empresa WHERE usuario_empresa = '$usuEmpresaM' AND tipo_empresa_id_tipoempresa = 3");
+                $sqlProveedor = ("SELECT * FROM empresa WHERE usuario_empresa = '$usuEmpresaM' AND tipo_empresa_id_tipoempresa = 3 OR tipo_empresa_id_tipoempresa = 1 AND razon_social != '$razonM'");
                 $dataProveedor = mysqli_query($connc, $sqlProveedor);
             ?>
             <div class="form-group">

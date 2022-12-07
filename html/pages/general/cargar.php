@@ -3,9 +3,9 @@
 session_start();
 
 $server = 'localhost';
-$username = 'root';
-$password = '';
-$database = 'ejemplo';
+$username = 'greentr1_GreenTrade';
+$password = 'WpkU-2X_XlHo';
+$database = 'greentr1_GreenTrade';
 
 $connc=mysqli_connect($server,$username,$password,$database);
 try {
@@ -26,3 +26,4 @@ try {
         header("Content-Disposition:inline;filename=$nombre.$tipo");
         echo $archivo;
     }
+

@@ -72,15 +72,15 @@
                 </div>
                 <div class="content">
                     <label for="direc_empresa"><b>Dirección Empresa</b></label>
-                    <input name="direc_empresa" type="text" class='input-field' placeholder="Dirección Empresa" required autocomplete="off">
+                    <input name="direc_empresa" type="text" class='input-field' placeholder="Dirección Empresa" autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="tel_empresa"><b>Teléfono Empresa</b></label>
-                    <input name="tel_empresa" type="tel"  class='input-field'  placeholder="Teléfono Empresa" required autocomplete="off">
+                    <input name="tel_empresa" type="tel"  class='input-field'  placeholder="Teléfono Empresa" autocomplete="off">
                 </div>
                 <div class="content">
                     <label for="mail_empresa"><b>Correo Empresa</b></label>
-                    <input name="mail_empresa" type="text" class='input-field' placeholder="greentrade@greentrade.com" required autocomplete="off">
+                    <input name="mail_empresa" type="text" class='input-field' placeholder="greentrade@greentrade.com" autocomplete="off">
                 </div>
                 <h3>Representante de la Empresa</h3>
                 <div class="content">

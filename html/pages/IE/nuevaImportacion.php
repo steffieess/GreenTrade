@@ -49,7 +49,7 @@
             </div>
             
             <?php
-                $sqlProveedor = ("SELECT * FROM empresa WHERE usuario_empresa = '$usuEmpresaM' AND tipo_empresa_id_tipoempresa = 3");
+                $sqlProveedor = ("SELECT * FROM empresa WHERE usuario_empresa = '$usuEmpresaM' AND tipo_empresa_id_tipoempresa = 3 OR tipo_empresa_id_tipoempresa = 1 AND razon_social != '$razonM'");
                 $dataProveedor = mysqli_query($connc, $sqlProveedor);
             ?>
             <div class="form-group">

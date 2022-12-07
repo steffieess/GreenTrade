@@ -212,13 +212,40 @@ if (isset($_GET['id_imp_exp'])) {
                     <label for="newnroOrdenImp"><b>N° de Orden</b></label>
                     <input name="newnroOrdenImp" id="newnroOrdenImp" type="text" class='input-field' placeholder="N° de Orden" value="<?php echo $nOrden; ?>" readonly>
                 </div>
-                <div class="content">
+                <?php
+                $sqlPais = ("SELECT * FROM pais");
+                $dataPais = mysqli_query($connc, $sqlPais);
+                ?>
+                <div class="form-group">
                     <label for="newnpaisOrigenImp"><b>País de Origen</b></label>
-                    <input name="newnpaisOrigenImp" id="newnpaisOrigenImp" type="text" class='input-field' placeholder="N° de Orden" value="<?php echo utf8_encode($origen); ?>" readonly>
+                    <select class="form-control" name="newnpaisOrigenImp" id="newnpaisOrigenImp">
+                        <?php while ($rowPais = mysqli_fetch_array($dataPais)){ ?>
+                            <?php if($rowPais['nombre_pais'] == $origen) { ?>
+                                        <option value="<?php echo utf8_encode($rowPais['nombre_pais']); ?>" selected><?php echo utf8_encode($rowPais['nombre_pais']); ?></option>
+                                <?php }else{ ?>
+                                    <option value="<?php echo utf8_encode($rowPais['nombre_pais']); ?>"><?php echo utf8_encode($rowPais['nombre_pais']); ?></option>
+                                <?php } ?>
+                        </option>
+                        <?php } ?>
+                    </select>
                 </div>
-                <div class="content">
+
+                <?php
+                $sqlPais = ("SELECT * FROM pais");
+                $dataPais = mysqli_query($connc, $sqlPais);
+                ?>
+                <div class="form-group">
                     <label for="newnpaisDestinoImp"><b>País de Destino</b></label>
-                    <input name="newnpaisDestinoImp" id="newnpaisDestinoImp" type="text" class='input-field' placeholder="N° de Orden" value="<?php echo utf8_encode($destino); ?>" readonly>
+                    <select class="form-control" name="newnpaisDestinoImp" id="newnpaisDestinoImp">
+                        <?php while ($rowPais = mysqli_fetch_array($dataPais)){ ?>
+                            <?php if($rowPais['nombre_pais'] == $destino) { ?>
+                                        <option value="<?php echo utf8_encode($rowPais['nombre_pais']); ?>" selected><?php echo utf8_encode($rowPais['nombre_pais']); ?></option>
+                                <?php }else{ ?>
+                                    <option value="<?php echo utf8_encode($rowPais['nombre_pais']); ?>"><?php echo utf8_encode($rowPais['nombre_pais']); ?></option>
+                                <?php } ?>
+                        </option>
+                        <?php } ?>
+                    </select>
                 </div>
                 <div class="content">
                     <label for="newincotemImp"><b>Incoterm</b></label>

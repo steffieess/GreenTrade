@@ -3,13 +3,15 @@ require '../mantenedor/mantenedor.php';
 
 if (isset($_GET['id_imp_exp'])) {
     $nro_orden = $_GET['id_imp_exp'];
-    $queryList = "SELECT * FROM imp_exp WHERE id_imp_exp = '$id_imp_exp'";
+    $queryList = "SELECT * FROM imp_exp WHERE id_imp_exp = '$nro_orden'";
     $queryEditList = mysqli_query($connc, $queryList);
 }
 
 if (isset($_POST['editImp'])) {
 
     if ($tipoUsu == 1 || $tipoUsu == 2) {
+        $origen = utf8_decode($_POST['newnpaisOrigenImp']);
+        $destino = utf8_decode($_POST['newnpaisDestinoImp']);
         $observaciones = utf8_decode($_POST['newobsImp']);
         $reserva = $_POST['newReservaImp'];
         $edt = $_POST['newEdtImp'];
@@ -34,9 +36,9 @@ if (isset($_POST['editImp'])) {
         $montopoliza = $_POST['newPrimaPolizaImp'];
 
         //update de importacion/exportación
-        $queryUpdateImpo = "UPDATE imp_exp SET observaciones = '$observaciones', nro_reserva= $reserva, fecha_edt='$edt', fecha_eta='$eta', nro_doctrasporte=$ndocumento,
+        $queryUpdateImpo = "UPDATE imp_exp SET origen = '$origen', destino = '$destino', observaciones = '$observaciones', nro_reserva= '$reserva', fecha_edt='$edt', fecha_eta='$eta', nro_doctrasporte='$ndocumento',
         fecha_doctrasporte='$fechadocumento', puerto_areo_embarque='$pol', puerto_areo_desembarque='$pod', cant_bultos=$bultos, peso_estimado=$peso, vol_estimado=$volumen,
-        nro_contenedor=$ncontendor, tipo_contenedor='$tipocontenedor', nro_poliza=$npoliza, fecha_poliza='$fechapoliza', monto_prima_poliza=$montopoliza WHERE id_imp_exp='$nro_orden'";
+        nro_contenedor='$ncontendor', tipo_contenedor='$tipocontenedor', nro_poliza='$npoliza', fecha_poliza='$fechapoliza', monto_prima_poliza='$montopoliza' WHERE id_imp_exp='$nro_orden'";
         $resultImpo = mysqli_query($connc, $queryUpdateImpo);
 
 
@@ -282,9 +284,9 @@ if (isset($_POST['editImp'])) {
         $tipocontenedor = utf8_decode($_POST['newTipoContenedorImp']);
 
         //update de importacion/exportación
-        $queryUpdateImpo = "UPDATE imp_exp SET observaciones = '$observaciones', nro_reserva= $reserva, fecha_edt='$edt', fecha_eta='$eta', nro_doctrasporte=$ndocumento,
-         fecha_doctrasporte='$fechadocumento', puerto_areo_embarque='$pol', puerto_areo_desembarque='$pod', cant_bultos=$bultos, peso_estimado=$peso, vol_estimado=$volumen,
-         nro_contenedor=$ncontendor, tipo_contenedor='$tipocontenedor' WHERE id_imp_exp='$nro_orden'";
+        $queryUpdateImpo = "UPDATE imp_exp SET observaciones = '$observaciones', nro_reserva= '$reserva', fecha_edt='$edt', fecha_eta='$eta', nro_doctrasporte='$ndocumento',
+        fecha_doctrasporte='$fechadocumento', puerto_areo_embarque='$pol', puerto_areo_desembarque='$pod', cant_bultos=$bultos, peso_estimado=$peso, vol_estimado=$volumen,
+        nro_contenedor='$ncontendor', tipo_contenedor='$tipocontenedor', nro_poliza='$npoliza', fecha_poliza='$fechapoliza', monto_prima_poliza='$montopoliza' WHERE id_imp_exp='$nro_orden'";
         $resultImpo = mysqli_query($connc, $queryUpdateImpo);
 
 
@@ -491,7 +493,7 @@ if (isset($_POST['editImp'])) {
         $montopoliza = $_POST['newPrimaPolizaImp'];
 
         //update de importacion/exportación
-        $queryUpdateImpo = "UPDATE imp_exp SET observaciones = '$observaciones', nro_poliza=$npoliza, fecha_poliza='$fechapoliza', monto_prima_poliza=$montopoliza WHERE id_imp_exp='$nro_orden'";
+        $queryUpdateImpo = "UPDATE imp_exp SET observaciones = '$observaciones', nro_poliza='$npoliza', fecha_poliza='$fechapoliza', monto_prima_poliza='$montopoliza' WHERE id_imp_exp='$nro_orden'";
         $resultImpo = mysqli_query($connc, $queryUpdateImpo);
 
         if (isset($_POST['checkps'])) {

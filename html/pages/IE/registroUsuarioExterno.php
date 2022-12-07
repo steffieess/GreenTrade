@@ -68,11 +68,11 @@
             </div>
             <div class="content">
                 <label for="appUsuarioExt"><b>Apellido Paterno Usuario</b></label>
-                <input name="appUsuarioExt" type="text" class='input-field' placeholder="Apellido Paterno" required autocomplete="off">
+                <input name="appUsuarioExt" type="text" class='input-field' placeholder="Apellido Paterno" autocomplete="off">
             </div>
             <div class="content">
                 <label for="apmUsuarioExt"><b>Apellido Materno Usuario</b></label>
-                <input name="apmUsuarioExt" type="text" class='input-field' placeholder="Apellido Materno" required autocomplete="off"> 
+                <input name="apmUsuarioExt" type="text" class='input-field' placeholder="Apellido Materno" autocomplete="off"> 
             </div>
             <div class="content">
                 <label for="mailUsuarioExt"><b>Correo Usuario</b></label>
@@ -80,7 +80,7 @@
             </div>
             <div class="content">
                 <label for="telUsuarioExt"><b>Teléfono Usuario</b></label>
-                <input name="telUsuarioExt" type="tel"  class='input-field' placeholder="Teléfono Usuario" required autocomplete="off">
+                <input name="telUsuarioExt" type="tel"  class='input-field' placeholder="Teléfono Usuario" autocomplete="off">
             </div>
             <div>
                 <input class="submit-btn" type="submit" value="Registrar Usuario Externo" name="regUsuarioExt">

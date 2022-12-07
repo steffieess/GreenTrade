@@ -1,0 +1,210 @@
+[29-Nov-2022 14:13:09 America/Santiago] PHP Warning:  readfile(FO1230010 FO1230011 FO1230047 FO1230059 FO1230060 ..pdf): failed to open stream: No such file or directory in /home/greentr1/public_html/html/pages/general/cargar.php on line 28
+[29-Nov-2022 14:13:10 America/Santiago] PHP Warning:  readfile(FO1230010 FO1230011 FO1230047 FO1230059 FO1230060 ..pdf): failed to open stream: No such file or directory in /home/greentr1/public_html/html/pages/general/cargar.php on line 28
+[29-Nov-2022 14:13:19 America/Santiago] PHP Warning:  readfile(FO1230010 FO1230011 FO1230047 FO1230059 FO1230060 ..pdf): failed to open stream: No such file or directory in /home/greentr1/public_html/html/pages/general/cargar.php on line 28
+[29-Nov-2022 14:13:37 America/Santiago] PHP Warning:  readfile(FO1230010 FO1230011 FO1230047 FO1230059 FO1230060 ..pdf): failed to open stream: No such file or directory in /home/greentr1/public_html/html/pages/general/cargar.php on line 27
+[29-Nov-2022 14:13:37 America/Santiago] PHP Warning:  readfile(FO1230010 FO1230011 FO1230047 FO1230059 FO1230060 ..pdf): failed to open stream: No such file or directory in /home/greentr1/public_html/html/pages/general/cargar.php on line 27
+[29-Nov-2022 14:13:40 America/Santiago] PHP Warning:  readfile(FO1230010 FO1230011 FO1230047 FO1230059 FO1230060 ..pdf): failed to open stream: No such file or directory in /home/greentr1/public_html/html/pages/general/cargar.php on line 27
+[29-Nov-2022 14:13:43 America/Santiago] PHP Warning:  readfile(FO1230010 FO1230011 FO1230047 FO1230059 FO1230060 ..pdf): failed to open stream: No such file or directory in /home/greentr1/public_html/html/pages/general/cargar.php on line 27
+[29-Nov-2022 14:13:59 America/Santiago] PHP Warning:  readfile(FO1230010 FO1230011 FO1230047 FO1230059 FO1230060 ..pdf): failed to open stream: No such file or directory in /home/greentr1/public_html/html/pages/general/cargar.php on line 26
+[29-Nov-2022 14:14:11 America/Santiago] PHP Notice:  Undefined variable: nombre in /home/greentr1/public_html/html/pages/general/cargar.php on line 23
+[29-Nov-2022 14:14:11 America/Santiago] PHP Warning:  readfile(..pdf): failed to open stream: No such file or directory in /home/greentr1/public_html/html/pages/general/cargar.php on line 23
+[29-Nov-2022 14:14:12 America/Santiago] PHP Notice:  Undefined variable: nombre in /home/greentr1/public_html/html/pages/general/cargar.php on line 23
+[29-Nov-2022 14:14:12 America/Santiago] PHP Warning:  readfile(..pdf): failed to open stream: No such file or directory in /home/greentr1/public_html/html/pages/general/cargar.php on line 23
+[29-Nov-2022 14:14:12 America/Santiago] PHP Notice:  Undefined variable: nombre in /home/greentr1/public_html/html/pages/general/cargar.php on line 23
+[29-Nov-2022 14:14:12 America/Santiago] PHP Warning:  readfile(..pdf): failed to open stream: No such file or directory in /home/greentr1/public_html/html/pages/general/cargar.php on line 23
+[29-Nov-2022 14:14:15 America/Santiago] PHP Notice:  Undefined variable: nombre in /home/greentr1/public_html/html/pages/general/cargar.php on line 23
+[29-Nov-2022 14:14:15 America/Santiago] PHP Warning:  readfile(..pdf): failed to open stream: No such file or directory in /home/greentr1/public_html/html/pages/general/cargar.php on line 23
+[29-Nov-2022 14:14:45 America/Santiago] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ';' or ',' in /home/greentr1/public_html/html/pages/general/cargar.php on line 27
+[29-Nov-2022 14:19:51 America/Santiago] PHP Warning:  readfile($nombre): failed to open stream: No such file or directory in /home/greentr1/public_html/html/pages/general/cargar.php on line 28
+[29-Nov-2022 14:20:01 America/Santiago] PHP Warning:  readfile($nombre): failed to open stream: No such file or directory in /home/greentr1/public_html/html/pages/general/cargar.php on line 27
+[29-Nov-2022 14:20:02 America/Santiago] PHP Warning:  readfile($nombre): failed to open stream: No such file or directory in /home/greentr1/public_html/html/pages/general/cargar.php on line 27
+[29-Nov-2022 14:20:02 America/Santiago] PHP Warning:  readfile($nombre): failed to open stream: No such file or directory in /home/greentr1/public_html/html/pages/general/cargar.php on line 27
+[29-Nov-2022 14:20:08 America/Santiago] PHP Warning:  readfile($nombre): failed to open stream: No such file or directory in /home/greentr1/public_html/html/pages/general/cargar.php on line 27
+[29-Nov-2022 14:20:29 America/Santiago] PHP Warning:  readfile(FO1230010 FO1230011 FO1230047 FO1230059 FO1230060 ): failed to open stream: No such file or directory in /home/greentr1/public_html/html/pages/general/cargar.php on line 27
+[29-Nov-2022 14:20:39 America/Santiago] PHP Warning:  readfile(FO1230010 FO1230011 FO1230047 FO1230059 FO1230060 ): failed to open stream: No such file or directory in /home/greentr1/public_html/html/pages/general/cargar.php on line 27
+[29-Nov-2022 14:21:14 America/Santiago] PHP Warning:  readfile() expects parameter 1 to be a valid path, string given in /home/greentr1/public_html/html/pages/general/cargar.php on line 27
+[29-Nov-2022 14:23:39 America/Santiago] PHP Warning:  readfile() expects parameter 1 to be a valid path, string given in /home/greentr1/public_html/html/pages/general/cargar.php on line 29
+[29-Nov-2022 14:25:21 America/Santiago] PHP Warning:  readfile() expects parameter 1 to be a valid path, string given in /home/greentr1/public_html/html/pages/general/cargar.php on line 29
+[29-Nov-2022 14:25:30 America/Santiago] PHP Warning:  readfile() expects parameter 1 to be a valid path, string given in /home/greentr1/public_html/html/pages/general/cargar.php on line 29
+[29-Nov-2022 14:29:11 America/Santiago] PHP Warning:  readfile() expects parameter 1 to be a valid path, string given in /home/greentr1/public_html/html/pages/general/cargar.php on line 30
+[29-Nov-2022 14:29:24 America/Santiago] PHP Warning:  readfile() expects parameter 1 to be a valid path, string given in /home/greentr1/public_html/html/pages/general/cargar.php on line 30
+[29-Nov-2022 14:29:25 America/Santiago] PHP Warning:  readfile() expects parameter 1 to be a valid path, string given in /home/greentr1/public_html/html/pages/general/cargar.php on line 30
+[29-Nov-2022 14:31:07 America/Santiago] PHP Warning:  readfile(FO1230010 FO1230011 FO1230047 FO1230059 FO1230060): failed to open stream: No such file or directory in /home/greentr1/public_html/html/pages/general/cargar.php on line 30
+[29-Nov-2022 14:31:13 America/Santiago] PHP Warning:  readfile(FO1230010 FO1230011 FO1230047 FO1230059 FO1230060): failed to open stream: No such file or directory in /home/greentr1/public_html/html/pages/general/cargar.php on line 30
+[29-Nov-2022 14:31:35 America/Santiago] PHP Warning:  readfile() expects parameter 1 to be a valid path, string given in /home/greentr1/public_html/html/pages/general/cargar.php on line 30
+[29-Nov-2022 14:32:29 America/Santiago] PHP Warning:  readfile() expects parameter 1 to be a valid path, string given in /home/greentr1/public_html/html/pages/general/cargar.php on line 30
+[29-Nov-2022 14:32:48 America/Santiago] PHP Warning:  readfile() expects parameter 1 to be a valid path, string given in /home/greentr1/public_html/html/pages/general/cargar.php on line 30
+[29-Nov-2022 14:33:29 America/Santiago] PHP Warning:  readfile($archivo): failed to open stream: No such file or directory in /home/greentr1/public_html/html/pages/general/cargar.php on line 30
+[29-Nov-2022 14:33:58 America/Santiago] PHP Warning:  readfile() expects parameter 1 to be a valid path, string given in /home/greentr1/public_html/html/pages/general/cargar.php on line 29
+[29-Nov-2022 14:34:41 America/Santiago] PHP Warning:  readfile() expects parameter 1 to be a valid path, string given in /home/greentr1/public_html/html/pages/general/cargar.php on line 29
+[29-Nov-2022 14:34:52 America/Santiago] PHP Warning:  readfile() expects parameter 1 to be a valid path, string given in /home/greentr1/public_html/html/pages/general/cargar.php on line 29
+[29-Nov-2022 14:35:07 America/Santiago] PHP Warning:  readfile() expects parameter 1 to be a valid path, string given in /home/greentr1/public_html/html/pages/general/cargar.php on line 29
+[29-Nov-2022 14:35:08 America/Santiago] PHP Warning:  readfile() expects parameter 1 to be a valid path, string given in /home/greentr1/public_html/html/pages/general/cargar.php on line 29
+[29-Nov-2022 14:44:39 America/Santiago] PHP Warning:  readfile(FO1230010 FO1230011 FO1230047 FO1230059 FO1230060.pdf): failed to open stream: No such file or directory in /home/greentr1/public_html/html/pages/general/cargar.php on line 27
+[29-Nov-2022 14:45:05 America/Santiago] PHP Warning:  readfile() expects parameter 1 to be a valid path, string given in /home/greentr1/public_html/html/pages/general/cargar.php on line 27
+[29-Nov-2022 14:50:00 America/Santiago] PHP Notice:  Undefined variable: archiv in /home/greentr1/public_html/html/pages/general/cargar.php on line 25
+[29-Nov-2022 14:50:03 America/Santiago] PHP Notice:  Undefined variable: archiv in /home/greentr1/public_html/html/pages/general/cargar.php on line 25
+[29-Nov-2022 15:11:26 America/Santiago] PHP Warning:  readfile() expects parameter 1 to be a valid path, string given in /home/greentr1/public_html/html/pages/general/cargar.php on line 29
+[29-Nov-2022 15:11:28 America/Santiago] PHP Warning:  readfile() expects parameter 1 to be a valid path, string given in /home/greentr1/public_html/html/pages/general/cargar.php on line 29
+[30-Nov-2022 16:48:58 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 272
+[30-Nov-2022 16:49:01 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 272
+[30-Nov-2022 16:52:43 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 272
+[30-Nov-2022 16:54:55 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 272
+[30-Nov-2022 16:56:49 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 272
+[30-Nov-2022 16:56:49 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 272
+[30-Nov-2022 16:57:44 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 272
+[30-Nov-2022 16:58:09 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 272
+[30-Nov-2022 17:00:08 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 272
+[30-Nov-2022 17:02:09 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 272
+[30-Nov-2022 17:17:11 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 272
+[30-Nov-2022 17:17:17 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 272
+[30-Nov-2022 17:17:29 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 272
+[30-Nov-2022 17:27:11 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 272
+[30-Nov-2022 17:30:57 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 301
+[30-Nov-2022 17:31:01 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 301
+[30-Nov-2022 17:31:26 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 301
+[30-Nov-2022 17:31:32 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 301
+[30-Nov-2022 17:31:43 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 301
+[30-Nov-2022 17:33:54 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 301
+[30-Nov-2022 17:33:59 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 301
+[30-Nov-2022 17:35:41 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 301
+[30-Nov-2022 17:37:11 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/listaImp.php on line 203
+[30-Nov-2022 17:37:11 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/listaImp.php on line 203
+[30-Nov-2022 17:37:11 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/listaImp.php on line 459
+[30-Nov-2022 17:37:11 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/listaImp.php on line 654
+[30-Nov-2022 17:37:11 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/listaImp.php on line 700
+[30-Nov-2022 17:37:17 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 2
+[30-Nov-2022 17:37:17 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 2
+[30-Nov-2022 17:37:17 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 27
+[30-Nov-2022 17:37:17 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 51
+[30-Nov-2022 17:37:17 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 75
+[30-Nov-2022 17:37:17 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 67
+[30-Nov-2022 17:37:17 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 67
+[30-Nov-2022 17:37:17 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 134
+[30-Nov-2022 17:37:17 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 196
+[30-Nov-2022 17:37:17 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 258
+[30-Nov-2022 17:37:17 America/Santiago] PHP Notice:  Undefined variable: paginas in /home/greentr1/public_html/html/pages/general/importaciones.php on line 330
+[30-Nov-2022 17:37:17 America/Santiago] PHP Notice:  Undefined variable: paginas in /home/greentr1/public_html/html/pages/general/importaciones.php on line 338
+[30-Nov-2022 17:37:23 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 2
+[30-Nov-2022 17:37:23 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 2
+[30-Nov-2022 17:37:23 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 27
+[30-Nov-2022 17:37:23 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 51
+[30-Nov-2022 17:37:23 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 75
+[30-Nov-2022 17:37:23 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 67
+[30-Nov-2022 17:37:23 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 67
+[30-Nov-2022 17:37:23 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 134
+[30-Nov-2022 17:37:23 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 196
+[30-Nov-2022 17:37:23 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 258
+[30-Nov-2022 17:37:23 America/Santiago] PHP Notice:  Undefined variable: paginas in /home/greentr1/public_html/html/pages/general/importaciones.php on line 330
+[30-Nov-2022 17:37:23 America/Santiago] PHP Notice:  Undefined variable: paginas in /home/greentr1/public_html/html/pages/general/importaciones.php on line 338
+[30-Nov-2022 17:37:26 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 2
+[30-Nov-2022 17:37:26 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 2
+[30-Nov-2022 17:37:26 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 27
+[30-Nov-2022 17:37:26 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 51
+[30-Nov-2022 17:37:26 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 75
+[30-Nov-2022 17:37:26 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 67
+[30-Nov-2022 17:37:26 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 67
+[30-Nov-2022 17:37:26 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 134
+[30-Nov-2022 17:37:26 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 196
+[30-Nov-2022 17:37:26 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 258
+[30-Nov-2022 17:37:26 America/Santiago] PHP Notice:  Undefined variable: paginas in /home/greentr1/public_html/html/pages/general/importaciones.php on line 330
+[30-Nov-2022 17:37:26 America/Santiago] PHP Notice:  Undefined variable: paginas in /home/greentr1/public_html/html/pages/general/importaciones.php on line 338
+[30-Nov-2022 17:37:27 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 2
+[30-Nov-2022 17:37:27 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 2
+[30-Nov-2022 17:37:27 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 27
+[30-Nov-2022 17:37:27 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 51
+[30-Nov-2022 17:37:27 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 75
+[30-Nov-2022 17:37:27 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 67
+[30-Nov-2022 17:37:27 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 67
+[30-Nov-2022 17:37:27 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 134
+[30-Nov-2022 17:37:27 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 196
+[30-Nov-2022 17:37:27 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 258
+[30-Nov-2022 17:37:27 America/Santiago] PHP Notice:  Undefined variable: paginas in /home/greentr1/public_html/html/pages/general/importaciones.php on line 330
+[30-Nov-2022 17:37:27 America/Santiago] PHP Notice:  Undefined variable: paginas in /home/greentr1/public_html/html/pages/general/importaciones.php on line 338
+[30-Nov-2022 17:37:27 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 2
+[30-Nov-2022 17:37:27 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 2
+[30-Nov-2022 17:37:27 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 27
+[30-Nov-2022 17:37:27 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 51
+[30-Nov-2022 17:37:27 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 75
+[30-Nov-2022 17:37:27 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 67
+[30-Nov-2022 17:37:27 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 67
+[30-Nov-2022 17:37:27 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 134
+[30-Nov-2022 17:37:27 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 196
+[30-Nov-2022 17:37:27 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 258
+[30-Nov-2022 17:37:27 America/Santiago] PHP Notice:  Undefined variable: paginas in /home/greentr1/public_html/html/pages/general/importaciones.php on line 330
+[30-Nov-2022 17:37:27 America/Santiago] PHP Notice:  Undefined variable: paginas in /home/greentr1/public_html/html/pages/general/importaciones.php on line 338
+[30-Nov-2022 17:37:33 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 2
+[30-Nov-2022 17:37:33 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 2
+[30-Nov-2022 17:37:33 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 27
+[30-Nov-2022 17:37:33 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 51
+[30-Nov-2022 17:37:33 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 75
+[30-Nov-2022 17:37:33 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 67
+[30-Nov-2022 17:37:33 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 67
+[30-Nov-2022 17:37:33 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 134
+[30-Nov-2022 17:37:33 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 196
+[30-Nov-2022 17:37:33 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 258
+[30-Nov-2022 17:37:33 America/Santiago] PHP Notice:  Undefined variable: paginas in /home/greentr1/public_html/html/pages/general/importaciones.php on line 330
+[30-Nov-2022 17:37:33 America/Santiago] PHP Notice:  Undefined variable: paginas in /home/greentr1/public_html/html/pages/general/importaciones.php on line 338
+[30-Nov-2022 17:38:47 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 2
+[30-Nov-2022 17:38:47 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 2
+[30-Nov-2022 17:38:47 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 27
+[30-Nov-2022 17:38:47 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 51
+[30-Nov-2022 17:38:47 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 75
+[30-Nov-2022 17:38:47 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 67
+[30-Nov-2022 17:38:47 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 67
+[30-Nov-2022 17:38:47 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 134
+[30-Nov-2022 17:38:47 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 196
+[30-Nov-2022 17:38:47 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 258
+[30-Nov-2022 17:38:47 America/Santiago] PHP Notice:  Undefined variable: paginas in /home/greentr1/public_html/html/pages/general/importaciones.php on line 330
+[30-Nov-2022 17:38:47 America/Santiago] PHP Notice:  Undefined variable: paginas in /home/greentr1/public_html/html/pages/general/importaciones.php on line 338
+[30-Nov-2022 17:38:50 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 2
+[30-Nov-2022 17:38:50 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 2
+[30-Nov-2022 17:38:50 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 27
+[30-Nov-2022 17:38:50 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 51
+[30-Nov-2022 17:38:50 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 75
+[30-Nov-2022 17:38:50 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 67
+[30-Nov-2022 17:38:50 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 67
+[30-Nov-2022 17:38:50 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 134
+[30-Nov-2022 17:38:50 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 196
+[30-Nov-2022 17:38:50 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 258
+[30-Nov-2022 17:38:50 America/Santiago] PHP Notice:  Undefined variable: paginas in /home/greentr1/public_html/html/pages/general/importaciones.php on line 330
+[30-Nov-2022 17:38:50 America/Santiago] PHP Notice:  Undefined variable: paginas in /home/greentr1/public_html/html/pages/general/importaciones.php on line 338
+[30-Nov-2022 17:38:51 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 2
+[30-Nov-2022 17:38:51 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 2
+[30-Nov-2022 17:38:51 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 27
+[30-Nov-2022 17:38:51 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 51
+[30-Nov-2022 17:38:51 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 75
+[30-Nov-2022 17:38:51 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 67
+[30-Nov-2022 17:38:51 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 67
+[30-Nov-2022 17:38:51 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 134
+[30-Nov-2022 17:38:51 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 196
+[30-Nov-2022 17:38:51 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 258
+[30-Nov-2022 17:38:51 America/Santiago] PHP Notice:  Undefined variable: paginas in /home/greentr1/public_html/html/pages/general/importaciones.php on line 330
+[30-Nov-2022 17:38:51 America/Santiago] PHP Notice:  Undefined variable: paginas in /home/greentr1/public_html/html/pages/general/importaciones.php on line 338
+[30-Nov-2022 17:38:51 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 2
+[30-Nov-2022 17:38:51 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 2
+[30-Nov-2022 17:38:51 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 27
+[30-Nov-2022 17:38:51 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 51
+[30-Nov-2022 17:38:51 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/func/tools/paginadorImp.php on line 75
+[30-Nov-2022 17:38:51 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 67
+[30-Nov-2022 17:38:51 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 67
+[30-Nov-2022 17:38:51 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 134
+[30-Nov-2022 17:38:51 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 196
+[30-Nov-2022 17:38:51 America/Santiago] PHP Notice:  Undefined variable: tipoUsu in /home/greentr1/public_html/html/pages/general/importaciones.php on line 258
+[30-Nov-2022 17:38:51 America/Santiago] PHP Notice:  Undefined variable: paginas in /home/greentr1/public_html/html/pages/general/importaciones.php on line 330
+[30-Nov-2022 17:38:51 America/Santiago] PHP Notice:  Undefined variable: paginas in /home/greentr1/public_html/html/pages/general/importaciones.php on line 338
+[30-Nov-2022 17:39:02 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 301
+[30-Nov-2022 17:39:21 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 301
+[30-Nov-2022 17:40:42 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 301
+[30-Nov-2022 17:40:58 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 301
+[30-Nov-2022 17:41:03 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 301
+[30-Nov-2022 17:41:06 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 301
+[30-Nov-2022 17:41:08 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 301
+[30-Nov-2022 17:41:28 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 301
+[30-Nov-2022 17:42:16 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 301
+[02-Dec-2022 17:53:16 America/Santiago] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/greentr1/public_html/database/database.php on line 10
+[02-Dec-2022 18:40:04 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 301
+[02-Dec-2022 18:40:39 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 301
+[02-Dec-2022 18:41:21 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 301
+[06-Dec-2022 18:20:13 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 301
+[06-Dec-2022 18:31:00 America/Santiago] PHP Notice:  Undefined variable: subcategoria in /home/greentr1/public_html/html/pages/general/listaImp.php on line 301

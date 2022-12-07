@@ -200,6 +200,7 @@
                   <li><a href="../general/inicio.php"><img src="../../img/logo.png" alt=""></a></li>
                   <li><a href="../general/inicio.php" class="nav-link px-2 text-white" style="font-size: 15px;">GreenTrade</a></li>
                   <li><a href="../general/vision.php" class="nav-link px-2 text-white" style="font-size: 15px;">Visión</a></li>
+                  <li><a href="../general/mision.php" class="nav-link px-2 text-white" style="font-size: 15px;">Misión</a></li>
                <?php endif ?>
             </ul>
             <?php if (!empty($dataUserM)) : ?>
