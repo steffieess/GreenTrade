@@ -350,6 +350,71 @@ if (isset($_GET['id_imp_exp'])) {
                     <?php } ?>
                 </div>
 
+                <div class="form-group">
+                <label for="newTipoPapelImp"><b>Tipo del papel</b></label>
+                <select class="form-control" name="newTipoPapelImp" id="newTipoPapelImp">
+                    <?php
+                    if ($tipo_papel == "Blanco") { ?>
+                        <option value="Sin especificar">
+                            Sin especificar
+                        </option>
+                        <option value="Blanco" selected>
+                            Blanco
+                        </option>
+                        <option value="Color">
+                            Color 
+                        </option>
+                        <option value="Plastificado">
+                            Plastificado
+                        </option>
+                    <?php } elseif ($tipo_papel == "Color") { ?>
+                        <option value="Sin especificar">
+                            Sin especificar
+                        </option>
+                        <option value="Blanco">
+                            Blanco
+                        </option>
+                        <option value="Color" selected>
+                            Color 
+                        </option>
+                        <option value="Plastificado">
+                            Plastificado
+                        </option>
+                    <?php }elseif ($tipo_papel == "Plastificado") {?>
+                        <option value="Sin especificar">
+                            Sin especificar
+                        </option>
+                        <option value="Blanco">
+                            Blanco
+                        </option>
+                        <option value="Color">
+                            Color 
+                        </option>
+                        <option value="Plastificado" selected>
+                            Plastificado
+                        </option>
+                    <?php }else {?>
+                        <option value="Sin especificar" selected>
+                            Sin especificar
+                        </option>
+                        <option value="Blanco">
+                            Blanco
+                        </option>
+                        <option value="Color">
+                            Color 
+                        </option>
+                        <option value="Plastificado">
+                            Plastificado
+                        </option>
+                    <?php }?>
+                </select>
+            </div>
+
+
+                <div class="content">
+                    <label for="newPesoPapelImp"><b>Peso total del papel</b></label>
+                    <input name="newPesoPapelImp" id="newPesoPapelImp" type="text" class='input-field' placeholder="" autocomplete="off" value="<?php if($peso_total_papel==null){echo '';}else{echo $peso_total_papel;} ?>">
+                </div>
                 <div class="content">
                     <label for="newCantBultosImp"><b>Cantidad de Bultos</b></label>
                     <input name="newCantBultosImp" id="newCantBultosImp" type="text" class='input-field' placeholder="" required autocomplete="off" value="<?php if($bultos==null){echo '';}else{echo $bultos;} ?>">

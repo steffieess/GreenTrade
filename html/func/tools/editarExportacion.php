@@ -28,6 +28,8 @@ if (isset($_POST['editImp'])) {
         $volumen = $_POST['newVolumenImp'];
         $ncontendor = $_POST['newNroContenedorImp'];
         $tipocontenedor = utf8_decode($_POST['newTipoContenedorImp']);
+        $tipo_papel = $_POST['newTipoPapelImp'];
+        $peso_papel = $_POST['newPesoPapelImp'];
         //otros datos
         $link = $_POST['newLinkImp']; //otra tabla
         $nsegumiento = $_POST['newNroSegImp']; //otra tabla
@@ -38,7 +40,7 @@ if (isset($_POST['editImp'])) {
         //update de importacion/exportación
         $queryUpdateImpo = "UPDATE imp_exp SET origen = '$origen', destino = '$destino', observaciones = '$observaciones', nro_reserva= '$reserva', fecha_edt='$edt', fecha_eta='$eta', nro_doctrasporte='$ndocumento',
         fecha_doctrasporte='$fechadocumento', puerto_areo_embarque='$pol', puerto_areo_desembarque='$pod', cant_bultos=$bultos, peso_estimado=$peso, vol_estimado=$volumen,
-        nro_contenedor='$ncontendor', tipo_contenedor='$tipocontenedor', nro_poliza='$npoliza', fecha_poliza='$fechapoliza', monto_prima_poliza='$montopoliza' WHERE id_imp_exp='$nro_orden'";
+        nro_contenedor='$ncontendor', tipo_contenedor='$tipocontenedor', nro_poliza='$npoliza', fecha_poliza='$fechapoliza', monto_prima_poliza='$montopoliza', tipo_papel='$tipo_papel', peso_total_papel='$peso_papel' WHERE id_imp_exp='$nro_orden'";
         $resultImpo = mysqli_query($connc, $queryUpdateImpo);
 
 
@@ -92,7 +94,6 @@ if (isset($_POST['editImp'])) {
 
 
         if (isset($_POST['checkpl'])) {
-            echo '<script">alert("1");</script>';
             if ($_FILES['packingList']['name'] != null) {
 
                 $tipoArchivo = $_FILES['packingList']['type'];
@@ -325,7 +326,6 @@ if (isset($_POST['editImp'])) {
         } else {
             //si esta desmarcado actualizamos el documento como no obligatorio
             $query = "UPDATE documento SET obligatorio=0 WHERE imp_exp_id_imp_exp='$nro_orden' and tipo_documento_id_tipodoc=1";
-            echo $query = "UPDATE documento SET obligatorio=0 WHERE imp_exp_id_imp_exp='$nro_orden' and tipo_documento_id_tipodoc=1";
             $resultQuery = mysqli_query($connc, $query);
         }
 
