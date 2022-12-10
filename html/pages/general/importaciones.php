@@ -66,6 +66,9 @@
             <a href="../IE/nuevaImportacion.php" class="btn">Nueva Importación</a>
         <?php } ?>
 
+        <?php if ($tipoUsu == 1 || $tipoUsu == 2) { ?>
+            <a href="../../func/tools/reportesImportacionG.php" class="btn">Descargar reporte <i class="fa-solid fa-file-arrow-down"></i> </a>
+        <?php } ?>
     </div>
 
     <?php if ($tipoUsu == 1 || $tipoUsu == 2) { ?>
@@ -101,6 +104,7 @@
                             <th>Estado</th>
                             <th>Ver más</th>
                             <th>Cerrar</th>
+                            <th>Descargar</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -125,6 +129,8 @@
                                     <td><?php echo utf8_encode($dataImpExp['estado']); ?></td>
                                     <td><a href="../general/listaImp.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-eye"></i></a></td>
                                     <td><a href="../general/cerrarImpExp.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-file-circle-check"></i></a></td>
+                                    <td><a href="../../func/tools/reportesImportacionI.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-file-arrow-down"></i></a></td>
+
                                 </tr>
                             <?php } ?>
                         <?php } else { ?>

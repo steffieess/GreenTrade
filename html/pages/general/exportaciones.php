@@ -59,10 +59,12 @@
 
     <div class="text-end">
         <?php
-        if ($tipoUsu == 2) {
-
-        ?>
+        if ($tipoUsu == 2) {?>
             <a href="../IE/nuevaExportacion.php" class="btn">Nueva Exportación</a>
+        <?php } ?>
+
+        <?php if ($tipoUsu == 1 || $tipoUsu == 2) { ?>
+            <a href="../../func/tools/reportesExportacionG.php" class="btn">Descargar reporte <i class="fa-solid fa-file-arrow-down"></i> </a>
         <?php } ?>
 
     </div>
@@ -124,6 +126,7 @@
                                     <td><?php echo utf8_encode($dataImpExp['estado']); ?></td>
                                     <td><a href="../general/listaExp.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-eye"></i></a></td>
                                     <td><a href="../general/cerrarImpExp.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-file-circle-check"></i></a></td>
+                                    <td><a href="../../func/tools/reportesExportacionI.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-file-arrow-down"></i></a></td>
                                 </tr>
                             <?php } ?>
                         <?php } else { ?>
