@@ -31,13 +31,37 @@ if ($clavenew == $clavenewv) {
         $password = password_hash($_POST['clavenew'], PASSWORD_BCRYPT);
         $query = "UPDATE usuario set password = '$password' WHERE mail_usuario = '$mailUserM'";
         $result = mysqli_query($connc, $query);
-        if ($result) {
-            $_SESSION['usuarios_rut'] = $rut;
-            $_SESSION['message'] = 'Contraseña actualizada exitosamente';
-            $_SESSION['message_type'] = 'Aviso';
-            echo "<script> window.location='../../pages/general/homepage.php'; </script>";
+        if (strlen($clavenew) == 6) {
+            if (preg_match('`[a-z]`', $clavenew)) {
+                if (preg_match('`[A-Z]`', $clavenew)) {
+                    if (preg_match('`[0-9]`', $clavenew)) {
+                        if ($result) {
+                            $_SESSION['usuarios_rut'] = $rut;
+                            $_SESSION['message'] = 'Contraseña actualizada exitosamente';
+                            $_SESSION['message_type'] = 'Aviso';
+                            echo "<script> window.location='../../pages/general/homepage.php'; </script>";
+                        } else {
+                            $_SESSION['message'] = 'Error al guardar';
+                            $_SESSION['message_type'] = 'Error';
+                            echo "<script> window.location='../../pages/general/cambiarClave.php'; </script>";
+                        }
+                    } else {
+                        $_SESSION['message'] = 'La clave debe tener al menos un caracter numérico';
+                        $_SESSION['message_type'] = 'Error';
+                        echo "<script> window.location='../../pages/general/cambiarClave.php'; </script>";
+                    }
+                } else {
+                    $_SESSION['message'] = 'La clave debe tener al menos una letra mayúscula';
+                    $_SESSION['message_type'] = 'Error';
+                    echo "<script> window.location='../../pages/general/cambiarClave.php'; </script>";
+                }
+            } else {
+                $_SESSION['message'] = 'La clave debe tener al menos una letra minúscula';
+                $_SESSION['message_type'] = 'Error';
+                echo "<script> window.location='../../pages/general/cambiarClave.php'; </script>";
+            }
         } else {
-            $_SESSION['message'] = 'Error al guardar';
+            $_SESSION['message'] = 'La clave debe tener 6 caracteres';
             $_SESSION['message_type'] = 'Error';
             echo "<script> window.location='../../pages/general/cambiarClave.php'; </script>";
         }

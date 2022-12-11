@@ -69,60 +69,84 @@ if (isset($_POST['Registrar'])) {
                     }
 
                     if ($dvr == strtoupper($dv)) {
-                        if ($clave_user == $clave_user_valid) {
+                        if (strlen($clave_user) == 6 ) {
 
-                            $password = password_hash($_POST['clave_user'], PASSWORD_BCRYPT);
+                            if ($clave_user == $clave_user_valid) {
+                                if (preg_match('`[a-z]`', $clave_user)) {
+                                    if (preg_match('`[A-Z]`', $clave_user)) {
+                                        if (preg_match('`[0-9]`', $clave_user)) {
+                                            $password = password_hash($_POST['clave_user'], PASSWORD_BCRYPT);
 
-                            $queryEmpresaC = "SELECT * FROM empresa WHERE razon_social =  '$razon' AND usuario_empresa = '$rut_user'";
-                            $queryIdEmpresaC = mysqli_query($connc, $queryEmpresaC);
-                            $sqlcantidadE = mysqli_num_rows($queryIdEmpresaC);
+                                            $queryEmpresaC = "SELECT * FROM empresa WHERE razon_social =  '$razon' AND usuario_empresa = '$rut_user'";
+                                            $queryIdEmpresaC = mysqli_query($connc, $queryEmpresaC);
+                                            $sqlcantidadE = mysqli_num_rows($queryIdEmpresaC);
 
 
-                            if ($sqlcantidadE <= 0) {
-                                $queryInsertEmpresa = "INSERT INTO empresa(razon_social, direccion_empresa, tel_empresa, mail_empresa, usuario_empresa, tipo_empresa_id_tipoempresa) VALUES  ('$razon', '$direc_empresa', '$tel_empresa', '$mail_empresa','$rut_user', 1)";
-                                $resultEmpresa = mysqli_query($connc, $queryInsertEmpresa);
+                                            if ($sqlcantidadE <= 0) {
+                                                $queryInsertEmpresa = "INSERT INTO empresa(razon_social, direccion_empresa, tel_empresa, mail_empresa, usuario_empresa, tipo_empresa_id_tipoempresa) VALUES  ('$razon', '$direc_empresa', '$tel_empresa', '$mail_empresa','$rut_user', 1)";
+                                                $resultEmpresa = mysqli_query($connc, $queryInsertEmpresa);
 
-                                if ($resultEmpresa) {
+                                                if ($resultEmpresa) {
 
-                                    $queryEmpresa = "SELECT * FROM empresa WHERE razon_social =  '$razon' AND usuario_empresa = '$rut_user'";
-                                    $queryIdEmpresa = mysqli_query($connc, $queryEmpresa);
-                                    $dataIdEmpresa = mysqli_fetch_array($queryIdEmpresa);
-                                    $id_empresa = $dataIdEmpresa['id_empresa'];
+                                                    $queryEmpresa = "SELECT * FROM empresa WHERE razon_social =  '$razon' AND usuario_empresa = '$rut_user'";
+                                                    $queryIdEmpresa = mysqli_query($connc, $queryEmpresa);
+                                                    $dataIdEmpresa = mysqli_fetch_array($queryIdEmpresa);
+                                                    $id_empresa = $dataIdEmpresa['id_empresa'];
 
-                                    $queryUsuario = "SELECT * FROM usuario WHERE rut_usuario =  '$rut_user' OR mail_usuario = '$mail_user'";
-                                    $queryRutUsuario = mysqli_query($connc, $queryUsuario);
-                                    $sqlcantidad = mysqli_num_rows($queryRutUsuario);
+                                                    $queryUsuario = "SELECT * FROM usuario WHERE rut_usuario =  '$rut_user' OR mail_usuario = '$mail_user'";
+                                                    $queryRutUsuario = mysqli_query($connc, $queryUsuario);
+                                                    $sqlcantidad = mysqli_num_rows($queryRutUsuario);
 
-                                    if ($sqlcantidad <= 0) {
-                                        $queryInsertUsuario = "INSERT INTO usuario(rut_usuario, nom_usuario, ap_paterno, ap_materno, password, mail_usuario, tel_usuario, status, tipo_usu_id_tipousu, empresa_id_empresa) VALUES  ('$rut_user','$nom_user', '$appat_user', '$apmat_user', '$password', '$mail_user','$tel_user', 0, 1, '$id_empresa')";
-                                        $resultUsuario = mysqli_query($connc, $queryInsertUsuario);
+                                                    if ($sqlcantidad <= 0) {
+                                                        $queryInsertUsuario = "INSERT INTO usuario(rut_usuario, nom_usuario, ap_paterno, ap_materno, password, mail_usuario, tel_usuario, status, tipo_usu_id_tipousu, empresa_id_empresa) VALUES  ('$rut_user','$nom_user', '$appat_user', '$apmat_user', '$password', '$mail_user','$tel_user', 0, 1, '$id_empresa')";
+                                                        $resultUsuario = mysqli_query($connc, $queryInsertUsuario);
 
-                                        if ($resultUsuario) {
-                                            $_SESSION['message'] = 'Usuario y empresa creados exitosamente';
-                                            $_SESSION['message_type'] = 'Exitoso';
-                                            echo "<script> window.location='../../pages/general/login_register.php'; </script>";
+                                                        if ($resultUsuario) {
+                                                            $_SESSION['message'] = 'Usuario y empresa creados exitosamente';
+                                                            $_SESSION['message_type'] = 'Exitoso';
+                                                            echo "<script> window.location='../../pages/general/login_register.php'; </script>";
+                                                        } else {
+                                                            $_SESSION['message'] = 'Error al crear usuario';
+                                                            $_SESSION['message_type'] = 'Error';
+                                                            echo "<script> window.location='../../pages/general/login_register.php'; </script>";
+                                                        }
+                                                    } else {
+                                                        $_SESSION['message'] = 'RUT o Correos ya registrados';
+                                                        $_SESSION['message_type'] = 'Error';
+                                                        echo "<script> window.location='../../pages/general/login_register.php'; </script>";
+                                                    }
+                                                } else {
+                                                    $_SESSION['message'] = 'Error al crear empresa';
+                                                    $_SESSION['message_type'] = 'Error';
+                                                    echo "<script> window.location='../../pages/general/login_register.php'; </script>";
+                                                }
+                                            } else {
+                                                $_SESSION['message'] = 'Empresa ya existente';
+                                                $_SESSION['message_type'] = 'Error';
+                                                echo "<script> window.location='../../pages/general/login_register.php'; </script>";
+                                            }
                                         } else {
-                                            $_SESSION['message'] = 'Error al crear usuario';
+                                            $_SESSION['message'] = 'La clave debe tener al menos un caracter numérico';
                                             $_SESSION['message_type'] = 'Error';
                                             echo "<script> window.location='../../pages/general/login_register.php'; </script>";
                                         }
                                     } else {
-                                        $_SESSION['message'] = 'RUT o Correos ya registrados';
+                                        $_SESSION['message'] = 'La clave debe tener al menos una letra mayúscula';
                                         $_SESSION['message_type'] = 'Error';
                                         echo "<script> window.location='../../pages/general/login_register.php'; </script>";
                                     }
                                 } else {
-                                    $_SESSION['message'] = 'Error al crear empresa';
+                                    $_SESSION['message'] = 'La clave debe tener al menos una letra minúscula';
                                     $_SESSION['message_type'] = 'Error';
                                     echo "<script> window.location='../../pages/general/login_register.php'; </script>";
                                 }
                             } else {
-                                $_SESSION['message'] = 'Empresa ya existente';
+                                $_SESSION['message'] = 'Contraseñas no coinciden';
                                 $_SESSION['message_type'] = 'Error';
                                 echo "<script> window.location='../../pages/general/login_register.php'; </script>";
                             }
                         } else {
-                            $_SESSION['message'] = 'Contraseñas no coinciden';
+                            $_SESSION['message'] = 'La clave debe tener 6 caracteres';
                             $_SESSION['message_type'] = 'Error';
                             echo "<script> window.location='../../pages/general/login_register.php'; </script>";
                         }
