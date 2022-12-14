@@ -180,6 +180,42 @@ if (isset($_GET['id_imp_exp'])) {
 }
 ?>
 
+<script>
+    <?php if (isset($_SESSION['message'])) { ?>
+        $(document).ready(function() {
+            setTimeout(clickbutton, 0);
+
+            function clickbutton() {
+                $("#btn-modal").click();
+            }
+        });
+        $(document).on('click', '#btn-modal', function() {
+            $('#modal-ejemplo').modal('show')
+        });
+    <?php } ?>
+</script>
+
+<button id="btn-modal" class="btn btn-primary" hidden>ABRIR MODAL </button>
+<?php if (isset($_SESSION['message'])) { ?>
+    <div class="modal fade" id="modal-ejemplo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><?php echo $_SESSION['message_type'] ?></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <?php echo $_SESSION['message'] ?>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php unset($_SESSION['message']);
+} ?>
+
         <script language="javascript" src="../../../js/jquery-3.6.1.min.js"></script>
 		
 		<script language="javascript">
@@ -195,6 +231,22 @@ if (isset($_GET['id_imp_exp'])) {
 				})
 			});
 
+		</script>
+
+<script type="text/javascript">
+		function valideKey(evt){
+			
+			// code is the decimal ASCII representation of the pressed key.
+			var code = (evt.which) ? evt.which : evt.keyCode;
+			
+			if(code==8) { // backspace.
+			  return true;
+			} else if(code>=48 && code<=57) { // is a number.
+			  return true;
+			} else{ // other keys.
+			  return false;
+			}
+		}
 		</script>
 
 <!--body section starts-->
@@ -367,6 +419,9 @@ if (isset($_GET['id_imp_exp'])) {
                         <option value="Plastificado">
                             Plastificado
                         </option>
+                        <option value="Mixto">
+                            Mixto
+                        </option>
                     <?php } elseif ($tipo_papel == "Color") { ?>
                         <option value="Sin especificar">
                             Sin especificar
@@ -379,6 +434,9 @@ if (isset($_GET['id_imp_exp'])) {
                         </option>
                         <option value="Plastificado">
                             Plastificado
+                        </option>
+                        <option value="Mixto">
+                            Mixto
                         </option>
                     <?php }elseif ($tipo_papel == "Plastificado") {?>
                         <option value="Sin especificar">
@@ -393,6 +451,25 @@ if (isset($_GET['id_imp_exp'])) {
                         <option value="Plastificado" selected>
                             Plastificado
                         </option>
+                        <option value="Mixto">
+                            Mixto
+                        </option>
+                        <?php }elseif ($tipo_papel == "Mixto") {?>
+                        <option value="Sin especificar">
+                            Sin especificar
+                        </option>
+                        <option value="Blanco">
+                            Blanco
+                        </option>
+                        <option value="Color">
+                            Color 
+                        </option>
+                        <option value="Plastificado">
+                            Plastificado
+                        </option>
+                        <option value="Mixto" selected>
+                            Mixto
+                        </option>
                     <?php }else {?>
                         <option value="Sin especificar" selected>
                             Sin especificar
@@ -406,14 +483,17 @@ if (isset($_GET['id_imp_exp'])) {
                         <option value="Plastificado">
                             Plastificado
                         </option>
+                        <option value="Mixto">
+                            Mixto
+                        </option>
                     <?php }?>
                 </select>
             </div>
 
 
-                <div class="content">
-                    <label for="newPesoPapelImp"><b>Peso total del papel</b></label>
-                    <input name="newPesoPapelImp" id="newPesoPapelImp" type="text" class='input-field' placeholder="" autocomplete="off" value="<?php if($peso_total_papel==null){echo '';}else{echo $peso_total_papel;} ?>">
+            <div class="content">
+                    <label for="newPesoPapelImp"><b>Peso total aproximado del papel (En gramos)</b></label>
+                    <input name="newPesoPapelImp" id="newPesoPapelImp" type="text" onkeypress="return valideKey(event);" class='input-field' placeholder="" autocomplete="off" value="<?php if($peso_total_papel==null){echo '';}else{echo $peso_total_papel;} ?>">
                 </div>
                 <div class="content">
                     <label for="newCantBultosImp"><b>Cantidad de Bultos</b></label>
@@ -512,6 +592,7 @@ if (isset($_GET['id_imp_exp'])) {
                 </div>
                 <script src="../../../fancy-file/script.js"></script>
             </form>
+            
         </div>
 
     <?php endif ?>

@@ -77,14 +77,14 @@
         <?php if (isset($_POST['buscarNroOrden'])) { ?>
             <?php if ($_POST['buscar'] != '') {
                 $buscar = $_POST['buscar'];
-                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 1 AND nro_orden = '$buscar'";
+                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 1 AND nro_orden = '$buscar' AND estado != 'Borrado'";
                 $queryImpExpList = mysqli_query($connc, $queryImpExp);
             } else {
-                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 1 ORDER BY fecha_creacion DESC, fecha_cierre ASC LIMIT $iniciar,$imp_x_pagina";
+                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 1 AND estado != 'Borrado' ORDER BY fecha_creacion DESC, fecha_cierre ASC LIMIT $iniciar,$imp_x_pagina";
                 $queryImpExpList = mysqli_query($connc, $queryImpExp);
             } ?>
         <?php } else {
-            $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 1 ORDER BY fecha_creacion DESC, fecha_cierre ASC LIMIT $iniciar,$imp_x_pagina";
+            $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 1 AND estado != 'Borrado' ORDER BY fecha_creacion DESC, fecha_cierre ASC LIMIT $iniciar,$imp_x_pagina";
             $queryImpExpList = mysqli_query($connc, $queryImpExp);
         } ?>
         <!-- search section ends-->
@@ -103,8 +103,10 @@
                             <th>Observaciones</th>
                             <th>Estado</th>
                             <th>Ver más</th>
-                            <th>Cerrar</th>
                             <th>Descargar</th>
+                            <th>Cerrar</th>
+                            <th>Reciclar</th>
+                            <th>Eliminar</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -128,9 +130,14 @@
                                     <td><?php echo utf8_encode($dataImpExp['observaciones']); ?></td>
                                     <td><?php echo utf8_encode($dataImpExp['estado']); ?></td>
                                     <td><a href="../general/listaImp.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-eye"></i></a></td>
-                                    <td><a href="../general/cerrarImpExp.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-file-circle-check"></i></a></td>
                                     <td><a href="../../func/tools/reportesImportacionI.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-file-arrow-down"></i></a></td>
-
+                                    <td><a href="../general/cerrarImpExp.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-file-circle-check"></i></a></td>
+                                    <?php if($dataImpExp['estado'] == 'Pendiente' || $dataImpExp['tipo_papel'] == 'Sin especificar' || $dataImpExp['peso_total_papel'] == null) { ?>
+                                        <td><a href="#"><i class="fa-solid fa-recycle"></i></a></td>
+                                    <?php }else{ ?>
+                                        <td><a href="../general/solicitar.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-recycle"></i></a></td>
+                                    <?php } ?>
+                                    <td><a href="../../func/tools/deteleImpExp.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-trash"></i></a></td>
                                 </tr>
                             <?php } ?>
                         <?php } else { ?>
@@ -147,14 +154,14 @@
         <?php if (isset($_POST['buscarNroOrden'])) { ?>
             <?php if ($_POST['buscar'] != '') {
                 $buscar = $_POST['buscar'];
-                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 1 AND usuproveedor = '$razonM' AND nro_orden = '$buscar'";
+                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 1 AND usuproveedor = '$razonM' AND nro_orden = '$buscar' AND estado != 'Borrado'";
                 $queryImpExpList = mysqli_query($connc, $queryImpExp);
             } else {
-                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 1 AND usuproveedor = '$razonM' ORDER BY fecha_creacion DESC, fecha_cierre ASC LIMIT $iniciar,$imp_x_pagina";
+                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 1 AND usuproveedor = '$razonM' AND estado != 'Borrado' ORDER BY fecha_creacion DESC, fecha_cierre ASC LIMIT $iniciar,$imp_x_pagina";
                 $queryImpExpList = mysqli_query($connc, $queryImpExp);
             } ?>
         <?php } else {
-            $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 1 AND usuproveedor = '$razonM' ORDER BY fecha_creacion DESC, fecha_cierre ASC LIMIT $iniciar,$imp_x_pagina";
+            $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 1 AND usuproveedor = '$razonM' AND estado != 'Borrado' ORDER BY fecha_creacion DESC, fecha_cierre ASC LIMIT $iniciar,$imp_x_pagina";
             $queryImpExpList = mysqli_query($connc, $queryImpExp);
         } ?>
         <!-- search section ends-->
@@ -209,14 +216,14 @@
         <?php if (isset($_POST['buscarNroOrden'])) { ?>
             <?php if ($_POST['buscar'] != '') {
                 $buscar = $_POST['buscar'];
-                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 1 AND usutrasportadora = '$razonM' AND nro_orden = '$buscar'";
+                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 1 AND usutrasportadora = '$razonM' AND nro_orden = '$buscar' AND estado != 'Borrado'";
                 $queryImpExpList = mysqli_query($connc, $queryImpExp);
             } else {
-                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 1 AND usutrasportadora = '$razonM' ORDER BY fecha_creacion DESC, fecha_cierre ASC LIMIT $iniciar,$imp_x_pagina";
+                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 1 AND usutrasportadora = '$razonM' AND estado != 'Borrado' ORDER BY fecha_creacion DESC, fecha_cierre ASC LIMIT $iniciar,$imp_x_pagina";
                 $queryImpExpList = mysqli_query($connc, $queryImpExp);
             } ?>
         <?php } else {
-            $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 1 AND usutrasportadora = '$razonM' ORDER BY fecha_creacion DESC, fecha_cierre ASC LIMIT $iniciar,$imp_x_pagina";
+            $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 1 AND usutrasportadora = '$razonM' AND estado != 'Borrado' ORDER BY fecha_creacion DESC, fecha_cierre ASC LIMIT $iniciar,$imp_x_pagina";
             $queryImpExpList = mysqli_query($connc, $queryImpExp);
         } ?>
         <!-- search section ends-->
@@ -271,14 +278,14 @@
         <?php if (isset($_POST['buscarNroOrden'])) { ?>
             <?php if ($_POST['buscar'] != '') {
                 $buscar = $_POST['buscar'];
-                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 1 AND usuaseguradora = '$razonM' AND nro_orden = '$buscar'";
+                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 1 AND usuaseguradora = '$razonM' AND nro_orden = '$buscar' AND estado != 'Borrado'";
                 $queryImpExpList = mysqli_query($connc, $queryImpExp);
             } else {
-                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 1 AND usuaseguradora = '$razonM' ORDER BY fecha_creacion DESC, fecha_cierre ASC LIMIT $iniciar,$imp_x_pagina";
+                $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 1 AND usuaseguradora = '$razonM' AND estado != 'Borrado' ORDER BY fecha_creacion DESC, fecha_cierre ASC LIMIT $iniciar,$imp_x_pagina";
                 $queryImpExpList = mysqli_query($connc, $queryImpExp);
             } ?>
         <?php } else {
-            $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 1 AND usuaseguradora = '$razonM' ORDER BY fecha_creacion DESC, fecha_cierre ASC LIMIT $iniciar,$imp_x_pagina";
+            $queryImpExp = "SELECT * FROM imp_exp ie WHERE ie.usuario_rut_usuario = '$usuEmpresaM' AND ie.tipo_ie_id_tipoie = 1 AND usuaseguradora = '$razonM' AND estado != 'Borrado' ORDER BY fecha_creacion DESC, fecha_cierre ASC LIMIT $iniciar,$imp_x_pagina";
             $queryImpExpList = mysqli_query($connc, $queryImpExp);
         } ?>
         <!-- search section ends-->

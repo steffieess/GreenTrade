@@ -55,16 +55,22 @@
     <div class="text-end">
         <?php
         if ($tipoUsu == 1) {
-
         ?>
             <a href="../IE/registroUsuario.php" class="btn">Nuevo Usuario Colaborador</a>
         <?php } ?>
+
         <?php
         if ($tipoUsu == 2) {
-
         ?>
             <a href="../IE/registroUsuarioExterno.php" class="btn">Nuevo Usuario Externo</a>
         <?php } ?>
+
+        <?php
+        if ($tipoUsu == 9) {
+        ?>
+            <a href="../IE/registroRecicladora.php" class="btn">Nuevo Reciclador</a>
+        <?php } ?>
+
     </div>
     <?php if ($tipoUsu == 1) { ?>
         <?php if (isset($_POST['buscarUsuario'])) { ?>

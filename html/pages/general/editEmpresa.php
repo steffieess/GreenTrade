@@ -14,6 +14,16 @@ if (isset($_GET['id_empresa'])) {
         $telefono = $row['tel_empresa'];
         $correo = $row['mail_empresa'];
     }
+
+    $queryEditEmp = "SELECT * FROM empresa WHERE id_empresa = '$id_empresa'";
+    $queryEditEmpList = mysqli_query($connc, $queryEditEmp);
+
+    if (mysqli_num_rows($queryEditEmpList) == 1) {
+        $row = mysqli_fetch_array($queryEditEmpList);
+        $direccion = $row['direccion_empresa'];
+        $telefono = $row['tel_empresa'];
+        $correo = $row['mail_empresa'];
+    }
 }
 ?>
 

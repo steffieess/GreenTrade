@@ -30,6 +30,13 @@ if (isset($_POST['editImp'])) {
         $tipocontenedor = utf8_decode($_POST['newTipoContenedorImp']);
         $tipo_papel = $_POST['newTipoPapelImp'];
         $peso_papel = $_POST['newPesoPapelImp'];
+
+        if(substr($peso_papel,-3) == '(g)'){
+            $peso_papel = $peso_papel;
+        }else{
+            $peso_papel = $peso_papel.'(g)';
+        }
+        
         //otros datos
         $link = $_POST['newLinkImp']; //otra tabla
         $nsegumiento = $_POST['newNroSegImp']; //otra tabla

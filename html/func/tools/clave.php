@@ -28,13 +28,14 @@ if ($clavenew == $clavenewv) {
         echo "<script> window.location='../../pages/general/cambiarClave.php'; </script>";
     }
     if ($pasa == 1) {
-        $password = password_hash($_POST['clavenew'], PASSWORD_BCRYPT);
-        $query = "UPDATE usuario set password = '$password' WHERE mail_usuario = '$mailUserM'";
-        $result = mysqli_query($connc, $query);
         if (strlen($clavenew) == 6) {
             if (preg_match('`[a-z]`', $clavenew)) {
                 if (preg_match('`[A-Z]`', $clavenew)) {
                     if (preg_match('`[0-9]`', $clavenew)) {
+                        $password = password_hash($_POST['clavenew'], PASSWORD_BCRYPT);
+                        $query = "UPDATE usuario set password = '$password' WHERE mail_usuario = '$mailUserM'";
+                        $result = mysqli_query($connc, $query);
+
                         if ($result) {
                             $_SESSION['usuarios_rut'] = $rut;
                             $_SESSION['message'] = 'Contraseña actualizada exitosamente';
