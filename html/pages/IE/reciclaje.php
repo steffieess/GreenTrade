@@ -1,6 +1,7 @@
 <!-- header section starts  -->
 <?php include("../../../includes/header.php"); ?>
 <!-- header section ends -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 <!--body section starts-->
 
@@ -70,8 +71,9 @@ if (mysqli_num_rows($querySoliListt) >= 1) {
 <?php unset($_SESSION['message']);
 } ?>
 
+
 <section>
-    <h1 class="heading-title"> Solicitud de Reciclaje </h1>
+    <h1 class="heading-title"> Reciclaje </h1>
     <div class="table-responsive">
         <div class="col-md-8 table-user">
             <table class="table">
@@ -83,6 +85,7 @@ if (mysqli_num_rows($querySoliListt) >= 1) {
                         <th>Estado</th>
                         <th>Fecha recicladora</th>
                         <th>Recicladora</th>
+                        <th>Ver más</th>
                         <th>Reciclar</th>
                     </tr>
                 </thead>
@@ -104,6 +107,7 @@ if (mysqli_num_rows($querySoliListt) >= 1) {
                                 <?php } else { ?>
                                     <td><?php echo $razon_social; ?></td>
                                 <?php } ?>
+                                <td><a href="../../../html/pages/IE/verReciclaje.php?id_imp_exp=<?php echo $imp_exp_id_imp_exp ?>"><i class="fa-solid fa-eye"></i></a></td>
                                 <?php if ($dataSoli['empresa_id_empresa'] == NULL and $dataSoli['fecha_recicladora'] == NULL) { ?>
                                     <td><a href="../general/solicitar.php?id_imp_exp=<?php echo $imp_exp_id_imp_exp ?>"><i class="fa-solid fa-recycle"></i></a></td>
                                 <?php } else { ?>
@@ -118,7 +122,7 @@ if (mysqli_num_rows($querySoliListt) >= 1) {
     </div>
 </section>
 <!--body section ends-->
-
+<div id="piechart" style="width: 500px; height: 300px;"></div>
 <!-- footer section starts  -->
 <?php include("../../../includes/footer.php"); ?>
 <!-- footer section ends -->

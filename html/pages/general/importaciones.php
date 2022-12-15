@@ -73,6 +73,16 @@
 
     <?php if ($tipoUsu == 1 || $tipoUsu == 2) { ?>
 
+        <?php
+            $sqlSoli = ("SELECT * FROM solicitud");
+            $dataSoli = mysqli_query($connc, $sqlSoli);
+
+            if (mysqli_num_rows($dataSoli) == 1) {
+                $row = mysqli_fetch_array($dataSoli);
+                $estado = $row['estado'];
+            }
+        ?>
+
         <!-- search section starts-->
         <?php if (isset($_POST['buscarNroOrden'])) { ?>
             <?php if ($_POST['buscar'] != '') {
@@ -132,7 +142,7 @@
                                     <td><a href="../general/listaImp.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-eye"></i></a></td>
                                     <td><a href="../../func/tools/reportesImportacionI.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-file-arrow-down"></i></a></td>
                                     <td><a href="../general/cerrarImpExp.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-file-circle-check"></i></a></td>
-                                    <?php if($dataImpExp['estado'] == 'Pendiente' || $dataImpExp['tipo_papel'] == 'Sin especificar' || $dataImpExp['peso_total_papel'] == null) { ?>
+                                    <?php if($estado == 'Pendiente' || $dataImpExp['tipo_papel'] == 'Sin especificar' || $dataImpExp['peso_total_papel'] == null) { ?>
                                         <td><a href="#"><i class="fa-solid fa-recycle"></i></a></td>
                                     <?php }else{ ?>
                                         <td><a href="../general/solicitar.php?id_imp_exp=<?php echo $dataImpExp['id_imp_exp'] ?>"><i class="fa-solid fa-recycle"></i></a></td>

@@ -44,9 +44,6 @@ if (isset($_POST['Solicitar'])) {
         $querySolicitud = "INSERT INTO solicitud(fecha_requeridaD, fecha_requeridaH, tipo_papel, gramaje_total, solicitante, estado, imp_exp_id_imp_exp, empresa_id_empresa) VALUES  ('$FechaRD', '$FechaRH','$TipoP','$PesoT', '$razonM', 'Pendiente','$id_imp_exp', '$id_empExt')";
         $resultSolicitud = mysqli_query($connc, $querySolicitud);
 
-        $queryUpdateImpo = "UPDATE imp_exp SET estado = 'Pendiente' WHERE id_imp_exp='$id_imp_exp'";
-        $resultImpo = mysqli_query($connc, $queryUpdateImpo);
-
         if ($resultSolicitud) {
             $_SESSION['message'] = 'Solicitud enviada';
             $_SESSION['message_type'] = 'Exitoso';

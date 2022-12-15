@@ -5,7 +5,7 @@
 <!--body section starts-->
 
 <?php
-$querySoli = "SELECT * FROM solicitud WHERE empresa_id_empresa = '$idEmpresaM'";
+$querySoli = "SELECT * FROM solicitud WHERE empresa_id_empresa = '$idEmpresaM' AND estado != 'Retiro Pendiente' AND fecha_recicladora = null";
 $querySoliList = mysqli_query($connc, $querySoli);
 $querySoliListt = mysqli_query($connc, $querySoli);
 
@@ -87,7 +87,7 @@ if (mysqli_num_rows($querySoliListt) == 1) {
                                 <td><?php echo date("d-m-Y", strtotime($dataSoli['fecha_requeridaD'])); ?></td>
                                 <td><?php echo date("d-m-Y", strtotime($dataSoli['fecha_requeridaH'])); ?></td>
                                 <td><?php echo $dataSoli['solicitante']; ?></td>
-                                <td><a href="../../func/tools/aceptar.php?id_imp_exp=<?php echo $imp_exp_id_imp_exp ?>"><i class="fa-regular fa-circle-check"></i></a> <a href="../../func/tools/rechazar.php?id_imp_exp=<?php echo $imp_exp_id_imp_exp ?>"><i class="fa-solid fa-trash-can"></i></a></td>
+                                <td><a href="../../../html/pages/Reciclador/aprobar.php?id_imp_exp=<?php echo $imp_exp_id_imp_exp ?>"><i class="fa-regular fa-circle-check"></i></a> <a href="../../../html/pages/Reciclador/rechazo.php?id_imp_exp=<?php echo $imp_exp_id_imp_exp ?>"><i class="fa-solid fa-trash-can"></i></a></td>
                             </tr>
                         <?php } ?>
                     <?php } ?>

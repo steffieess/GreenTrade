@@ -51,6 +51,52 @@
     </div>
 </section>
 <!--body section ends-->
+<?php
+
+$queryImpE = "SELECT SUM(REPLACE(peso_total_papel,'(g)','')) AS Peso FROM imp_exp";
+$queryImpEList = mysqli_query($connc, $queryImpE);
+
+$row = mysqli_fetch_array($queryImpEList);
+$peso_total_papel = $row['Peso'];
+
+$queryDocu = "SELECT SUM(nro_paginas) AS PesoDoc FROM documento";
+$queryDocuList = mysqli_query($connc, $queryDocu);
+
+$row = mysqli_fetch_array($queryDocuList);
+$PesoDoc = $row['PesoDoc'];
+$PesoDoc = $PesoDoc * 4.31;
+?>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load('current', {
+        'packages': ['corechart']
+    });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['Peso físico', <?php echo $peso_total_papel ?>],
+            ['Peso digital', <?php echo $PesoDoc ?>]
+        ]);
+
+        var options = {
+            colors: ['#FF0000', '#7DBC66'],
+            pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+    }
+</script>
+<center>
+<?php if($peso_total_papel != 0 || $PesoDoc != 0){ ?>
+    <h3>Tu reducción de huella de carbono es:</h3>
+    <div id="piechart" style="width: 700px; height: 400px;"></div>
+<?php } ?>
+</center>
 
 <!-- footer section starts  -->
 <?php include("../../../includes/footer.php"); ?>
